@@ -28,6 +28,14 @@ public class Visao : MonoBehaviour
             min_Y = -4.0f;  
             max_Y = 5.0f;
         }
+        else if (nomeCena == "Escadaria")
+        {
+            min_X = -4.98f;
+            max_X = 5.0f;
+
+            min_Y = 0.03f;  
+            max_Y = 0.03f;
+        }
     }
 
     void LateUpdate()
