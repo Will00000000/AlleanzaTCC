@@ -5,46 +5,39 @@ public class Visao : MonoBehaviour
 {
     public Transform alvo;
 
+    bool seguir;
     float min_X, max_X;
-    float min_Y, max_Y;
+    private string nomeCena;
 
-    void Start()
+    private void FixedUpdate()
     {
-        string nomeCena = SceneManager.GetActiveScene().name;
+        nomeCena = SceneManager.GetActiveScene().name;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, min_X, max_X), transform.position.y, transform.position.z);
+
+        Vector3 newPosition = alvo.position + new Vector3(0, 0, -10);
+        transform.position = newPosition;
 
         if (nomeCena == "MorganHouse")
         {
             min_X = -2.62f;
             max_X = 2.59f;
-
-            min_Y = 0.01f;   
-            max_Y = 0f;
         }
         else if (nomeCena == "Praia")
         {
             min_X = -26.8f;
             max_X = 14.66f;
-
-            min_Y = -4.0f;  
-            max_Y = 5.0f;
-        }
-        else if (nomeCena == "Escadaria")
-        {
-            min_X = -4.98f;
-            max_X = 5.0f;
-
-            min_Y = 0.03f;  
-            max_Y = 0.03f;
         }
     }
 
-    void LateUpdate()
+    /*void Seguir () //área de ataque a ser implementada
     {
-        Vector3 newPosition = alvo.position + new Vector3(0, 0, -10);
-
-        newPosition.x = Mathf.Clamp(newPosition.x, min_X, max_X);
-        newPosition.y = Mathf.Clamp(newPosition.y, min_Y, max_Y);
-
-        transform.position = newPosition;
-    }
+        if (jogador.GetComponent <Jogador2D_Terra> ().CamSeguindo)
+        {
+            
+        }
+        else
+        {
+            transform.position = jogador.GetComponent <Jogador2D_Terra> ().destinoCam;
+        }
+    }*/
 }
