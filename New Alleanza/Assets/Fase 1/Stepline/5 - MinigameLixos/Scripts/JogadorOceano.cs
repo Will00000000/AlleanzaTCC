@@ -24,8 +24,6 @@ public class JogadorOceano : MonoBehaviour
 
         Disparar ();
         Mover ();
-
-        Debug.Log (anguloMira);
     }
 
     void Mover ()

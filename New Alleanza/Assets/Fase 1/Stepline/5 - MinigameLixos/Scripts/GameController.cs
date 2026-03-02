@@ -28,5 +28,7 @@ public class GameController : MonoBehaviour
             Instantiate (Lixo, pontoOrigem [pontoAleatorio].position, pontoOrigem [pontoAleatorio].rotation);
             timer = intervaloTempo;
         }
+
+        
     }
 }
