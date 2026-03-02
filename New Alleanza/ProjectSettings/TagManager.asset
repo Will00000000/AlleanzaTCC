@@ -8,6 +8,7 @@ TagManager:
   - ponte
   - projetil
   - lixo
+  - jogador
   layers:
   - Default
   - TransparentFX

@@ -4,17 +4,18 @@ public class Lixos : MonoBehaviour
 {
     Rigidbody2D rig;
 
-    public Transform alvo;
+    GameObject alvo;
     public int velocidade;
 
     void Start()
     {
         rig = GetComponent <Rigidbody2D> ();
+        alvo = GameObject.FindWithTag ("jogador");
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards (transform.position, alvo.position, velocidade * Time.deltaTime);
+        transform.position = Vector2.MoveTowards (transform.position, alvo.transform.position, velocidade * Time.deltaTime);
     }
 
     void OnTriggerEnter2D (Collider2D col)
