@@ -232,9 +232,14 @@ MonoBehaviour:
   - {fileID: 852767175}
   - {fileID: 703131390}
   - {fileID: 864824646}
+  - {fileID: 1050588434}
+  - {fileID: 1908647361}
+  - {fileID: 850486623}
+  - {fileID: 1223891356}
+  - {fileID: 1714758886}
   Lixo: {fileID: 4539459369516870337, guid: 68c1ab897b699aa4ba63c683e953f341, type: 3}
   timer: 1
-  intervaloTempo: 0.5
+  intervaloTempo: 1
 --- !u!4 &202547619
 Transform:
   m_ObjectHideFlags: 0
