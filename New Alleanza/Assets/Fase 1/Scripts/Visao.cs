@@ -28,6 +28,14 @@ public class Visao : MonoBehaviour
             min_Y = -4.0f;   // ajuste conforme seu cenário
             max_Y = 5.0f;
         }
+        else if (nomeCena == "Escadaria")
+        {
+            min_X = -5.01f;
+            max_X = 4.99f;
+
+            min_Y = 0f;
+            max_Y = 0f;
+        }
     }
 
     void LateUpdate()
