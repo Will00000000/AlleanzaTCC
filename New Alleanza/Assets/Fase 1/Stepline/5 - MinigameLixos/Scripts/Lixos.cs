@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class Lixos : MonoBehaviour
 {
+    public float velocidade;
     Rigidbody2D rig;
 
-    GameObject alvo;
-    public float velocidade;
-
-    void Start()
+    void Start ()
     {
         rig = GetComponent <Rigidbody2D> ();
-        alvo = GameObject.FindWithTag ("jogador");
     }
 
     void Update()
@@ -20,7 +17,7 @@ public class Lixos : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.gameObject.tag == "projetil")
+        if (col.gameObject.tag == "projetil" || col.gameObject.tag == "limite")
         {
             Destroy(gameObject);
         }

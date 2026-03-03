@@ -24,11 +24,15 @@ public class GameController : MonoBehaviour
 
         if (timer <= 0)
         {
-            int pontoAleatorio = Random.Range (0, pontoOrigem.Length -1);
-            Instantiate (Lixo, pontoOrigem [pontoAleatorio].position, pontoOrigem [pontoAleatorio].rotation);
             timer = intervaloTempo;
 
-            intervaloTempo -= 0.01f;
+            if (intervaloTempo > 0.20f)
+            {
+                int pontoAleatorio = Random.Range (0, pontoOrigem.Length -1);
+                Instantiate (Lixo, pontoOrigem [pontoAleatorio].position, pontoOrigem [pontoAleatorio].rotation);
+
+                intervaloTempo -= 0.01f;
+            }
         }
     }
 }
