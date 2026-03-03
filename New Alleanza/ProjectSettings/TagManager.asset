@@ -9,6 +9,7 @@ TagManager:
   - projetil
   - lixo
   - jogador
+  - Ingrediente
   layers:
   - Default
   - TransparentFX
