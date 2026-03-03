@@ -5,10 +5,7 @@ public class Lixos : MonoBehaviour
     Rigidbody2D rig;
 
     GameObject alvo;
-    public int velocidade;
-
-    int lixosAcertados = 0;
-    bool lixoDestruido = false;
+    public float velocidade;
 
     void Start()
     {
@@ -18,9 +15,7 @@ public class Lixos : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards (transform.position, alvo.transform.position, velocidade * Time.deltaTime);
-
-        //Pontuacao ();
+        transform.position = new Vector2 (transform.position.x - velocidade, transform.position.y);
     }
 
     void OnTriggerEnter2D (Collider2D col)
@@ -28,16 +23,6 @@ public class Lixos : MonoBehaviour
         if (col.gameObject.tag == "projetil")
         {
             Destroy(gameObject);
-            lixosAcertados += 1;
         }
     }
-
-    /*void Pontuacao ()
-    {
-        if (lixoDestruido = true)
-        {
-            lixosAcertados += 1;
-            Debug.Log (lixosAcertados);
-        }
-    }*/
 }
