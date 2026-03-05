@@ -19,7 +19,7 @@ public class Tiros : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.gameObject.tag == "lixo")
+        if (col.gameObject.tag == "lixo" || col.gameObject.tag == "limite")
         {
             Destroy (gameObject);
         }
