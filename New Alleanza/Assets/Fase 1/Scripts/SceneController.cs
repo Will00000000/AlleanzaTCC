@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public GameObject cam;
-
     public void GoPraia()
     {
         SceneManager.LoadScene("Praia");
@@ -20,11 +18,8 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Escadaria");
     }
     
-    /*void OnColliderEnter2D (Collider2D col)
+    public void GoCidade ()
     {
-        if (col.gameObject.tag == "Player")
-        {
-            cam.transform.position = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z);
-        }
-    }*/
+        SceneManager.LoadScene ("Cidade");
+    }
 }

@@ -11,7 +11,7 @@ public class Jogador2D_Terra : MonoBehaviour
 
     string nameScene;
 
-   [Header("Movimento")]
+    [Header("Movimento")]
     [SerializeField] int velocidade;
     [SerializeField] float velocidadeDash, pulo;
     [SerializeField] Vector2 destino;
@@ -38,7 +38,7 @@ public class Jogador2D_Terra : MonoBehaviour
 
         if (DashAtivado)
         {
-            Dash();
+            DashAtaque();
         }
 
         anima.SetFloat("SideMove", Mathf.Abs (xMove));
@@ -48,11 +48,6 @@ public class Jogador2D_Terra : MonoBehaviour
     {
         rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, yMove * velocidade);
         xMove = Input.GetAxisRaw("Horizontal");
-        
-        if (nameScene == "Cidade")
-        {
-            yMove = Input.GetAxisRaw("Vertical");
-        }
 
         if (xMove < 0)
         {
@@ -86,15 +81,7 @@ public class Jogador2D_Terra : MonoBehaviour
         }
     }*/
 
-    void OnColliderEnter2D (Collider2D col)
-    {
-        if (col.gameObject.tag == "ponte")
-        {
-            
-        }
-    }
-
-    private void Dash()
+    private void DashAtaque()
     {
         if (Input.GetMouseButtonDown(0))
         {
