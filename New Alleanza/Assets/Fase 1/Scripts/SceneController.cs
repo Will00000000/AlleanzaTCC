@@ -22,4 +22,14 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene ("Cidade");
     }
+
+    public void GoQuebraCabeca ()
+    {
+        SceneManager.LoadScene ("Minigame");
+    }
+
+    public void Pocoes ()
+    {
+        SceneManager.LoadScene ("MinigamePoção");
+    }
 }

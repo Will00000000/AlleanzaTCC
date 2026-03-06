@@ -17,7 +17,7 @@ public class Visao : MonoBehaviour
             min_X = -2.62f;
             max_X = 2.59f;
 
-            min_Y = 0.1f;   
+            min_Y = -0.13f;   
             max_Y = 3.0f;
         }
 
@@ -50,9 +50,17 @@ public class Visao : MonoBehaviour
 
     void Update()
     {
-        Vector3 newPosition = alvo.position + new Vector3 (0, 3.31f, -10);
-        newPosition.x = Mathf.Clamp(newPosition.x, min_X, max_X);
+        /*float limites_X = Mathf.Clamp (transform.position.x, min_X, max_X);
+        Vector3 newPosition = new Vector3 (limites_X, transform.position.y, transform.position.z);
         
-        transform.position = alvo.transform.position + newPosition;
+        transform.position = alvo.position + newPosition;*/
+
+        Vector3 alvoSeguir = new Vector3 (alvo.position.x, alvo.position.y, transform.position.z);
+
+        // aplicar limites
+        float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);
+        float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);
+
+        transform.position = new Vector3 (clampX, clampY, transform.position.z);
     }
 }

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Fase 1/Stepline/3 - Minigame/Scenes/Minigame.unity
     guid: 9093a5a4f0b500045919927dd30f55d3
+  - enabled: 1
+    path: "Assets/Fase 1/Stepline/6 - MinigamePo\xE7ao/Scenas/MinigamePo\xE7\xE3o.unity"
+    guid: 4f78fe1d9ed6082419d94432ff82beb7
   m_configObjects: {}
