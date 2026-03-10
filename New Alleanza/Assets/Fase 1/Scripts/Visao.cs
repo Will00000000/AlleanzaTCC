@@ -39,27 +39,22 @@ public class Visao : MonoBehaviour
             max_Y = 0f;
         }
 
-        /*else if (nomeCena == "Cidade")
+        if (nomeCena == "Cidade")
         {
-            min_X = 3.38;
-            max_X = 4.99f;
+            min_X = -10.85f;
+            max_X = 10.88f;
 
-            transform.position = new Vector2 (transform.position.x, 3.31f);
-        }*/
+            min_Y = 3.24f;
+        }
     }
 
     void Update()
     {
-        /*float limites_X = Mathf.Clamp (transform.position.x, min_X, max_X);
-        Vector3 newPosition = new Vector3 (limites_X, transform.position.y, transform.position.z);
-        
-        transform.position = alvo.position + newPosition;*/
-
         Vector3 alvoSeguir = new Vector3 (alvo.position.x, alvo.position.y, transform.position.z);
 
         // aplicar limites
-        float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);
-        float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);
+        float clampX = Mathf.Clamp (alvoSeguir.x, min_X, max_X);
+        float clampY = Mathf.Clamp (alvoSeguir.y, min_Y, max_Y);
 
         transform.position = new Vector3 (clampX, clampY, transform.position.z);
     }
