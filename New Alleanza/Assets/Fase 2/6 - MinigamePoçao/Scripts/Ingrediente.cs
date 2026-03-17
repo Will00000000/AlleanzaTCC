@@ -30,4 +30,6 @@ public class Arrastavel : MonoBehaviour
         mousePoint.z = 10f;
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
+
+    
 }
