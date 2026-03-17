@@ -6,6 +6,6 @@ public class TP_Controller : MonoBehaviour
 
     public void TP_Rua ()
     {
-        transform.position = new Vector2 (97.8300018f, 0);
+        alvo.transform.position = new Vector2 (97.8300018f, 0);
     }
 }

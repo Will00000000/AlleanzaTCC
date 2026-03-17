@@ -10,6 +10,8 @@ TagManager:
   - lixo
   - jogador
   - limite
+  - chao1
+  - chao2
   layers:
   - Default
   - TransparentFX

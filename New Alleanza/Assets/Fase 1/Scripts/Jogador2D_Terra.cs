@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
+    public bool Is_Rua1, Is_Rua2, Is_Rua3;
+
     private Rigidbody2D rig;
     private Camera visaoAtaque;
 
@@ -89,5 +91,23 @@ public class Jogador2D_Terra : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, destino, velocidadeDash * Time.deltaTime);
+    }
+
+    void OnTriggerEnter2D (Collider2D col)
+    {
+        if (col.gameObject.tag == "detectorRua1")
+        {
+            Is_Rua1 = true;
+        }
+
+        if (col.gameObject.tag == "detectorRua2")
+        {
+            Is_Rua2 = true;
+        }
+
+        if (col.gameObject.tag == "detectorRua3")
+        {
+            Is_Rua3 = true;
+        }
     }
 }
