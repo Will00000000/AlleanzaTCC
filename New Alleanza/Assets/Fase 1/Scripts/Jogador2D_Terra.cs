@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
-    public bool Is_Rua1, Is_Rua2, Is_Rua3;
+    public bool Is_Rua1 = false, Is_Rua2 = false, Is_Rua3 = false;
 
     private Rigidbody2D rig;
     private Camera visaoAtaque;
@@ -104,7 +104,7 @@ public class Jogador2D_Terra : MonoBehaviour
         {
             Is_Rua2 = true;
         }
-
+        
         if (col.gameObject.tag == "detectorRua3")
         {
             Is_Rua3 = true;

@@ -55,10 +55,22 @@ public class Visao : MonoBehaviour
 
         if (jogador.Is_Rua1 = true) //verifica se Rua1 é verdadeiro (se está na primeira rua)
         {
-            min_X = 110.5f; //limites das câmeras
+            min_X = 200; //limites das câmeras
             max_X = 129.37f;
 
             min_Y = 3.32f;
+
+            //Debug.Log ("rua1");
+        }
+
+        if (jogador.Is_Rua2 = true) //verifica se Rua2 é verdadeiro (se está na segunda rua)
+        {
+            min_X = 71.61f; //limite x
+            max_X = 90.49f;
+
+            min_Y = 3.32f; //limite y
+
+            Debug.Log ("Rua2");
         }
 
         float clampX = Mathf.Clamp (alvoSeguir.x, min_X, max_X); //limite de câmera no eixo x
