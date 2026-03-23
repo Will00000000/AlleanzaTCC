@@ -27,7 +27,7 @@ public class Visao : MonoBehaviour
             min_X = -26.8f;
             max_X = 14.66f;
 
-            min_Y = -4.0f; // ajuste conforme seu cenário
+            min_Y = -4.0f;
             max_Y = 5.0f;
         }
 
@@ -43,27 +43,27 @@ public class Visao : MonoBehaviour
 
     void Update()
     {
-        alvoSeguir = new Vector3 (alvo.position.x, alvo.position.y, transform.position.z);
+        alvoSeguir = new Vector3(alvo.position.x, alvo.position.y, transform.position.z);
 
-        LimiteCam ();
+        LimiteCam();
     }
 
     void LimiteCam ()
     {
-        GameObject player_obj = GameObject.Find ("Jogador"); //como a câmera está distante do jogador, precisa procurar o objeto dele antes de qualquer coisa
-        Jogador2D_Terra jogador = player_obj.GetComponent <Jogador2D_Terra> (); //pega o script do jogador, porque está no mesmo objeto
-
-        if (jogador.Is_Rua1 = true) //verifica se Rua1 é verdadeiro (se está na primeira rua)
+        GameObject player_obj = GameObject.Find("Jogador"); //como a câmera está distante do jogador, precisa procurar o objeto dele antes  de qualquer coisa
+        Jogador2D_Terra jogador = player_obj.GetComponent<Jogador2D_Terra>(); //pega o script do jogador, porque está no mesmo objeto.
+        
+        if (jogador.Is_Rua1 == true) // corrigido
         {
-            min_X = 110.5f; //limites das câmeras
+            min_X = 110.5f; //limite das câmeras 
             max_X = 129.37f;
 
             min_Y = 3.32f;
         }
 
-        float clampX = Mathf.Clamp (alvoSeguir.x, min_X, max_X); //limite de câmera no eixo x
-        float clampY = Mathf.Clamp (alvoSeguir.y, min_Y, max_Y); //limite de câmera no eixo y
+        float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);//limite de câmera no eixo x
+        float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);//limite de câmera no eixo y
 
-        transform.position = new Vector3 (clampX, clampY, transform.position.z); //câmera se move com o limite aplicado
+        transform.position = new Vector3(clampX, clampY, transform.position.z);//câmera se move com o limite aplicando
     }
 }
