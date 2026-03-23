@@ -12,16 +12,16 @@ EditorBuildSettings:
     path: Assets/Fase 1/Stepline/1 - Cut/CutsceneInicial.unity
     guid: 40b8d9eff1bd2944c8458e863af023da
   - enabled: 1
-    path: "Assets/Fase 1/Stepline/2 - Apresenta\xE7\xE3o/MorganHouse.unity"
+    path: Assets/Fase 1/Stepline/Mundo/MorganHouse.unity
     guid: 37c84c0757cd3e24180b2b728368a775
   - enabled: 1
-    path: "Assets/Fase 1/Stepline/2 - Apresenta\xE7\xE3o/Praia.unity"
+    path: Assets/Fase 1/Stepline/Mundo/Praia.unity
     guid: 2c5965be902d4b041ba53f677fed32e5
   - enabled: 1
-    path: "Assets/Fase 1/Stepline/2 - Apresenta\xE7\xE3o/Escadaria.unity"
+    path: Assets/Fase 1/Stepline/Mundo/Escadaria.unity
     guid: cc662d095ca2e2040b959a752d370321
   - enabled: 1
-    path: "Assets/Fase 1/Stepline/2 - Apresenta\xE7\xE3o/Cidade.unity"
+    path: Assets/Fase 1/Stepline/Mundo/Cidade.unity
     guid: 1bcc73bd7e7ec8743ad75036e1248133
   - enabled: 1
     path: Assets/Fase 1/Stepline/3 - Minigame/Scenes/Minigame.unity

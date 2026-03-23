@@ -50,10 +50,9 @@ public class Visao : MonoBehaviour
 
     void LimiteCam ()
     {
-        GameObject player_obj = GameObject.Find ("Jogador"); //como a câmera está distante do jogador, precisa procurar o objeto dele antes de qualquer coisa
-        Jogador2D_Terra jogador = player_obj.GetComponent <Jogador2D_Terra> (); //pega o script do jogador, porque está no mesmo objeto
+        GameController controlador = GetComponent <GameController> (); //pega o script do jogador, porque está no mesmo objeto
 
-        if (jogador.Is_Rua1 = true) //verifica se Rua1 é verdadeiro (se está na primeira rua)
+        if (controlador.Is_Rua1 = true) //verifica se Rua1 é verdadeiro (se está na primeira rua)
         {
             min_X = 200; //limites das câmeras
             max_X = 129.37f;
@@ -63,7 +62,7 @@ public class Visao : MonoBehaviour
             //Debug.Log ("rua1");
         }
 
-        if (jogador.Is_Rua2 = true) //verifica se Rua2 é verdadeiro (se está na segunda rua)
+        if (controlador.Is_Rua2 = true) //verifica se Rua2 é verdadeiro (se está na segunda rua)
         {
             min_X = 71.61f; //limite x
             max_X = 90.49f;
