@@ -156,7 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caixaDialogo: {fileID: 6550059}
   textoDialogo: {fileID: 851900233}
-  falas: []
+  jogador: {fileID: 1866056545}
+  falas:
+  - oii
+  - tudo bem, uilia
 --- !u!114 &6550061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oi Willia......
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -693,6 +696,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1866056545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
+  m_PrefabInstance: {fileID: 108898005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ec5db023aca6a498dd0788eba48f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866456834
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,11 +20,13 @@ public class Jogador2D_Terra : MonoBehaviour
     [SerializeField] Vector2 move;
     [SerializeField] bool DashAtivado = false;
 
+    //CONTROLE DE MOVIMENTO (para diálogo)
+    public bool podeMover = true;
+
     [Header("Animação")]
     Animator anima;
     float xMove, yMove;
 
-    // Start is called before the first frame update
     void Start()
     {
         anima = GetComponent<Animator>();
@@ -33,9 +35,19 @@ public class Jogador2D_Terra : MonoBehaviour
         nameScene = SceneManager.GetActiveScene().name;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //se não puder mover (diálogo ativo)
+        if (!podeMover)
+        {
+            rig.velocity = Vector2.zero; // para o movimento
+
+            // força animação parada
+            anima.SetFloat("SideMove", 0);
+
+            return; // impede qualquer outro movimento
+        }
+
         Mover();
 
         if (DashAtivado)
@@ -43,7 +55,7 @@ public class Jogador2D_Terra : MonoBehaviour
             DashAtaque();
         }
 
-        anima.SetFloat("SideMove", Mathf.Abs (xMove));
+        anima.SetFloat("SideMove", Mathf.Abs(xMove));
     }
 
     void Mover()
@@ -60,28 +72,6 @@ public class Jogador2D_Terra : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 0);
         }
     }
-
-    //REPAGINAR ISSO AQUI
-    /*void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "area ataque")
-        {
-            DashAtivado = true;
-            destino = col.transform.position;
-            destinoCam = new Vector3(col.transform.position.x, col.transform.position.y, -10);
-
-            CamSeguindo = false;
-        }
-    
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "area ataque")
-        {
-            DashAtivado = false;
-            CamSeguindo = true;
-        }
-    }*/
 
     private void DashAtaque()
     {
