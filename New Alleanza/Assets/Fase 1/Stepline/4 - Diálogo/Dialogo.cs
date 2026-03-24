@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Dialogo : MonoBehaviour
 {
     public GameObject caixaDialogo;
-    public Text textoDialogo;
+    public TMP_Text textoDialogo;
 
     [TextArea]
     public string[] falas;
@@ -23,7 +23,7 @@ public class Dialogo : MonoBehaviour
     public void IniciarDialogo()
     {
         caixaDialogo.SetActive(true);
-        Time.timeScale = 0f; // pausa o jogo
+        Time.timeScale = 0f;
 
         dialogoAtivo = true;
         index = 0;
@@ -48,7 +48,7 @@ public class Dialogo : MonoBehaviour
     void EncerrarDialogo()
     {
         caixaDialogo.SetActive(false);
-        Time.timeScale = 1f; // volta o jogo
+        Time.timeScale = 1f;
 
         dialogoAtivo = false;
     }
