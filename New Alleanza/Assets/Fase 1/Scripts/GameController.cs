@@ -9,10 +9,6 @@ public class GameController : MonoBehaviour
     public float timer;
     public float intervaloTempo;
 
-    //RUAS DA CIDADE
-    public GameObject jogador;
-    public bool Is_Rua1 = false, Is_Rua2 = false, Is_Rua3 = false;
-
     void Start ()
     {
         timer = intervaloTempo;
@@ -38,24 +34,6 @@ public class GameController : MonoBehaviour
 
                 intervaloTempo -= 0.01f;
             }
-        }
-    }
-
-    void OnTriggerEnter2D (Collider2D col)
-    {
-        if (col.gameObject.tag == "detectorRua1") //detecta se o jogador está na rua 1 (referenciado em "Visao")
-        {
-            Is_Rua1 = true;
-        }
-
-        if (col.gameObject.tag == "detectorRua2")
-        {
-            Is_Rua2 = true;
-        }
-        
-        if (col.gameObject.tag == "detectorRua3")
-        {
-            Is_Rua3 = true;
         }
     }
 }
