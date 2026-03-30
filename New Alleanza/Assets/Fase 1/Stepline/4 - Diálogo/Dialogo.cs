@@ -1,26 +1,39 @@
 using UnityEngine;
 using TMPro;
+using System.Collections; // necessário para usar digitação
 
 public class Dialogo : MonoBehaviour
 {
     public GameObject caixaDialogo;
     public TMP_Text textoDialogo;
 
-    //referência ao jogador (arrastar no Inspector)
     public Jogador2D_Terra jogador;
 
     [TextArea]
     public string[] falas;
 
+    public float velocidadeTexto = 0.05f; // velocidade da digitação
+
     int index = 0;
     bool dialogoAtivo = false;
 
+    bool estaDigitando = false; // verifica se o texto ainda está sendo escrito
+
     void Update()
     {
-        //só permite avançar diálogo se ele estiver ativo
+        // só permite avançar diálogo se ele estiver ativo
         if (dialogoAtivo && Input.GetKeyDown(KeyCode.Space))
         {
-            ProximaFala();
+            if (estaDigitando) // se ainda estiver digitando...
+            {
+                StopAllCoroutines(); // para a digitação atual
+                textoDialogo.text = falas[index]; // mostra o texto completo na hora
+                estaDigitando = false; // finaliza o estado de digitação
+            }
+            else
+            {
+                ProximaFala(); // vai para a próxima fala
+            }
         }
     }
 
@@ -39,20 +52,35 @@ public class Dialogo : MonoBehaviour
             jogador.podeMover = false;
         }
 
-        textoDialogo.text = falas[index];
+        StartCoroutine(DigitarTexto()); // inicia o efeito de digitação
+    }
+
+    IEnumerator DigitarTexto()
+    {
+        estaDigitando = true; // indica que está digitando
+        textoDialogo.text = ""; // limpa o texto antes de começar
+
+        // percorre cada letra da fala atual
+        foreach (char letra in falas[index])
+        {
+            textoDialogo.text += letra; // adiciona uma letra por vez
+            yield return new WaitForSecondsRealtime(velocidadeTexto); // espera um tempo
+        }
+
+        estaDigitando = false; // terminou de digitar
     }
 
     void ProximaFala()
     {
-        index++;
+        index++; // vai para a próxima fala
 
         if (index < falas.Length)
         {
-            textoDialogo.text = falas[index];
+            StartCoroutine(DigitarTexto()); // inicia digitação da nova fala
         }
         else
         {
-            EncerrarDialogo();
+            EncerrarDialogo(); // se acabou, fecha o diálogo
         }
     }
 
@@ -60,7 +88,7 @@ public class Dialogo : MonoBehaviour
     {
         caixaDialogo.SetActive(false);
 
-        Time.timeScale = 1f; //volta o tempo ao normal
+        Time.timeScale = 1f; // volta o tempo ao normal
 
         dialogoAtivo = false;
 

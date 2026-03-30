@@ -160,6 +160,7 @@ MonoBehaviour:
   falas:
   - oii
   - tudo bem, uilia
+  velocidadeTexto: 0.07
 --- !u!114 &6550061
 MonoBehaviour:
   m_ObjectHideFlags: 0
