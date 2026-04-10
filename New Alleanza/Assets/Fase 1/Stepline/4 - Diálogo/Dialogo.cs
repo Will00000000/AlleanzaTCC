@@ -4,13 +4,19 @@ using System.Collections; // necessário para usar digitação
 
 public class Dialogo : MonoBehaviour
 {
-    public GameObject caixaDialogo;
+    public GameObject caixaDialogo; // caixa original (Player1)
+    public GameObject caixaPlayer2; // 🆕 caixa do segundo personagem
+
     public TMP_Text textoDialogo;
 
     public Jogador2D_Terra jogador;
 
+    public Animator animator; // controla a animação da caixa
+
     [TextArea]
     public string[] falas;
+
+    public int[] quemFala; // 🆕 0 = Player1 | 1 = Player2
 
     public float velocidadeTexto = 0.05f; // velocidade da digitação
 
@@ -28,7 +34,7 @@ public class Dialogo : MonoBehaviour
             {
                 StopAllCoroutines(); // para a digitação atual
                 textoDialogo.text = falas[index]; // mostra o texto completo na hora
-                estaDigitando = false; // finaliza o estado de digitação
+                estaDigitando = false;
             }
             else
             {
@@ -37,11 +43,27 @@ public class Dialogo : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        caixaDialogo.SetActive(false); // garante que começa escondido
+
+        if (caixaPlayer2 != null)
+        {
+            caixaPlayer2.SetActive(false); // 🆕 começa escondido também
+        }
+    }
+
     public void IniciarDialogo()
     {
         caixaDialogo.SetActive(true);
 
-        Time.timeScale = 0f; // pausa o tempo do jogo
+        // 🎬 ativa animação de entrada
+        if (animator != null)
+        {
+            animator.SetBool("Abrir", true);
+        }
+
+        Time.timeScale = 0f;
 
         dialogoAtivo = true;
         index = 0;
@@ -52,43 +74,82 @@ public class Dialogo : MonoBehaviour
             jogador.podeMover = false;
         }
 
-        StartCoroutine(DigitarTexto()); // inicia o efeito de digitação
+        MostrarQuemFala(); // 🆕 define quem aparece primeiro
+
+        StartCoroutine(DigitarTexto());
     }
 
     IEnumerator DigitarTexto()
     {
-        estaDigitando = true; // indica que está digitando
-        textoDialogo.text = ""; // limpa o texto antes de começar
+        estaDigitando = true;
+        textoDialogo.text = "";
 
-        // percorre cada letra da fala atual
         foreach (char letra in falas[index])
         {
-            textoDialogo.text += letra; // adiciona uma letra por vez
-            yield return new WaitForSecondsRealtime(velocidadeTexto); // espera um tempo
+            textoDialogo.text += letra;
+            yield return new WaitForSecondsRealtime(velocidadeTexto);
         }
 
-        estaDigitando = false; // terminou de digitar
+        estaDigitando = false;
     }
 
     void ProximaFala()
     {
-        index++; // vai para a próxima fala
+        index++;
 
         if (index < falas.Length)
         {
-            StartCoroutine(DigitarTexto()); // inicia digitação da nova fala
+            MostrarQuemFala(); // 🆕 troca a caixa conforme quem fala
+
+            StartCoroutine(DigitarTexto());
         }
         else
         {
-            EncerrarDialogo(); // se acabou, fecha o diálogo
+            EncerrarDialogo();
+        }
+    }
+
+    // 🆕 MÉTODO NOVO
+    void MostrarQuemFala()
+    {
+        if (quemFala[index] == 0)
+        {
+            caixaDialogo.SetActive(true); // Player1
+            if (caixaPlayer2 != null)
+                caixaPlayer2.SetActive(false);
+        }
+        else
+        {
+            caixaDialogo.SetActive(false);
+            if (caixaPlayer2 != null)
+                caixaPlayer2.SetActive(true); // Player2
         }
     }
 
     void EncerrarDialogo()
     {
+        // 🎬 animação de saída
+        if (animator != null)
+        {
+            animator.SetBool("Abrir", false);
+        }
+
+        StartCoroutine(FecharDepois());
+    }
+
+    IEnumerator FecharDepois()
+    {
+        textoDialogo.text = "";
+        yield return new WaitForSecondsRealtime(-0.1f); // tempo da animação
+
         caixaDialogo.SetActive(false);
 
-        Time.timeScale = 1f; // volta o tempo ao normal
+        if (caixaPlayer2 != null)
+        {
+            caixaPlayer2.SetActive(false); // garante que fecha tudo
+        }
+
+        Time.timeScale = 1f;
 
         dialogoAtivo = false;
 
