@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class GameController : MonoBehaviour
 
     void Update ()
     {
-        criaAsteroides ();
+        if (SceneManager.GetActiveScene().name == "Minigame_Lixos")
+        {
+            criaAsteroides ();
+        }
     }
 
     void criaAsteroides ()
@@ -36,4 +40,6 @@ public class GameController : MonoBehaviour
             }
         }
     }
+
+    void 
 }

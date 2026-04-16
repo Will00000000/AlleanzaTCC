@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Visao : MonoBehaviour
+public class Visao : Singleton <Visao>
 {
     public Transform alvo;
     Vector3 alvoSeguir;
@@ -18,7 +18,7 @@ public class Visao : MonoBehaviour
             min_X = -2.62f;
             max_X = 2.59f;
 
-            min_Y = -0.13f;   
+            min_Y = -0.13f;
             max_Y = 3.0f;
         }
 

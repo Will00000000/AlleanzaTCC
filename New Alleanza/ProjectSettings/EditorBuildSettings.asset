@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Fase 1/Stepline/Mundo/Escadaria.unity
     guid: cc662d095ca2e2040b959a752d370321
   - enabled: 1
-    path: Assets/Fase 1/Stepline/Mundo/Cidade/Ruas/Rua1.unity
+    path: Assets/Fase 1/Stepline/Mundo/Cidade/Rua.unity
     guid: 0aaf4087cd468244ea12b253cff247a3
   - enabled: 1
     path: Assets/Fase 1/Stepline/Mundo/Cidade/Ruas/Rua2.unity
