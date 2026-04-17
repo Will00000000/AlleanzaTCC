@@ -24,11 +24,11 @@ public class Visao : MonoBehaviour
 
         else if (nomeCena == "Praia")
         {
-            min_X = -26.8f;
-            max_X = 14.66f;
+            min_X = -23.92f;
+            max_X = 9.67f;
 
-            min_Y = -4.0f;
-            max_Y = 5.0f;
+            min_Y = 2.11f;
+            max_Y = 2.11f;
         }
 
         else if (nomeCena == "Escadaria")
