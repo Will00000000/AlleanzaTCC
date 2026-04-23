@@ -3,10 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : Singleton <SceneController>
 {
-    public bool is_Rua; //verifica se está na rua
-    public bool is_Escadaria;
+    public bool is_Rua = false, was_Rua = false; //verifica se está ou estava na rua
+    public bool is_Museu = false, was_Museu = false; //verifica se está ou estava no museu
 
-    public bool was_Rua; //verifica se estava na rua
+    public bool is_Escadaria;
 
     public void GoPraia()
     {
@@ -28,21 +28,16 @@ public class SceneController : Singleton <SceneController>
         SceneManager.LoadScene ("Cidade");
     }
 
-    //RUAS
-
     public void GoRua ()
     {
-        
+        SceneManager.LoadScene("Rua");
     }
 
-    public void GoRua2 ()
+    public void GoMuseu ()
     {
-        
-    }
-
-    public void GoRua3 ()
-    {
-        
+        SceneManager.LoadScene("Museu");
+        is_Museu = true;
+        was_Rua = true;
     }
 
     //MINIGAMES

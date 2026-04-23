@@ -4,26 +4,26 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     //MINIGAME DOS LIXOS
-    public Transform [] pontoOrigem;
+    public Transform[] pontoOrigem;
     public GameObject Lixo;
 
     public float timer;
     public float intervaloTempo;
 
-    void Start ()
+    void Start()
     {
         timer = intervaloTempo;
     }
 
-    void Update ()
+    void Update()
     {
         if (SceneManager.GetActiveScene().name == "Minigame_Lixos")
         {
-            criaAsteroides ();
+            criaAsteroides();
         }
     }
 
-    void criaAsteroides ()
+    void criaAsteroides()
     {
         timer -= Time.deltaTime;
 
@@ -33,13 +33,11 @@ public class GameController : MonoBehaviour
 
             if (intervaloTempo > 0.20f)
             {
-                int pontoAleatorio = Random.Range (0, pontoOrigem.Length -1);
-                Instantiate (Lixo, pontoOrigem [pontoAleatorio].position, pontoOrigem [pontoAleatorio].rotation);
+                int pontoAleatorio = Random.Range(0, pontoOrigem.Length - 1);
+                Instantiate(Lixo, pontoOrigem[pontoAleatorio].position, pontoOrigem[pontoAleatorio].rotation);
 
                 intervaloTempo -= 0.01f;
             }
         }
     }
-
-    void 
 }

@@ -40,22 +40,16 @@ public class Visao : Singleton <Visao>
             max_Y = 0f;
         }
 
-        if (nomeCena == "Rua1")
+        if (nomeCena == "Rua")
         {
-            min_X = -9.25f;
-            max_X = 9.31f;
+            min_X = -80;
+            max_X = 80;
         }
 
-        if (nomeCena == "Rua2")
+        if (nomeCena == "Museu")
         {
-            min_X = -9.25f;
-            max_X = 9.31f;
-        }
-
-        if (nomeCena == "Rua3")
-        {
-            min_X = -9.25f;
-            max_X = 9.31f;
+            min_X = 9.5f;
+            max_X = -9.5f;
         }
     }
 

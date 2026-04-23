@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Jogador2D_Terra : Singleton <Jogador2D_Terra>
 {
