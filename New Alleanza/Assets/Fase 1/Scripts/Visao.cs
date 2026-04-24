@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,18 @@ public class Visao : Singleton <Visao>
     float min_X, max_X;
     float min_Y, max_Y;
 
-    void Start()
-    {
-        string nomeCena = SceneManager.GetActiveScene().name;
+    string nomeCena;
 
+    void Update()
+    {
+        nomeCena = SceneManager.GetActiveScene().name;
+        alvoSeguir = new Vector3 (alvo.position.x, alvo.position.y, transform.position.z);
+
+        LimiteCam ();
+    }
+
+    void LimiteCam ()
+    {
         if (nomeCena == "MorganHouse")
         {
             min_X = -2.62f;
@@ -48,20 +57,13 @@ public class Visao : Singleton <Visao>
 
         if (nomeCena == "Museu")
         {
-            min_X = 9.5f;
-            max_X = -9.5f;
+            min_X = -9.5f;
+            max_X = 9.5f;
+
+            min_Y = 0f;
+            max_Y = 0f;
         }
-    }
 
-    void Update()
-    {
-        alvoSeguir = new Vector3 (alvo.position.x, alvo.position.y, transform.position.z);
-
-        LimiteCam ();
-    }
-
-    void LimiteCam ()
-    {
         float clampX = Mathf.Clamp (alvoSeguir.x, min_X, max_X); //limite de câmera no eixo x
         float clampY = Mathf.Clamp (alvoSeguir.y, min_Y, max_Y); //limite de câmera no eixo y
 

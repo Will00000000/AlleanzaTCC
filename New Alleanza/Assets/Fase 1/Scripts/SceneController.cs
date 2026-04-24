@@ -8,10 +8,7 @@ public class SceneController : Singleton <SceneController>
 
     public bool is_Escadaria;
 
-    public void GoPraia()
-    {
-        SceneManager.LoadScene("Praia");
-    }
+    public Transform player;
 
     public void GoCasa()
     {
@@ -25,7 +22,7 @@ public class SceneController : Singleton <SceneController>
 
     public void GoCidade ()
     {
-        SceneManager.LoadScene ("Cidade");
+        SceneManager.LoadScene("Cidade");
     }
 
     public void GoRua ()
@@ -36,8 +33,8 @@ public class SceneController : Singleton <SceneController>
     public void GoMuseu ()
     {
         SceneManager.LoadScene("Museu");
-        is_Museu = true;
-        was_Rua = true;
+
+        player.position = new Vector2(17, -2);
     }
 
     //MINIGAMES

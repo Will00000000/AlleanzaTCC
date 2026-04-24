@@ -227,6 +227,10 @@ PrefabInstance:
       value: SceneController
       objectReference: {fileID: 0}
     - target: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1907886676}
+    - target: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
       propertyPath: jogador
       value: 
       objectReference: {fileID: 1907886676}
