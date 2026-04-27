@@ -1,14 +1,32 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SceneController : Singleton <SceneController>
+public class SceneController : Singleton<SceneController>
 {
-    public bool is_Rua = false, was_Rua = false; //verifica se está ou estava na rua
-    public bool is_Museu = false, was_Museu = false; //verifica se está ou estava no museu
+    public bool is_Rua = false, was_Rua = false;
+    public bool is_Museu = false, was_Museu = false;
 
     public bool is_Escadaria;
 
-    public Transform player;
+    public GameObject player;
+    public Button botao;
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += QuandoCenaCarregar;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= QuandoCenaCarregar;
+    }
+
+    private void Start()
+    {
+        ConfigurarBotoesDaCena();
+    }
+
 
     public void GoCasa()
     {
@@ -20,32 +38,100 @@ public class SceneController : Singleton <SceneController>
         SceneManager.LoadScene("Escadaria");
     }
 
-    public void GoCidade ()
+    public void GoCidade()
     {
         SceneManager.LoadScene("Cidade");
     }
 
-    public void GoRua ()
+    public void GoRua()
     {
         SceneManager.LoadScene("Rua");
     }
 
-    public void GoMuseu ()
+    public void GoMuseu()
     {
         SceneManager.LoadScene("Museu");
 
-        player.position = new Vector2(17, -2);
+        if (player != null)
+        {
+            player.transform.position = new Vector2(17, -2);
+        }
     }
 
-    //MINIGAMES
-
-    public void GoQuebraCabeca ()
+    public void GoQuebraCabeca()
     {
-        SceneManager.LoadScene ("Minigame");
+        SceneManager.LoadScene("Minigame");
     }
 
-    public void Pocoes ()
+    public void Pocoes()
     {
-        SceneManager.LoadScene ("MinigamePoção");
+        SceneManager.LoadScene("MinigamePoção");
+    }
+    private void QuandoCenaCarregar(Scene cena, LoadSceneMode modo)
+    {
+        ConfigurarBotoesDaCena();
+    }
+
+    void ConfigurarBotoesDaCena()
+    {
+        GameObject[] botoesEncontrados = GameObject.FindGameObjectsWithTag("IR");
+        player=GameObject.Find ("Jogador");
+
+        if (botoesEncontrados.Length == 0)
+        {
+            return;
+        }
+
+        foreach (GameObject botaoEncontrar in botoesEncontrados)
+        {
+            Button botaoAtual = botaoEncontrar.GetComponent<Button>();
+
+            if (botaoAtual == null)
+            {
+                continue;
+            }
+
+            string nomeDoBotao = botaoEncontrar.name;
+
+            botaoAtual.onClick.RemoveAllListeners();
+            botaoAtual.onClick.AddListener(() => ChamarFuncaoDoBotao(nomeDoBotao));
+        }
+    }
+
+    private void ChamarFuncaoDoBotao(string nomeFuncao)
+    {
+        switch (nomeFuncao)
+        {
+            case "GoCasa":
+                GoCasa();
+                break;
+
+            case "GoEscadaria":
+                GoEscadaria();
+                break;
+
+            case "GoCidade":
+                GoCidade();
+                break;
+
+            case "GoRua":
+                GoRua();
+                break;
+
+            case "GoMuseu":
+                GoMuseu();
+                break;
+
+            case "GoQuebraCabeca":
+                GoQuebraCabeca();
+                break;
+
+            case "Pocoes":
+                Pocoes();
+                break;
+
+            default:
+                break;
+        }
     }
 }

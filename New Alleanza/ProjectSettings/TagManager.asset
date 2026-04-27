@@ -13,6 +13,33 @@ TagManager:
   - detectorRua1
   - detectorRua2
   - detectorRua3
+  - 19
+  - 25
+  - 5
+  - 14
+  - 15
+  - 8
+  - 23
+  - 11
+  - 20
+  - 12
+  - 22
+  - 6
+  - 10
+  - 13
+  - 17
+  - 21
+  - 16
+  - 24
+  - 18
+  - 3
+  - 26
+  - 9
+  - 2
+  - 7
+  - 4
+  - 1
+  - IR
   layers:
   - Default
   - TransparentFX

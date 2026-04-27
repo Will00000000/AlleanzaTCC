@@ -2398,6 +2398,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_Rua: 0
+  was_Rua: 0
+  is_Museu: 0
+  was_Museu: 0
+  is_Escadaria: 0
+  player: {fileID: 0}
 --- !u!1001 &508497576
 PrefabInstance:
   m_ObjectHideFlags: 0
