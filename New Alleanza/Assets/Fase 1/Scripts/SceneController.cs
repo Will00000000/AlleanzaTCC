@@ -2,14 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneController : Singleton<SceneController>
+public class SceneController : MonoBehaviour
 {
     public bool is_Rua = false, was_Rua = false;
     public bool is_Museu = false, was_Museu = false;
 
     public bool is_Escadaria;
 
-    public GameObject player;
+    GameObject player;
     public Button botao;
 
     private void OnEnable()
@@ -25,12 +25,18 @@ public class SceneController : Singleton<SceneController>
     private void Start()
     {
         ConfigurarBotoesDaCena();
+        player = GameObject.Find ("Jogador");
     }
-
 
     public void GoCasa()
     {
         SceneManager.LoadScene("MorganHouse");
+    }
+
+    public void GoPraia ()
+    {
+        SceneManager.LoadScene("Praia");
+        Debug.Log ("Você entrou na praia");
     }
 
     public void GoEscadaria()

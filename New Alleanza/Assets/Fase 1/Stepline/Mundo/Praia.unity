@@ -449,7 +449,6 @@ GameObject:
   - component: {fileID: 291604809}
   - component: {fileID: 291604810}
   - component: {fileID: 291604811}
-  - component: {fileID: 291604812}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -569,18 +568,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &291604812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291604808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &317143514
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +663,6 @@ GameObject:
   - component: {fileID: 456616547}
   - component: {fileID: 456616548}
   - component: {fileID: 456616549}
-  - component: {fileID: 456616550}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -796,18 +782,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &456616550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456616546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &561345835
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +793,6 @@ GameObject:
   - component: {fileID: 561345836}
   - component: {fileID: 561345837}
   - component: {fileID: 561345838}
-  - component: {fileID: 561345839}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -939,18 +912,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &561345839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561345835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &586024022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2560,7 +2521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1737437832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2663,8 +2624,6 @@ GameObject:
   - component: {fileID: 1757902124}
   - component: {fileID: 1757902126}
   - component: {fileID: 1757902125}
-  - component: {fileID: 1757902127}
-  - component: {fileID: 1757902128}
   m_Layer: 0
   m_Name: PisoPonte
   m_TagString: ponte
@@ -2784,30 +2743,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1757902127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757902123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1757902128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757902123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1786349786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,7 +2754,6 @@ GameObject:
   - component: {fileID: 1786349787}
   - component: {fileID: 1786349788}
   - component: {fileID: 1786349789}
-  - component: {fileID: 1786349790}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -2939,18 +2873,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1786349790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786349786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1809401867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
@@ -3074,7 +2996,6 @@ GameObject:
   - component: {fileID: 1877732521}
   - component: {fileID: 1877732522}
   - component: {fileID: 1877732523}
-  - component: {fileID: 1877732524}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -3194,18 +3115,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1877732524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877732520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1903077363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,6 +3159,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_Rua: 0
+  was_Rua: 0
+  is_Museu: 0
+  was_Museu: 0
+  is_Escadaria: 0
+  botao: {fileID: 0}
 --- !u!1 &2012493499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4306536813540882901, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}

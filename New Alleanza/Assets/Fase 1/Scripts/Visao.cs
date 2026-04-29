@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Visao : Singleton <Visao>
+public class Visao : MonoBehaviour
 {
     public Transform alvo;
     Vector3 alvoSeguir;
@@ -49,7 +49,7 @@ public class Visao : Singleton <Visao>
             max_Y = 0f;
         }
 
-        if (nomeCena == "Rua")
+        if (nomeCena == "Cidade")
         {
             min_X = -80;
             max_X = 80;

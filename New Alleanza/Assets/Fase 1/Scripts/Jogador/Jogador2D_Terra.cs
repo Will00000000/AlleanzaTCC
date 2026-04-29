@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Jogador2D_Terra : Singleton <Jogador2D_Terra>
+public class Jogador2D_Terra : MonoBehaviour
 {
     private Rigidbody2D rig;
     private Camera visaoAtaque;
