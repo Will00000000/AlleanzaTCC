@@ -19,9 +19,70 @@ public class Jogador2D_Terra : MonoBehaviour
     Animator anima;
     float xMove, yMove;
 
+    public SceneController sceneController;
+
     // Start is called before the first frame update
     void Start()
     {
+        if (sceneController.is_QuartoMorgan)
+        {
+            Debug.Log("Você entrou na Casa");
+
+            if (sceneController.was_Praia)
+            {
+                transform.position = new Vector2 (-3.4f, -1.9f);
+
+                Debug.Log("Você estava na Praia e entrou na Casa");
+            }
+        }
+
+        if (sceneController.is_Praia)
+        {
+            if (sceneController.was_QuartoMorgan)
+            {
+                transform.position = new Vector2(1.2f, 0.5f);
+            }
+
+            if (sceneController.was_Escadaria)
+            {
+                transform.position = new Vector2(-34, -1.9f);
+            }
+        }
+
+        if (sceneController.is_Escadaria)
+        {
+            if (sceneController.was_Praia)
+            {
+                transform.position = new Vector2(8.5f, -0.1f);
+            }
+
+            if (sceneController.was_Rua)
+            {
+                transform.position = new Vector2(-2.8f, 0.5f);
+            }
+        }
+
+        if (sceneController.is_Rua)
+        {
+            if (sceneController.was_Escadaria)
+            {
+                transform.position = new Vector2(86, -2.24f);
+            }
+
+            if (sceneController.was_Museu)
+            {
+                transform.position = new Vector2(86, -2.24f);
+            }
+        }
+
+        if (sceneController.is_Museu)
+        {
+            if (sceneController.was_Rua)
+            {
+                transform.position = new Vector2(15.6f, -2.2f);
+            }
+        }
+
         anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
     }

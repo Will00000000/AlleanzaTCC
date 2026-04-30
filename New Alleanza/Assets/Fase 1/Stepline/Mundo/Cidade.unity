@@ -159,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 86.55
+      value: 86.8
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.y
@@ -201,6 +201,10 @@ PrefabInstance:
       propertyPath: velocidade
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 182266703}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -221,7 +225,7 @@ PrefabInstance:
     - target: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1907886676}
+      objectReference: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
     - target: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
       propertyPath: jogador
       value: 
@@ -340,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916357514251304866, guid: 60ffcab0a17ba5d44a60c61a437805d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoEscadaria
+      value: GoEscadaria_from_Cidade
       objectReference: {fileID: 0}
     - target: {fileID: 916357514251304866, guid: 60ffcab0a17ba5d44a60c61a437805d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -453,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 4477232376955215266, guid: 60ffcab0a17ba5d44a60c61a437805d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -25.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4915824413949920266, guid: 60ffcab0a17ba5d44a60c61a437805d0, type: 3}
+      propertyPath: m_Name
+      value: GoEscadaria
       objectReference: {fileID: 0}
     - target: {fileID: 5005798710053958817, guid: 60ffcab0a17ba5d44a60c61a437805d0, type: 3}
       propertyPath: m_Sprite

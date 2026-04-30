@@ -1,67 +1,93 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class SceneController : MonoBehaviour
+public class SceneController : Singleton<SceneController>
 {
-    public bool is_Rua = false, was_Rua = false;
-    public bool is_Museu = false, was_Museu = false;
+    public GameObject player;
 
-    public bool is_Escadaria;
-
-    GameObject player;
-    public Button botao;
+    public bool is_Escadaria, was_Escadaria;
+    public bool is_Rua, was_Rua;
+    public bool is_QuartoMorgan, was_QuartoMorgan;
+    public bool is_Praia, was_Praia;
+    public bool is_Museu, was_Museu;
 
     private void OnEnable()
     {
-        SceneManager.sceneLoaded += QuandoCenaCarregar;
+        //SceneManager.sceneLoaded += QuandoCenaCarregar;
     }
 
     private void OnDisable()
     {
-        SceneManager.sceneLoaded -= QuandoCenaCarregar;
+        //SceneManager.sceneLoaded -= QuandoCenaCarregar;
     }
 
     private void Start()
     {
-        ConfigurarBotoesDaCena();
-        player = GameObject.Find ("Jogador");
+        player = GameObject.Find("Jogador");
     }
 
-    public void GoCasa()
+    public void GoCasa_from_Praia ()
     {
         SceneManager.LoadScene("MorganHouse");
+
+        is_QuartoMorgan = true;
+        was_Praia = true;
     }
 
-    public void GoPraia ()
+    public void GoPraia_from_Casa ()
     {
         SceneManager.LoadScene("Praia");
-        Debug.Log ("Você entrou na praia");
+
+        is_Praia = true;
+        was_QuartoMorgan = true;
     }
 
-    public void GoEscadaria()
+    public void GoPraia_from_Escadaria ()
+    {
+        SceneManager.LoadScene("Praia");
+
+        is_Praia = true;
+        was_Escadaria = true;
+    }
+
+    public void GoEscadaria_from_Praia()
     {
         SceneManager.LoadScene("Escadaria");
+
+        is_Escadaria = true;
+        was_Praia = true;
     }
 
-    public void GoCidade()
+    public void GoEscadaria_from_Cidade ()
+    {
+        SceneManager.LoadScene("Escadaria");
+
+        is_Escadaria = true;
+        was_Rua = true;
+    }
+
+    public void GoCidade_from_Escadaria ()
     {
         SceneManager.LoadScene("Cidade");
+
+        is_Rua = true;
+        was_Escadaria = true;
     }
 
-    public void GoRua()
+    public void GoCidade_from_Museu ()
     {
-        SceneManager.LoadScene("Rua");
+        SceneManager.LoadScene("Cidade");
+
+        is_Rua = true;
+        was_Museu = true;
     }
 
-    public void GoMuseu()
+    public void GoMuseu_from_Cidade()
     {
         SceneManager.LoadScene("Museu");
 
-        if (player != null)
-        {
-            player.transform.position = new Vector2(17, -2);
-        }
+        is_Museu = true;
+        was_Rua = true;
     }
 
     public void GoQuebraCabeca()
@@ -69,75 +95,8 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Minigame");
     }
 
-    public void Pocoes()
+    public void GoPocoes()
     {
         SceneManager.LoadScene("MinigamePoção");
-    }
-    private void QuandoCenaCarregar(Scene cena, LoadSceneMode modo)
-    {
-        ConfigurarBotoesDaCena();
-    }
-
-    void ConfigurarBotoesDaCena()
-    {
-        GameObject[] botoesEncontrados = GameObject.FindGameObjectsWithTag("IR");
-        player=GameObject.Find ("Jogador");
-
-        if (botoesEncontrados.Length == 0)
-        {
-            return;
-        }
-
-        foreach (GameObject botaoEncontrar in botoesEncontrados)
-        {
-            Button botaoAtual = botaoEncontrar.GetComponent<Button>();
-
-            if (botaoAtual == null)
-            {
-                continue;
-            }
-
-            string nomeDoBotao = botaoEncontrar.name;
-
-            botaoAtual.onClick.RemoveAllListeners();
-            botaoAtual.onClick.AddListener(() => ChamarFuncaoDoBotao(nomeDoBotao));
-        }
-    }
-
-    private void ChamarFuncaoDoBotao(string nomeFuncao)
-    {
-        switch (nomeFuncao)
-        {
-            case "GoCasa":
-                GoCasa();
-                break;
-
-            case "GoEscadaria":
-                GoEscadaria();
-                break;
-
-            case "GoCidade":
-                GoCidade();
-                break;
-
-            case "GoRua":
-                GoRua();
-                break;
-
-            case "GoMuseu":
-                GoMuseu();
-                break;
-
-            case "GoQuebraCabeca":
-                GoQuebraCabeca();
-                break;
-
-            case "Pocoes":
-                Pocoes();
-                break;
-
-            default:
-                break;
-        }
     }
 }
