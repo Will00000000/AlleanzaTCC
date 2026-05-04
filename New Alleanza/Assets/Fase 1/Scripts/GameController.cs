@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Minigame_Lixos")
+        if (SceneManager.GetActiveScene().name == "MinigameLixos")
         {
             criaAsteroides();
         }

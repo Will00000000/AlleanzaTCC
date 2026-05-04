@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Fase 2/6 - MinigamePo\xE7ao/Scenas/MinigamePo\xE7\xE3o.unity"
     guid: 4f78fe1d9ed6082419d94432ff82beb7
+  - enabled: 1
+    path: Assets/Fase 1/Stepline/5 - MinigameLixos/Scenes/MinigameLixos.unity
+    guid: 563e0c6aaf113fd42aca7b3f78f6ecba
   m_configObjects: {}

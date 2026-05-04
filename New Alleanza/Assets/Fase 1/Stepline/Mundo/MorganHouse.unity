@@ -1495,65 +1495,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 860662464709950953, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 902856190193114609, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_Name
       value: Jogador
       objectReference: {fileID: 0}
-    - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7317896647150442752, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mapa
-      value: 
-      objectReference: {fileID: 769929516}
-    - target: {fileID: 7317896647150442752, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mochila
-      value: 
-      objectReference: {fileID: 1895166490}
-    - target: {fileID: 7317896647150442752, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: botaoSair
-      value: 
-      objectReference: {fileID: 1443581111}
-    - target: {fileID: 7317896647150442752, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7317896647150442752, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mapaInteracao
-      value: 
-      objectReference: {fileID: 1519713910}
-    - target: {fileID: 7317896647150442752, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mochilaInteracao
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01895873
-      objectReference: {fileID: 0}
-    - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01895873
-      objectReference: {fileID: 0}
-    - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10.565701
-      objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.39
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.93
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1588,25 +1540,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mapa
-      value: 
-      objectReference: {fileID: 769929516}
-    - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mochila
-      value: 
-      objectReference: {fileID: 1895166490}
-    - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mapaInteracao
-      value: 
-      objectReference: {fileID: 1519713910}
-    - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: sceneController
       value: 
       objectReference: {fileID: 1010630444}
-    - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      propertyPath: mochilaInteracao
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

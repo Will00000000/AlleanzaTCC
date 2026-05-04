@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 401506574400823936}
   m_Layer: 0
   m_Name: Jogador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.010552238, y: 0.010552238, z: 5.880762}
+  m_LocalScale: {x: 0.4314333, y: 0.4314333, z: 0.4314333}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f68df91b432ac2d42ae04d4946f904bb, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: c4c4b7bce5daf0542a91828340aa987d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,13 +130,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamSeguindo: 1
   destinoCam: {x: 0, y: 0, z: 0}
-  rampa: {fileID: 0}
   velocidade: 5
   velocidadeDash: 40
   pulo: 0
   destino: {x: 0, y: 0}
   move: {x: 0, y: 0}
   DashAtivado: 0
+  sceneController: {fileID: 0}
 --- !u!82 &848472086513471148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -286,6 +286,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10317607, y: -1.6507833}
-  m_Size: {x: 41.05694, y: 109.079895}
+  m_Offset: {x: -0.49630803, y: -0.030073395}
+  m_Size: {x: 1.8953798, y: 8.975982}
   m_Direction: 0

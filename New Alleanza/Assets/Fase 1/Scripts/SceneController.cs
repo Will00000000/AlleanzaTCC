@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : Singleton<SceneController>
+public class SceneController : MonoBehaviour
 {
     public GameObject player;
 
@@ -10,16 +10,6 @@ public class SceneController : Singleton<SceneController>
     public bool is_QuartoMorgan, was_QuartoMorgan;
     public bool is_Praia, was_Praia;
     public bool is_Museu, was_Museu;
-
-    private void OnEnable()
-    {
-        //SceneManager.sceneLoaded += QuandoCenaCarregar;
-    }
-
-    private void OnDisable()
-    {
-        //SceneManager.sceneLoaded -= QuandoCenaCarregar;
-    }
 
     private void Start()
     {
@@ -98,5 +88,10 @@ public class SceneController : Singleton<SceneController>
     public void GoPocoes()
     {
         SceneManager.LoadScene("MinigamePoção");
+    }
+
+    public void GoLixos ()
+    {
+        SceneManager.LoadScene("MinigameLixos");
     }
 }
