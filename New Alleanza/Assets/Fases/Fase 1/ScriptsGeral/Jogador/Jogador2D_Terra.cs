@@ -83,7 +83,6 @@ public class Jogador2D_Terra : MonoBehaviour
             }
         }
 
-        anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
     }
 
@@ -96,22 +95,21 @@ public class Jogador2D_Terra : MonoBehaviour
         {
             DashAtaque();
         }
-
-        anima.SetFloat("SideMove", Mathf.Abs (xMove));
     }
 
     void Mover()
     {
-        rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, yMove * velocidade);
+        rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, rig.velocity.y);
+
         xMove = Input.GetAxisRaw("Horizontal");
 
         if (xMove < 0)
         {
-            transform.eulerAngles = new Vector2(0, 180);
-        }
-        else
-        {
             transform.eulerAngles = new Vector2(0, 0);
+        }
+        else if (xMove > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
         }
     }
 

@@ -2,7 +2,7 @@
 - Project name: New Alleanza
 - Unity version: Unity 2022.3.52f1
 - Active game object:
-  - Name: SceneControler
-  - Tag: Untagged
+  - Name: Jogador
+  - Tag: Player
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
