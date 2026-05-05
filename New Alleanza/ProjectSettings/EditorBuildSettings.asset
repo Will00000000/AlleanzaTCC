@@ -6,33 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/HUD/Menu Principal/MenuPrincipal.unity
+    path: Assets/Menu Principal/MenuPrincipal.unity
     guid: 881ad89e25566c6429dd1da38c7f3605
   - enabled: 1
-    path: Assets/Fase 1/Stepline/1 - Cut/CutsceneInicial.unity
+    path: Assets/Fases/Fase 1/Jogo/Cutscenes/Inicial/CutsceneInicial.unity
     guid: 40b8d9eff1bd2944c8458e863af023da
   - enabled: 1
-    path: Assets/Fase 1/Stepline/Mundo/MorganHouse.unity
+    path: Assets/Fases/Fase 1/Jogo/Mundo/MorganHouse.unity
     guid: 37c84c0757cd3e24180b2b728368a775
   - enabled: 1
-    path: Assets/Fase 1/Stepline/Mundo/Praia.unity
+    path: Assets/Fases/Fase 1/Jogo/Mundo/Praia.unity
     guid: 2c5965be902d4b041ba53f677fed32e5
   - enabled: 1
-    path: Assets/Fase 1/Stepline/Mundo/Escadaria.unity
+    path: Assets/Fases/Fase 1/Jogo/Mundo/Escadaria.unity
     guid: cc662d095ca2e2040b959a752d370321
   - enabled: 1
-    path: Assets/Fase 1/Stepline/Mundo/Cidade.unity
+    path: Assets/Fases/Fase 1/Jogo/Mundo/Cidade.unity
     guid: 0aaf4087cd468244ea12b253cff247a3
   - enabled: 1
-    path: Assets/Fase 1/Stepline/Mundo/Museu.unity
+    path: Assets/Fases/Fase 1/Jogo/Mundo/Museu.unity
     guid: 9f2eab1f6442d3b4cac0aabcb61ef423
   - enabled: 1
-    path: Assets/Fase 1/Stepline/3 - Minigame/Scenes/Minigame.unity
+    path: "Assets/Fases/Fase 1/Jogo/Minigames/QuebraCabe\xE7a/Scenes/Minigame.unity"
     guid: 9093a5a4f0b500045919927dd30f55d3
   - enabled: 1
-    path: "Assets/Fase 2/6 - MinigamePo\xE7ao/Scenas/MinigamePo\xE7\xE3o.unity"
+    path: "Assets/Fases/Fase 2/Jogo/Minigames/Po\xE7\xF5es/Cenas/MinigamePo\xE7\xE3o.unity"
     guid: 4f78fe1d9ed6082419d94432ff82beb7
   - enabled: 1
-    path: Assets/Fase 1/Stepline/5 - MinigameLixos/Scenes/MinigameLixos.unity
+    path: Assets/Fases/Fase 1/Jogo/Minigames/Lixos/Scenes/MinigameLixos.unity
     guid: 563e0c6aaf113fd42aca7b3f78f6ecba
   m_configObjects: {}
