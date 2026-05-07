@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,37 +9,29 @@ public class Visao : MonoBehaviour
     float min_X, max_X;
     float min_Y, max_Y;
 
-    string nomeCena;
-
-    void Update()
+    void Start()
     {
-        nomeCena = SceneManager.GetActiveScene().name;
-        alvoSeguir = new Vector3 (alvo.position.x, alvo.position.y, transform.position.z);
+        string nomeCena = SceneManager.GetActiveScene().name;
 
-        LimiteCam ();
-    }
-
-    void LimiteCam ()
-    {
         if (nomeCena == "MorganHouse")
         {
             min_X = -2.62f;
             max_X = 2.59f;
 
-            min_Y = -0.13f;
+            min_Y = -0.13f;   
             max_Y = 3.0f;
         }
 
-        if (nomeCena == "Praia")
+        else if (nomeCena == "Praia")
         {
-            min_X = -26.8f;
-            max_X = 14.66f;
+            min_X = -23.92f;
+            max_X = 9.67f;
 
-            min_Y = -4.0f; // ajuste conforme seu cenário
-            max_Y = 5.0f;
+            min_Y = 2.11f;
+            max_Y = 2.11f;
         }
 
-        if (nomeCena == "Escadaria")
+        else if (nomeCena == "Escadaria")
         {
             min_X = -5.01f;
             max_X = 4.99f;
@@ -48,25 +39,31 @@ public class Visao : MonoBehaviour
             min_Y = 0f;
             max_Y = 0f;
         }
+    }
 
-        if (nomeCena == "Cidade")
+    void Update()
+    {
+        alvoSeguir = new Vector3(alvo.position.x, alvo.position.y, transform.position.z);
+
+        LimiteCam();
+    }
+
+    void LimiteCam ()
+    {
+        GameObject player_obj = GameObject.Find("Jogador"); //como a câmera está distante do jogador, precisa procurar o objeto dele antes  de qualquer coisa
+        Jogador2D_Terra jogador = player_obj.GetComponent<Jogador2D_Terra>(); //pega o script do jogador, porque está no mesmo objeto.
+        
+        if (jogador.Is_Rua1 == true) // corrigido
         {
-            min_X = -80;
-            max_X = 80;
+            min_X = 110.5f; //limite das câmeras 
+            max_X = 129.37f;
+
+            min_Y = 3.32f;
         }
 
-        if (nomeCena == "Museu")
-        {
-            min_X = -9.5f;
-            max_X = 9.5f;
+        float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);//limite de câmera no eixo x
+        float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);//limite de câmera no eixo y
 
-            min_Y = 0f;
-            max_Y = 0f;
-        }
-
-        float clampX = Mathf.Clamp (alvoSeguir.x, min_X, max_X); //limite de câmera no eixo x
-        float clampY = Mathf.Clamp (alvoSeguir.y, min_Y, max_Y); //limite de câmera no eixo y
-
-        transform.position = new Vector3 (clampX, clampY, transform.position.z); //câmera se move com o limite aplicado
+        transform.position = new Vector3(clampX, clampY, transform.position.z);//câmera se move com o limite aplicando
     }
 }

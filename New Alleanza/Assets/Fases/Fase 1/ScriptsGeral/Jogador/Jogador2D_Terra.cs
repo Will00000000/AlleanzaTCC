@@ -1,12 +1,17 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
+    public bool Is_Rua1, Is_Rua2, Is_Rua3;
+
     private Rigidbody2D rig;
     private Camera visaoAtaque;
 
     public bool CamSeguindo = true;
     public Vector3 destinoCam;
+
+    string nameScene;
 
     [Header("Movimento")]
     [SerializeField] int velocidade;
@@ -15,125 +20,58 @@ public class Jogador2D_Terra : MonoBehaviour
     [SerializeField] Vector2 move;
     [SerializeField] bool DashAtivado = false;
 
+    //CONTROLE DE MOVIMENTO (para diálogo)
+    public bool podeMover = true;
+
     [Header("Animação")]
     Animator anima;
     float xMove, yMove;
 
-    public SceneController sceneController;
-
-    // Start is called before the first frame update
     void Start()
     {
-        if (sceneController.is_QuartoMorgan)
-        {
-            Debug.Log("Você entrou na Casa");
-
-            if (sceneController.was_Praia)
-            {
-                transform.position = new Vector2 (-3.4f, -1.9f);
-
-                Debug.Log("Você estava na Praia e entrou na Casa");
-            }
-        }
-
-        if (sceneController.is_Praia)
-        {
-            if (sceneController.was_QuartoMorgan)
-            {
-                transform.position = new Vector2(1.2f, 0.5f);
-            }
-
-            if (sceneController.was_Escadaria)
-            {
-                transform.position = new Vector2(-34, -1.9f);
-            }
-        }
-
-        if (sceneController.is_Escadaria)
-        {
-            if (sceneController.was_Praia)
-            {
-                transform.position = new Vector2(8.5f, -0.1f);
-            }
-
-            if (sceneController.was_Rua)
-            {
-                transform.position = new Vector2(-2.8f, 0.5f);
-            }
-        }
-
-        if (sceneController.is_Rua)
-        {
-            if (sceneController.was_Escadaria)
-            {
-                transform.position = new Vector2(86, -2.24f);
-            }
-
-            if (sceneController.was_Museu)
-            {
-                transform.position = new Vector2(86, -2.24f);
-            }
-        }
-
-        if (sceneController.is_Museu)
-        {
-            if (sceneController.was_Rua)
-            {
-                transform.position = new Vector2(15.6f, -2.2f);
-            }
-        }
-
+        anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
+
+        nameScene = SceneManager.GetActiveScene().name;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //se não puder mover (diálogo ativo)
+        if (!podeMover)
+        {
+            rig.velocity = Vector2.zero; // para o movimento
+
+            // força animação parada
+            anima.SetFloat("SideMove", 0);
+
+            return; // impede qualquer outro movimento
+        }
+
         Mover();
 
         if (DashAtivado)
         {
             DashAtaque();
         }
+
+        anima.SetFloat("SideMove", Mathf.Abs(xMove));
     }
 
     void Mover()
     {
-        rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, rig.velocity.y);
-
+        rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, yMove * velocidade);
         xMove = Input.GetAxisRaw("Horizontal");
 
         if (xMove < 0)
         {
-            transform.eulerAngles = new Vector2(0, 0);
-        }
-        else if (xMove > 0)
-        {
             transform.eulerAngles = new Vector2(0, 180);
         }
+        else
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }
     }
-
-    //REPAGINAR ISSO AQUI
-    /*void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "area ataque")
-        {
-            DashAtivado = true;
-            destino = col.transform.position;
-            destinoCam = new Vector3(col.transform.position.x, col.transform.position.y, -10);
-
-            CamSeguindo = false;
-        }
-    
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "area ataque")
-        {
-            DashAtivado = false;
-            CamSeguindo = true;
-        }
-    }*/
 
     private void DashAtaque()
     {
@@ -143,5 +81,23 @@ public class Jogador2D_Terra : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, destino, velocidadeDash * Time.deltaTime);
+    }
+
+    void OnTriggerEnter2D (Collider2D col)
+    {
+        if (col.gameObject.tag == "detectorRua1")
+        {
+            Is_Rua1 = true;
+        }
+
+        if (col.gameObject.tag == "detectorRua2")
+        {
+            Is_Rua2 = true;
+        }
+
+        if (col.gameObject.tag == "detectorRua3")
+        {
+            Is_Rua3 = true;
+        }
     }
 }
