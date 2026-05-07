@@ -53,14 +53,6 @@ public class Visao : MonoBehaviour
         GameObject player_obj = GameObject.Find("Jogador"); //como a câmera está distante do jogador, precisa procurar o objeto dele antes  de qualquer coisa
         Jogador2D_Terra jogador = player_obj.GetComponent<Jogador2D_Terra>(); //pega o script do jogador, porque está no mesmo objeto.
         
-        if (jogador.Is_Rua1 == true) // corrigido
-        {
-            min_X = 110.5f; //limite das câmeras 
-            max_X = 129.37f;
-
-            min_Y = 3.32f;
-        }
-
         float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);//limite de câmera no eixo x
         float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);//limite de câmera no eixo y
 

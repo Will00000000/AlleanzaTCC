@@ -3,13 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
-    public bool Is_Rua1, Is_Rua2, Is_Rua3;
-
     private Rigidbody2D rig;
     private Camera visaoAtaque;
 
-    public bool CamSeguindo = true;
-    public Vector3 destinoCam;
+    bool CamSeguindo;
+    Vector3 destinoCam;
 
     string nameScene;
 
@@ -24,26 +22,25 @@ public class Jogador2D_Terra : MonoBehaviour
     public bool podeMover = true;
 
     [Header("Animação")]
-    Animator anima;
+    //Animator anima;
     float xMove, yMove;
 
-    void Start()
+    private void Start()
     {
-        anima = GetComponent<Animator>();
+        //anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
 
         nameScene = SceneManager.GetActiveScene().name;
     }
 
-    void Update()
+    private void Update()
     {
         //se não puder mover (diálogo ativo)
         if (!podeMover)
         {
             rig.velocity = Vector2.zero; // para o movimento
 
-            // força animação parada
-            anima.SetFloat("SideMove", 0);
+            //anima.SetFloat("SideMove", 0);
 
             return; // impede qualquer outro movimento
         }
@@ -55,21 +52,21 @@ public class Jogador2D_Terra : MonoBehaviour
             DashAtaque();
         }
 
-        anima.SetFloat("SideMove", Mathf.Abs(xMove));
+        //anima.SetFloat("SideMove", Mathf.Abs(xMove));
     }
 
-    void Mover()
+    private void Mover()
     {
         rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, yMove * velocidade);
         xMove = Input.GetAxisRaw("Horizontal");
 
         if (xMove < 0)
         {
-            transform.eulerAngles = new Vector2(0, 180);
-        }
-        else
-        {
             transform.eulerAngles = new Vector2(0, 0);
+        }
+        else if (xMove > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
         }
     }
 
@@ -81,23 +78,5 @@ public class Jogador2D_Terra : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, destino, velocidadeDash * Time.deltaTime);
-    }
-
-    void OnTriggerEnter2D (Collider2D col)
-    {
-        if (col.gameObject.tag == "detectorRua1")
-        {
-            Is_Rua1 = true;
-        }
-
-        if (col.gameObject.tag == "detectorRua2")
-        {
-            Is_Rua2 = true;
-        }
-
-        if (col.gameObject.tag == "detectorRua3")
-        {
-            Is_Rua3 = true;
-        }
     }
 }

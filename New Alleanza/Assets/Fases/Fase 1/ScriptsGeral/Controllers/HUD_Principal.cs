@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class HUD_Quarto : MonoBehaviour
+public class HUD_Principal : MonoBehaviour
 {
     //SISTEMA DE FERRAMENTAS
     [SerializeField] GameObject mapaMenu;
@@ -81,12 +78,6 @@ public class HUD_Quarto : MonoBehaviour
     {
         ConfigMenu.SetActive (false);
         PauseMenu.SetActive (true);
-    }
-
-    public void Sair ()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("MenuPrincipal");
     }
 
     //SISTEMA DE COLETA DE FERRAMENTAS
