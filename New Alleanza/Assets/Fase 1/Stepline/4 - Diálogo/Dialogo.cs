@@ -5,7 +5,7 @@ using System.Collections; // necessário para usar digitação
 public class Dialogo : MonoBehaviour
 {
     public GameObject caixaDialogo; // caixa original (Player1)
-    public GameObject caixaPlayer2; // 🆕 caixa do segundo personagem
+    public GameObject caixaPlayer2; // caixa do segundo personagem
 
     public TMP_Text textoDialogo;
 
@@ -16,7 +16,7 @@ public class Dialogo : MonoBehaviour
     [TextArea]
     public string[] falas;
 
-    public int[] quemFala; // 🆕 0 = Player1 | 1 = Player2
+    public int[] quemFala; // 0 = Player1 | 1 = Player2
 
     public float velocidadeTexto = 0.05f; // velocidade da digitação
 
@@ -49,7 +49,7 @@ public class Dialogo : MonoBehaviour
 
         if (caixaPlayer2 != null)
         {
-            caixaPlayer2.SetActive(false); // 🆕 começa escondido também
+            caixaPlayer2.SetActive(false); // começa escondido também
         }
     }
 
@@ -57,7 +57,7 @@ public class Dialogo : MonoBehaviour
     {
         caixaDialogo.SetActive(true);
 
-        // 🎬 ativa animação de entrada
+        //ativa animação de entrada
         if (animator != null)
         {
             animator.SetBool("Abrir", true);
@@ -68,13 +68,13 @@ public class Dialogo : MonoBehaviour
         dialogoAtivo = true;
         index = 0;
 
-        // trava o movimento do jogador
+        //trava o movimento do jogador
         if (jogador != null)
         {
             jogador.podeMover = false;
         }
 
-        MostrarQuemFala(); // 🆕 define quem aparece primeiro
+        MostrarQuemFala(); //define quem aparece primeiro
 
         StartCoroutine(DigitarTexto());
     }
@@ -99,7 +99,7 @@ public class Dialogo : MonoBehaviour
 
         if (index < falas.Length)
         {
-            MostrarQuemFala(); // 🆕 troca a caixa conforme quem fala
+            MostrarQuemFala(); //troca a caixa conforme quem fala
 
             StartCoroutine(DigitarTexto());
         }
@@ -109,7 +109,6 @@ public class Dialogo : MonoBehaviour
         }
     }
 
-    // 🆕 MÉTODO NOVO
     void MostrarQuemFala()
     {
         if (quemFala[index] == 0)
@@ -128,7 +127,7 @@ public class Dialogo : MonoBehaviour
 
     void EncerrarDialogo()
     {
-        // 🎬 animação de saída
+        //animação de saída
         if (animator != null)
         {
             animator.SetBool("Abrir", false);
