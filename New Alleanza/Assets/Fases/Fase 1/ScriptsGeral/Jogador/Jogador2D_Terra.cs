@@ -29,6 +29,7 @@ public class Jogador2D_Terra : MonoBehaviour
 
     void Start()
     {
+        // Alteração: Descomentado para evitar o erro de NullReference
         anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
 
@@ -42,8 +43,11 @@ public class Jogador2D_Terra : MonoBehaviour
         {
             rig.velocity = Vector2.zero; // para o movimento
 
-            // força animação parada
-            anima.SetFloat("SideMove", 0);
+            // Alteração: Verificação de segurança para o erro parar
+            if (anima != null)
+            {
+                anima.SetFloat("SideMove", 0);
+            }
 
             return; // impede qualquer outro movimento
         }
@@ -55,7 +59,11 @@ public class Jogador2D_Terra : MonoBehaviour
             DashAtaque();
         }
 
-        anima.SetFloat("SideMove", Mathf.Abs(xMove));
+        // Alteração: Verificação de segurança para o erro parar
+        if (anima != null)
+        {
+            anima.SetFloat("SideMove", Mathf.Abs(xMove));
+        }
     }
 
     void Mover()

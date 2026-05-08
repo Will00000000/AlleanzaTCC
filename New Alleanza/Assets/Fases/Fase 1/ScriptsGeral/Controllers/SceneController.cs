@@ -10,10 +10,43 @@ public class SceneController : MonoBehaviour
     public bool is_QuartoMorgan, was_QuartoMorgan;
     public bool is_Praia, was_Praia;
     public bool is_Museu, was_Museu;
+    public bool is_Praia2, was_Praia2;
 
     private void Start()
     {
         player = GameObject.Find("Jogador");
+    }
+
+    public void GoPraia2_from_Praia()
+    {
+        SceneManager.LoadScene("Praia2");
+
+        is_Praia2 = true;
+        was_Praia = true;
+    }
+
+    public void GoEscadaria_from_Praia2()
+    {
+        SceneManager.LoadScene("Escadaria");
+
+        is_Escadaria = true;
+        was_Praia2 = true;
+    }
+
+    public void GoPraia2_from_Escadaria()
+    {
+        SceneManager.LoadScene("Praia2");
+
+        is_Praia2 = true;
+        was_Escadaria = true;
+    }
+
+    public void GoPraia_from_Praia2()
+    {
+        SceneManager.LoadScene("Praia");
+
+        is_Praia = true;
+        was_Praia2 = true;
     }
 
     public void GoCasa_from_Praia ()
