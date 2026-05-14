@@ -5,22 +5,55 @@ using UnityEngine.SceneManagement;
 
 public class HUD_Quarto : MonoBehaviour
 {
-    //SISTEMA DE FERRAMENTAS
+    [Header("Menus (Janelas)")]
     [SerializeField] GameObject mapaMenu;
     [SerializeField] GameObject inventarioMenu;
     [SerializeField] GameObject UI;
 
-    //COLETA DE FERRAMENTAS
-    public GameObject inventarioButton, mapaButton;
-    public GameObject MochilaCenario, MapaCenario; //todo o Canvas, não só o sprite
+    [Header("Botões da HUD (Os que clicamos para abrir)")]
+    public GameObject inventarioButton; 
+    public GameObject mapaButton;
+
+    [Header("Objetos do Cenário (Os que coletamos)")]
+    public GameObject MochilaCenario; 
+    public GameObject MapaCenario;
+
+    [Header("Sistema de Pause")]
+    public GameObject PauseMenu;
+    public GameObject ConfigMenu;
 
     private void Awake()
     {
-        mapaMenu.SetActive(false);
-        inventarioMenu.SetActive(false);
-        UI.SetActive(true);
+        // Garante que os menus comecem fechados
+        if (mapaMenu != null) mapaMenu.SetActive(false);
+        if (inventarioMenu != null) inventarioMenu.SetActive(false);
+        if (UI != null) UI.SetActive(true);
     }
 
+    void Start()
+    {
+        // VERIFICAÇÃO DA MOCHILA
+        if (GameManager.MorganPegouMochila) {
+            if (inventarioButton != null) inventarioButton.SetActive(true);
+            if (MochilaCenario != null) MochilaCenario.SetActive(false);
+        } else {
+            if (inventarioButton != null) inventarioButton.SetActive(false);
+            if (MochilaCenario != null) MochilaCenario.SetActive(true);
+        }
+
+        // VERIFICAÇÃO DO MAPA
+        if (GameManager.MorganPegouMapa) {
+            if (mapaButton != null) mapaButton.SetActive(true);
+            if (MapaCenario != null) MapaCenario.SetActive(false);
+        } else {
+            if (mapaButton != null) mapaButton.SetActive(false);
+            if (MapaCenario != null) MapaCenario.SetActive(true);
+        }
+
+        if (PauseMenu != null) PauseMenu.SetActive(false);
+    }
+
+    // MÉTODOS DE ABRIR/FECHAR
     public void MapaAbre()
     {
         mapaMenu.SetActive(true);
@@ -45,21 +78,26 @@ public class HUD_Quarto : MonoBehaviour
         UI.SetActive(true);
     }
 
-    //SISTEMA PAUSE
-    public GameObject PauseMenu;
-    public GameObject ConfigMenu;
-    public bool isPause;
-
-    void Start()
+    // SISTEMA DE COLETA
+    public void HabilitarInventario()
     {
-        PauseMenu.SetActive(false);
+        GameManager.MorganPegouMochila = true; 
+        if (inventarioButton != null) inventarioButton.SetActive(true);      
+        if (MochilaCenario != null) MochilaCenario.SetActive(false);      
     }
 
+    public void HabilitarMapa()
+    {
+        GameManager.MorganPegouMapa = true;   
+        if (mapaButton != null) mapaButton.SetActive(true);            
+        if (MapaCenario != null) MapaCenario.SetActive(false);         
+    }
+
+    // PAUSE E SAIR
     public void PauseGame()
     {
         PauseMenu.SetActive(true);
         Time.timeScale = 0f;
-
         UI.SetActive(false);
     }
 
@@ -67,38 +105,12 @@ public class HUD_Quarto : MonoBehaviour
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
-
         UI.SetActive(true);
     }
 
-    public void AbrirMenuConfig ()
-    {
-        ConfigMenu.SetActive(true);
-        PauseMenu.SetActive(false);
-    }
-
-    public void FechaManuConfig ()
-    {
-        ConfigMenu.SetActive (false);
-        PauseMenu.SetActive (true);
-    }
-
-    public void Sair ()
+    public void Sair()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MenuPrincipal");
-    }
-
-    //SISTEMA DE COLETA DE FERRAMENTAS
-    public void HabilitarInventario ()
-    {
-        inventarioButton.SetActive (true);
-        MochilaCenario.SetActive (false);
-    }
-
-    public void HabilitarMapa ()
-    {
-        mapaButton.SetActive (true);
-        MapaCenario.SetActive (false);
     }
 }
