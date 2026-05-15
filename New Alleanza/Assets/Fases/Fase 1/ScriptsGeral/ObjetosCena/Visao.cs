@@ -39,6 +39,21 @@ public class Visao : MonoBehaviour
             min_Y = 0f;
             max_Y = 0f;
         }
+
+        else if (nomeCena == "Cidade")
+        {
+            min_X = -80;
+            max_X = 80;
+
+            min_Y = 0f;
+            max_Y = 0f;
+        }
+
+        else if (nomeCena == "Museu")
+        {
+            min_X = -9.5f;
+            max_X = 9.5f;
+        }
     }
 
     void Update()

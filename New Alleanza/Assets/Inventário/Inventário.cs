@@ -1,16 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventario : MonoBehaviour
 {
-    GameObject slot;
+    public Image [] slots;
 
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        slots = GetComponentsInChildren<Image> ();
     }
 }

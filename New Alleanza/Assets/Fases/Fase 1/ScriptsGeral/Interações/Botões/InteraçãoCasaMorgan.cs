@@ -6,8 +6,9 @@ public class InteraçãoCasaMorgan : MonoBehaviour
 
     public GameObject mochila, mochilaInteracao;
     public GameObject mapa, mapaInteracao;
+    public GameObject chave, chaveInteracao;
     public GameObject botaoSair;
-    [SerializeField] float distanciaMochila, distanciaMapa, distanciaBotao;
+    [SerializeField] float distanciaMochila, distanciaMapa, distanciaBotao, distanciaChave;
 
     void Start ()
     {
@@ -22,6 +23,7 @@ public class InteraçãoCasaMorgan : MonoBehaviour
         distanciaMochila = Vector2.Distance(jogador.transform.position, mochila.transform.position);
         distanciaMapa = Vector2.Distance(jogador.transform.position, mapa.transform.position);
         distanciaBotao = Vector2.Distance(jogador.transform.position, botaoSair.transform.position);
+        distanciaChave = Vector2.Distance(jogador.transform.position, chave.transform.position);
     }
 
     private void InteracaoColeta()
@@ -42,6 +44,15 @@ public class InteraçãoCasaMorgan : MonoBehaviour
         else
         {
             mapaInteracao.SetActive(false);
+        }
+
+        if (distanciaChave < 4)
+        {
+            chaveInteracao.SetActive(true);
+        }
+        else
+        {  
+            chaveInteracao.SetActive(false);
         }
     }
 

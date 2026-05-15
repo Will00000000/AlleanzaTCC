@@ -1342,7 +1342,7 @@ PrefabInstance:
     - target: {fileID: 1013099458161789618, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2108925615}
     - target: {fileID: 1193507474329340713, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_TagString
       value: MainCamera
@@ -1498,7 +1498,7 @@ PrefabInstance:
     - target: {fileID: 7443386528084170230, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2108925615}
     - target: {fileID: 7883454670849010840, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09179488
