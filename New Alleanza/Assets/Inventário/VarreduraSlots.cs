@@ -6,16 +6,15 @@ public class VarreduraSlots : MonoBehaviour
     public Image [] slot;
     Sprite novoSprite;
 
-    private void Start()
-    {
-
-    }
+    public Coleta script_coleta;
 
     private void Update()
     {
         if (slot[0].sprite == null)
         {
             Debug.Log("slot 1 livre");
+            slot[0].sprite = script_coleta.spriteItem;
+            slot[0]
         }
         else if (slot[1].sprite == null)
         {
