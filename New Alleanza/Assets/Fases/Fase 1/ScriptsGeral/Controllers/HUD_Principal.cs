@@ -22,6 +22,11 @@ public class HUD_Quarto : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject ConfigMenu;
 
+    // --- NOVO: REFERÊNCIA PARA O ANIMATOR DO MAPA ---
+    // (Caso o seu 'animator' lá de baixo seja apenas do pause, criamos esse específico para o mapa)
+    [Header("Animação do Mapa")]
+    [SerializeField] private Animator mapaAnimator; 
+
     private void Awake()
     {
         // Garante que os menus comecem fechados
@@ -58,6 +63,13 @@ public class HUD_Quarto : MonoBehaviour
     {
         mapaMenu.SetActive(true);
         UI.SetActive(false);
+
+        // --- NOVO: FORÇA A ANIMAÇÃO DO MAPA A REINICIAR ---
+        if (mapaAnimator != null)
+        {
+            // Substitua "NomeDaSuaAnimacao" pelo nome EXATO do clipe de animação de abertura do mapa
+            mapaAnimator.Play("NomeDaSuaAnimacao", -1, 0f); 
+        }
     }
 
     public void MapaFecha()
@@ -94,6 +106,7 @@ public class HUD_Quarto : MonoBehaviour
     }
 
     // PAUSE E SAIR
+    public GameObject animator; // Mantido o seu original caso use em outro lugar
     public void PauseGame()
     {
         PauseMenu.SetActive(true);

@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: velocidade
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8254580052704621613, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: sceneController

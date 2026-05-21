@@ -2320,7 +2320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &849552738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2343,6 +2343,7 @@ MonoBehaviour:
   - oi morgan
   quemFala: 0000000001000000
   velocidadeTexto: 0.05
+  mellory: {fileID: 0}
 --- !u!4 &849552739
 Transform:
   m_ObjectHideFlags: 0

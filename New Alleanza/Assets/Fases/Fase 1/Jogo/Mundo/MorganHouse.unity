@@ -1067,6 +1067,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4171372423838032564, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
   m_PrefabInstance: {fileID: 8545514363767854098}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &839985091
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839985090}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3319f5ab42545e9409e1eb73542dc439, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &977566314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1192,6 +1213,8 @@ MonoBehaviour:
   was_Praia: 0
   is_Museu: 0
   was_Museu: 0
+  is_Praia2: 0
+  was_Praia2: 0
 --- !u!4 &1010630445
 Transform:
   m_ObjectHideFlags: 0
@@ -2325,6 +2348,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1495438859960830545, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2202606415765536186, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Name
       value: InterfaceGeral
@@ -2450,6 +2477,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567033405}
     - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 839985090}
+    - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: mapaMenu
       value: 
       objectReference: {fileID: 839985090}
@@ -2461,6 +2492,10 @@ PrefabInstance:
       propertyPath: MapaCenario
       value: 
       objectReference: {fileID: 1613017688}
+    - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: mapaAnimator
+      value: 
+      objectReference: {fileID: 839985091}
     - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: MochilaCenario
       value: 
@@ -2488,6 +2523,14 @@ PrefabInstance:
     - target: {fileID: 5526377386202057822, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533897148631586738, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5533897148631586738, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5634058614731560925, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2569,6 +2612,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7166519798094878546, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7386091974773477904, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -2628,7 +2675,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4171372423838032564, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 839985091}
   m_SourcePrefab: {fileID: 100100000, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
