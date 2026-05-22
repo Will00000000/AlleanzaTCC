@@ -14,4 +14,18 @@ public class Coleta : MonoBehaviour
 
         spriteItem = sprite_itensGeral[0].sprite; //pega o sprite 1 "chave"
     }
+
+    public void ColetarOutroObjeto()
+    {
+        itensGeral[1].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[1].sprite; //pega o sprite 1 "chave"
+    }
+
+    public void ColetarObjeto3()
+    {
+        itensGeral[2].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[2].sprite; //pega o sprite 1 "chave"
+    }
 }
