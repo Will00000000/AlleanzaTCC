@@ -15,17 +15,53 @@ public class Coleta : MonoBehaviour
         spriteItem = sprite_itensGeral[0].sprite; //pega o sprite 1 "chave"
     }
 
-    public void ColetarOutroObjeto()
+    public void ColetarItem2()
     {
         itensGeral[1].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
 
         spriteItem = sprite_itensGeral[1].sprite; //pega o sprite 1 "chave"
     }
 
-    public void ColetarObjeto3()
+    public void ColetarItem3()
     {
         itensGeral[2].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
 
         spriteItem = sprite_itensGeral[2].sprite; //pega o sprite 1 "chave"
+    }
+    public void ColetarItem4()
+    {
+        itensGeral[3].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[3].sprite; //pega o sprite 1 "chave"
+    }
+    public void ColetarItem5()
+    {
+        itensGeral[4].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[4].sprite; //pega o sprite 1 "chave"
+    }
+    public void ColetarItem6()
+    {
+        itensGeral[5].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[5].sprite; //pega o sprite 1 "chave"
+    }
+    public void ColetarItem7()
+    {
+        itensGeral[6].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[6].sprite; //pega o sprite 1 "chave"
+    }
+    public void ColetarItem8()
+    {
+        itensGeral[7].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[7].sprite; //pega o sprite 1 "chave"
+    }
+    public void ColetarItem9()
+    {
+        itensGeral[8].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+
+        spriteItem = sprite_itensGeral[8].sprite; //pega o sprite 1 "chave"
     }
 }
