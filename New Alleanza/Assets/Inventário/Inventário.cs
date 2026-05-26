@@ -7,6 +7,6 @@ public class Inventario : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 }
