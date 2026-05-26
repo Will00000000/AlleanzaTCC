@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class Inventario : MonoBehaviour
 {
-    public Image [] slots;
+    public GameObject[] botões;
 
-    private void Start()
+    private void Update()
     {
-        slots = GetComponentsInChildren<Image> ();
+        
     }
 }

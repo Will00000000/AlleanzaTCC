@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HUD_Principal : MonoBehaviour
@@ -14,7 +15,10 @@ public class HUD_Principal : MonoBehaviour
     private void Awake()
     {
         mapaMenu.SetActive(false);
-        inventarioMenu.SetActive(false);
+
+        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (20000, inventarioMenu.GetComponent<RectTransform>().offsetMin.y);
+        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (inventarioMenu.GetComponent<RectTransform>().offsetMax.x, -20000);
+
         UI.SetActive(true);
     }
 
@@ -32,13 +36,17 @@ public class HUD_Principal : MonoBehaviour
 
     public void InventarioAbre()
     {
-        inventarioMenu.SetActive(true);
+        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (200, 190);
+        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (-200, -50);
+
         UI.SetActive(false);
     }
 
     public void InventarioFecha()
     {
-        inventarioMenu.SetActive(false);
+        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (20000, inventarioMenu.GetComponent<RectTransform>().offsetMin.y);
+        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (inventarioMenu.GetComponent<RectTransform>().offsetMin.x, -20000);
+
         UI.SetActive(true);
     }
 
