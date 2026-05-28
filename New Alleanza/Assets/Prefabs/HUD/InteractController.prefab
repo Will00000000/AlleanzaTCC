@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5751429312126233272}
   - component: {fileID: 2491021828148885786}
   - component: {fileID: 6695312202686250934}
+  - component: {fileID: 4397257261527399190}
   m_Layer: 0
   m_Name: InteractController
   m_TagString: Untagged
@@ -45,16 +46,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61d437069000d34c98658b48ac2995a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogador: {fileID: 0}
   mochila: {fileID: 0}
   mochilaInteracao: {fileID: 0}
   mapa: {fileID: 0}
   mapaInteracao: {fileID: 0}
+  chave: {fileID: 0}
+  chaveInteracao: {fileID: 0}
   botaoSair: {fileID: 0}
   distanciaMochila: 0
   distanciaMapa: 0
   distanciaBotao: 0
+  distanciaChave: 0
 --- !u!114 &6695312202686250934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3234797088976738630}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4b8f0b42e9a8341ac21475a58a9e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "bot\xE3oCasa": {fileID: 0}
+  distancia_botaoCasa: 0
+--- !u!114 &4397257261527399190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,8 +80,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 3234797088976738630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4b8f0b42e9a8341ac21475a58a9e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: b4a59a074ee72c448822262d596cdd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "bot\xE3oCasa": {fileID: 0}
-  distanciaBotao: 0
+  spriteItem: {fileID: 0}
+  sprite_itensGeral:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  itensGeral:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
