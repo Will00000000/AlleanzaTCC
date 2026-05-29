@@ -5479,7 +5479,8 @@ PrefabInstance:
       propertyPath: "bot\xE3oCasa"
       value: 
       objectReference: {fileID: 1715980669}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2491021828148885786, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

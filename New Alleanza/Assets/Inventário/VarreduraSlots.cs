@@ -7,13 +7,10 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
 
     public GameObject script_coleta;
 
-    private void Start()
-    {
-        script_coleta = GameObject.Find("InteractController");
-    }
-
     private void Update()
     {
+        script_coleta = GameObject.Find("InteractController");
+
         Color novaCor;
 
         #region Slot 1

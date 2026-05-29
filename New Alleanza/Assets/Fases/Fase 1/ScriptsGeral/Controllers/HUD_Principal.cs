@@ -1,5 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HUD_Principal : MonoBehaviour
 {
@@ -12,12 +12,31 @@ public class HUD_Principal : MonoBehaviour
     public GameObject inventarioButton, mapaButton;
     public GameObject MochilaCenario, MapaCenario; //todo o Canvas, não só o sprite
 
+    float offMin_x;
+    float offMax_y;
+
     private void Awake()
     {
         mapaMenu.SetActive(false);
 
-        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (20000, inventarioMenu.GetComponent<RectTransform>().offsetMin.y);
-        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (inventarioMenu.GetComponent<RectTransform>().offsetMax.x, -20000);
+        /*if (SceneManager.GetActiveScene().name == "MorganHouse")
+        {
+            offMin_x = 2000;
+            offMax_y = -2000;
+        }
+        else if (SceneManager.GetActiveScene().name == "Praia")
+        {
+            offMin_x = 2000;
+            offMax_y = -2000;
+        }
+        else if (SceneManager.GetActiveScene().name == "Escadaria")
+        {
+            offMin_x = 2000;
+            offMax_y = -2000;
+        }*/
+
+        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2(2000, inventarioMenu.GetComponent<RectTransform>().offsetMin.y);
+        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (inventarioMenu.GetComponent<RectTransform>().offsetMax.x, -2000);
 
         UI.SetActive(true);
     }
@@ -44,8 +63,8 @@ public class HUD_Principal : MonoBehaviour
 
     public void InventarioFecha()
     {
-        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (20000, inventarioMenu.GetComponent<RectTransform>().offsetMin.y);
-        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (inventarioMenu.GetComponent<RectTransform>().offsetMin.x, -20000);
+        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (2000, inventarioMenu.GetComponent<RectTransform>().offsetMin.y);
+        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (inventarioMenu.GetComponent<RectTransform>().offsetMin.x, -2000);
 
         UI.SetActive(true);
     }
