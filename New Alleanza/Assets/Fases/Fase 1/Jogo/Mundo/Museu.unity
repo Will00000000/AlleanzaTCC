@@ -424,7 +424,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: GoRua_from_Museu
+        m_MethodName: GoCidade_from_Museu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
