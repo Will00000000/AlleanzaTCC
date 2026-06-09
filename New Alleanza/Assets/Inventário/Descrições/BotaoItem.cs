@@ -4,8 +4,7 @@ using UnityEngine.UI;
 public class BotaoItem : MonoBehaviour
 {
     public DadosItem meusDados;
-
-    private GerenciadorDescricao gerenciadorDescricao;
+    public GerenciadorDescricao gerenciadorDescricao;
 
     void Start()
     {
@@ -13,17 +12,14 @@ public class BotaoItem : MonoBehaviour
 
         Button botao = GetComponent<Button>();
 
-        if (botao != null)
-        {
-            botao.onClick.AddListener(AoClicarNoItem);
-        }
+        botao.onClick.AddListener (AoClicarNoItem);
     }
 
     void AoClicarNoItem()
     {
         if (gerenciadorDescricao != null)
         {
-            gerenciadorDescricao.ExibirDetalhes(meusDados);
+            //gerenciadorDescricao.ExibirDetalhes(meusDados);
         }
     }
 }

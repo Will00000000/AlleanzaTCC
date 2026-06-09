@@ -2,7 +2,7 @@
 - Project name: New Alleanza
 - Unity version: Unity 2022.3.52f1
 - Active game object:
-  - Name: Image
+  - Name: ChaveDesc
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

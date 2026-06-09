@@ -6,6 +6,7 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
     public Image[] slot;
 
     public GameObject script_coleta;
+    public GerenciadorDescricao script_descricao;
 
     private void Update()
     {
@@ -17,6 +18,8 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         if (slot[0].sprite == null)
         {
             slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
+
+            script_descricao = GetComponent<GerenciadorDescricao>();
         }
         #endregion
 

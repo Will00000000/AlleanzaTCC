@@ -13,8 +13,6 @@ public class Coleta : MonoBehaviour
     {
         itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); //objeto chave é desabilitado
         spriteItem = sprite_itensGeral[0].sprite; //pega o sprite 1 "chave"
-
-
     }
 
     public void ColetarPeca()

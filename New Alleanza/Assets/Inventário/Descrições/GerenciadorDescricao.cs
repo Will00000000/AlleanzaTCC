@@ -7,12 +7,14 @@ public class GerenciadorDescricao : MonoBehaviour
     public TextMeshProUGUI campoTipo;
     public TextMeshProUGUI campoDescricao;
 
+    DadosItem item;
+
     void Start()
     {
         LimparDescricao();
     }
 
-    public void ExibirDetalhes(DadosItem item)
+    public void ExibirDetalhes()
     {
         campoTitulo.text = item.titulo;
         campoTipo.text = item.tipo;
