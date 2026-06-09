@@ -22,8 +22,6 @@ public class HUD_Quarto : MonoBehaviour
     public GameObject PauseMenu;
     public GameObject ConfigMenu;
 
-    // --- NOVO: REFERÊNCIA PARA O ANIMATOR DO MAPA ---
-    // (Caso o seu 'animator' lá de baixo seja apenas do pause, criamos esse específico para o mapa)
     [Header("Animação do Mapa")]
     [SerializeField] private Animator mapaAnimator; 
 
@@ -32,6 +30,7 @@ public class HUD_Quarto : MonoBehaviour
         // Garante que os menus comecem fechados
         if (mapaMenu != null) mapaMenu.SetActive(false);
         if (inventarioMenu != null) inventarioMenu.SetActive(false);
+        if (ConfigMenu != null) ConfigMenu.SetActive(false); // Adicionado para garantir que as configurações comecem fechadas
         if (UI != null) UI.SetActive(true);
     }
 
@@ -64,11 +63,10 @@ public class HUD_Quarto : MonoBehaviour
         mapaMenu.SetActive(true);
         UI.SetActive(false);
 
-        // --- NOVO: FORÇA A ANIMAÇÃO DO MAPA A REINICIAR ---
+        // FORÇA A ANIMAÇÃO DO MAPA A REINICIAR DO ZERO
         if (mapaAnimator != null)
         {
-            // Substitua "NomeDaSuaAnimacao" pelo nome EXATO do clipe de animação de abertura do mapa
-            mapaAnimator.Play("NomeDaSuaAnimacao", -1, 0f); 
+            mapaAnimator.Play("New Animation", -1, 0f); 
         }
     }
 
@@ -125,5 +123,32 @@ public class HUD_Quarto : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    // --- NOVAS FUNÇÕES PARA O MENU DE CONFIGURAÇÕES ---
+    public void AbrirConfiguracoes()
+    {
+        if (ConfigMenu != null)
+        {
+            ConfigMenu.SetActive(true); // Abre a tela de configurações
+        }
+        
+        if (PauseMenu != null)
+        {
+            PauseMenu.SetActive(false); // Fecha o menu de pause de trás para não acumular
+        }
+    }
+
+    public void FecharConfiguracoes()
+    {
+        if (ConfigMenu != null)
+        {
+            ConfigMenu.SetActive(false); // Fecha as configurações
+        }
+        
+        if (PauseMenu != null)
+        {
+            PauseMenu.SetActive(true); // Traz o menu de pause de volta
+        }
     }
 }
