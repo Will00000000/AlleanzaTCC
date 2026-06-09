@@ -21,7 +21,6 @@ public class Visao : MonoBehaviour
             min_Y = -0.13f;   
             max_Y = 3.0f;
         }
-
         else if (nomeCena == "Praia")
         {
             min_X = -23.92f;
@@ -30,7 +29,6 @@ public class Visao : MonoBehaviour
             min_Y = 2.11f;
             max_Y = 2.11f;
         }
-
         else if (nomeCena == "Escadaria")
         {
             min_X = -5.01f;
@@ -39,38 +37,56 @@ public class Visao : MonoBehaviour
             min_Y = 0f;
             max_Y = 0f;
         }
-
-        else if (nomeCena == "Cidade")
-        {
-            min_X = -80;
-            max_X = 80;
-
-            min_Y = 0f;
-            max_Y = 0f;
-        }
-
         else if (nomeCena == "Museu")
         {
-            min_X = -9.5f;
-            max_X = 9.5f;
+    
+            min_X = -9.52f;
+            max_X = 9.52f;  
+
+            min_Y = 0f;   
+            max_Y = 0f;    
+        }
+        else if (nomeCena == "Cidade")
+        {
+            
+            min_X = -80f;
+            max_X = 80f;
+            
+            min_Y = 0f;
+            max_Y = 0f;
         }
     }
 
     void Update()
     {
-        alvoSeguir = new Vector3(alvo.position.x, alvo.position.y, transform.position.z);
-
-        LimiteCam();
+        // Verifica se o alvo (Morgan) existe para não dar erro no console
+        if (alvo != null)
+        {
+            alvoSeguir = new Vector3(alvo.position.x, alvo.position.y, transform.position.z);
+            LimiteCam();
+        }
     }
 
     void LimiteCam ()
     {
-        GameObject player_obj = GameObject.Find("Jogador"); //como a câmera está distante do jogador, precisa procurar o objeto dele antes  de qualquer coisa
-        Jogador2D_Terra jogador = player_obj.GetComponent<Jogador2D_Terra>(); //pega o script do jogador, porque está no mesmo objeto.
+        GameObject player_obj = GameObject.Find("Jogador");
         
-        float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);//limite de câmera no eixo x
-        float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);//limite de câmera no eixo y
+        if (player_obj != null)
+        {
+            Jogador2D_Terra jogador = player_obj.GetComponent<Jogador2D_Terra>();
+            
+            if (jogador.Is_Rua1 == true)
+            {
+                min_X = 110.5f; 
+                max_X = 129.37f;
+                min_Y = 3.32f;
+                // Importante: se Is_Rua1 for true, defina um max_Y também se necessário
+            }
+        }
 
-        transform.position = new Vector3(clampX, clampY, transform.position.z);//câmera se move com o limite aplicando
+        float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);
+        float clampY = Mathf.Clamp(alvoSeguir.y, min_Y, max_Y);
+
+        transform.position = new Vector3(clampX, clampY, transform.position.z);
     }
 }
