@@ -25,6 +25,10 @@ public class Dialogo : MonoBehaviour
 
     bool estaDigitando = false; // verifica se o texto ainda está sendo escrito
 
+    // --- NOVO: REFERÊNCIA PARA O SCRIPT DE SEGUIR DA MELLORY ---
+    [Header("Configuração de Acompanhante")]
+    public SeguirJogador mellory; 
+
     void Update()
     {
         // só permite avançar diálogo se ele estiver ativo
@@ -127,7 +131,7 @@ public class Dialogo : MonoBehaviour
 
     void EncerrarDialogo()
     {
-        //animação de saída
+        //animacao de saída
         if (animator != null)
         {
             animator.SetBool("Abrir", false);
@@ -156,6 +160,12 @@ public class Dialogo : MonoBehaviour
         if (jogador != null)
         {
             jogador.podeMover = true;
+        }
+
+        //ATIVA O COMPORTAMENTO DE SEGUIR DA MELLORY
+        if (mellory != null)
+        {
+            mellory.ComeçarASeguir();
         }
     }
 }

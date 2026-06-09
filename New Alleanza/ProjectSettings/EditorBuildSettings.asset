@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Fases/Fase 1/Jogo/Mundo/Praia.unity
     guid: 2c5965be902d4b041ba53f677fed32e5
   - enabled: 1
+    path: Assets/Fases/Fase 1/Jogo/Mundo/Praia2.unity
+    guid: e8d981b008235564cbf98b18971cec49
+  - enabled: 1
     path: Assets/Fases/Fase 1/Jogo/Mundo/Escadaria.unity
     guid: cc662d095ca2e2040b959a752d370321
   - enabled: 1
