@@ -5,7 +5,10 @@ public class GameController : MonoBehaviour
 {
     //MINIGAME DOS LIXOS
     public Transform[] pontoOrigem;
+    public Transform pontoFinal;
+
     public GameObject Lixo;
+    public GameObject LixoFinal;
 
     public float timer;
     public float intervaloTempo;
@@ -37,6 +40,11 @@ public class GameController : MonoBehaviour
                 Instantiate(Lixo, pontoOrigem[pontoAleatorio].position, pontoOrigem[pontoAleatorio].rotation);
 
                 intervaloTempo -= 0.01f;
+            }
+            else if (intervaloTempo < 0.21f & intervaloTempo > 0.20f)
+            {
+                Debug.Log("Lixo final instant");
+                Instantiate(LixoFinal, pontoFinal.position, pontoFinal.rotation);
             }
         }
     }
