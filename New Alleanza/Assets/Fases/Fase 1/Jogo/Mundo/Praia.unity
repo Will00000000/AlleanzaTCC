@@ -3202,14 +3202,14 @@ RectTransform:
   m_GameObject: {fileID: 1135968340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0040167174, y: 0.004827504, z: 0.0064267484}
+  m_LocalScale: {x: 0.002738598, y: 0.0032913922, z: 0.004381757}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 596262120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -956.1722, y: -542.8058}
+  m_AnchoredPosition: {x: -956.1722, y: -543.3694}
   m_SizeDelta: {x: 100, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135968342
@@ -3258,7 +3258,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 596262124}
         m_TargetAssemblyTypeName: Coleta, Assembly-CSharp
-        m_MethodName: Peca
+        m_MethodName: ColetarPeca
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4122,7 +4122,7 @@ RectTransform:
   m_GameObject: {fileID: 1661484766}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.538006, y: 1.538006, z: 1.538006}
+  m_LocalScale: {x: 0.7010702, y: 0.7010702, z: 0.7010702}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 596262120}
