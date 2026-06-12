@@ -400,7 +400,6 @@ MonoBehaviour:
   - {fileID: 1714758886}
   pontoFinal: {fileID: 1254525582}
   Lixo: {fileID: 4539459369516870337, guid: 68c1ab897b699aa4ba63c683e953f341, type: 3}
-  LixoFinal: {fileID: 4539459369516870337, guid: 28b26c9e2c3194748980a01b893641ad, type: 3}
   timer: 1
   intervaloTempo: 1.5
 --- !u!4 &202547619
