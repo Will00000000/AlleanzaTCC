@@ -107,6 +107,7 @@ public class SceneController : MonoBehaviour
 
     public void GoMuseu_from_Cidade()
     {
+        PlayerPrefs.SetString("ligar", "true");
         SceneManager.LoadScene("Museu");
 
         is_Museu = true;
@@ -130,6 +131,7 @@ public class SceneController : MonoBehaviour
 
     public void GoOceano ()
     {
+        
         SceneManager.LoadScene("Atlantis");
     }
 }
