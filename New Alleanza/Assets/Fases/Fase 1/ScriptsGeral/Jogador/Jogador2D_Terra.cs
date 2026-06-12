@@ -73,11 +73,11 @@ public class Jogador2D_Terra : MonoBehaviour
 
         if (xMove < 0)
         {
-            transform.eulerAngles = new Vector2(0, 180);
+            transform.eulerAngles = new Vector2(0, 0);
         }
         else
         {
-            transform.eulerAngles = new Vector2(0, 0);
+            transform.eulerAngles = new Vector2(0, 180);
         }
     }
 

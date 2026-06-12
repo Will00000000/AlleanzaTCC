@@ -5,6 +5,8 @@ public class GameController : MonoBehaviour
 {
     //MINIGAME DOS LIXOS
     public Transform[] pontoOrigem;
+    public Transform pontoFinal;
+
     public GameObject Lixo;
 
     public float timer;

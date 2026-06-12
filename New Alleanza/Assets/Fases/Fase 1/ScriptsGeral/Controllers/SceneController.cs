@@ -127,4 +127,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("MinigameLixos");
     }
+
+    public void GoOceano ()
+    {
+        SceneManager.LoadScene("Atlantis");
+    }
 }
