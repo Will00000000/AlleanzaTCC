@@ -14,6 +14,7 @@ public class Jogador2D_Terra : MonoBehaviour
     public bool CamSeguindo = true;
     public Vector3 destinoCam;
     public Button btnGoOceano;
+    public bool habilitaBotao = false;
 
     string nameScene;
 
@@ -38,7 +39,7 @@ public class Jogador2D_Terra : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
 
         nameScene = SceneManager.GetActiveScene().name;
-        btnGoOceano.enabled = false;
+        btnGoOceano.enabled = habilitaBotao;
     }
 
     void Update()
@@ -69,7 +70,8 @@ public class Jogador2D_Terra : MonoBehaviour
         {
             anima.SetFloat("SideMove", Mathf.Abs(xMove));
         }
-        btnGoOceano.enabled =Convert.ToBoolean( PlayerPrefs.GetString("ligar"));
+        habilitaBotao= Convert.ToBoolean(PlayerPrefs.GetString("ligar"));
+        btnGoOceano.enabled =habilitaBotao;
     }
 
     void Mover()
