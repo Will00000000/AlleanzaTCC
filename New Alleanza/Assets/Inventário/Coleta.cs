@@ -8,7 +8,6 @@ public class Coleta : MonoBehaviour
     public SpriteRenderer[] sprite_itensGeral; //lista que recebe todos os sprites dos itens do jogo (uma biblioteca)
     public GameObject[] itensGeral; //lista que recebe todos os gameObjects de itens do jogo (biblioteca)
 
-
     public void ColetarChave ()
     {
         itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); //objeto chave é desabilitado
@@ -17,9 +16,8 @@ public class Coleta : MonoBehaviour
 
     public void ColetarPeca()
     {
-        itensGeral[1].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[1].sprite; //pega o sprite 1 "chave"
+        itensGeral[1].transform.localScale = new Vector3(0, 0, 0); //objeto peça é desabilitado
+        //spriteItem = sprite_itensGeral[1].sprite; //pega o sprite 2 "peça"
     }
 
     public void ColetarItem3()

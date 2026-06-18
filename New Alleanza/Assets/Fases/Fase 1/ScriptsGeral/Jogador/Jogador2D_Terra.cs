@@ -1,22 +1,11 @@
-using System;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
-    public bool Is_Rua1, Is_Rua2, Is_Rua3;
-
     private Rigidbody2D rig;
-    private Camera visaoAtaque;
 
     public bool CamSeguindo = true;
     public Vector3 destinoCam;
-    public Button btnGoOceano;
-    public bool habilitaBotao = false;
-
-    string nameScene;
 
     [Header("Movimento")]
     [SerializeField] int velocidade;
@@ -34,16 +23,14 @@ public class Jogador2D_Terra : MonoBehaviour
 
     void Start()
     {
-        // Alteração: Descomentado para evitar o erro de NullReference
         anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
-
-        nameScene = SceneManager.GetActiveScene().name;
-        btnGoOceano.enabled = habilitaBotao;
     }
 
     void Update()
     {
+        Mover();
+
         //se não puder mover (diálogo ativo)
         if (!podeMover)
         {
@@ -58,20 +45,15 @@ public class Jogador2D_Terra : MonoBehaviour
             return; // impede qualquer outro movimento
         }
 
-        Mover();
+        if (anima != null)
+        {
+            anima.SetFloat("SideMove", Mathf.Abs(xMove));
+        }
 
         if (DashAtivado)
         {
             DashAtaque();
         }
-
-        // Alteração: Verificação de segurança para o erro parar
-        if (anima != null)
-        {
-            anima.SetFloat("SideMove", Mathf.Abs(xMove));
-        }
-        habilitaBotao= Convert.ToBoolean(PlayerPrefs.GetString("ligar"));
-        btnGoOceano.enabled =habilitaBotao;
     }
 
     void Mover()
@@ -81,11 +63,11 @@ public class Jogador2D_Terra : MonoBehaviour
 
         if (xMove > 0)
         {
-            transform.eulerAngles = new Vector2(0, 0);
+            transform.eulerAngles = new Vector2(0, 180);
         }
         else if (xMove < 0)
         {
-            transform.eulerAngles = new Vector2(0, 180);
+            transform.eulerAngles = new Vector2(0, 0);
         }
     }
 
@@ -97,23 +79,5 @@ public class Jogador2D_Terra : MonoBehaviour
         }
 
         transform.position = Vector2.MoveTowards(transform.position, destino, velocidadeDash * Time.deltaTime);
-    }
-
-    void OnTriggerEnter2D (Collider2D col)
-    {
-        if (col.gameObject.tag == "detectorRua1")
-        {
-            Is_Rua1 = true;
-        }
-
-        if (col.gameObject.tag == "detectorRua2")
-        {
-            Is_Rua2 = true;
-        }
-
-        if (col.gameObject.tag == "detectorRua3")
-        {
-            Is_Rua3 = true;
-        }
     }
 }
