@@ -424,7 +424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 29, y: 11}
+  m_AnchoredPosition: {x: 184, y: 11}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &420246232
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32441bd64a769d74c84162739b2eb816, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d11c65a783277764c9c2572de0e530c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -334.3045, y: 0, z: -320.8125, w: 0}
+  m_margin: {x: -334.3045, y: 0, z: -131.37, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -966,7 +966,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 353, y: -333}
+  m_AnchoredPosition: {x: 106, y: -258}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1301156863
@@ -1235,9 +1235,16 @@ MonoBehaviour:
   jogador: {fileID: 0}
   animator: {fileID: 0}
   falas:
-  - oi mellory
-  - oi morgan
-  quemFala: 0000000001000000
+  - "Mellory! E a\xED, tudo pronto para o museu? "
+  - Tudo certo, amigo. Ai, eu to muito ansiosa pra visitar o museu!
+  - "Eu tamb\xE9m, cara, vai ser irado!"
+  - "Demais. Ah, Morg, o que voc\xEA achou do meu disfarce hoje, hein? To bem disfar\xE7ada
+    de terranis?"
+  - " Se eu n\xE3o te conhecesse, diria que n\xE3o tem nada de abyssalis a\xED. Uma
+    verdadeira terranis xD!"
+  - "Ufa! N\xE3o estou a fim de encarar maus olhados dos terranis."
+  - 'Pode deixar que qualquer coisa estamos juntos. Agora, bora visitar Melindre. '
+  quemFala: 00000000010000000000000001000000000000000100000000000000
   velocidadeTexto: 0.05
   mellory: {fileID: 2140675905}
 --- !u!4 &1467236003
@@ -2060,7 +2067,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 29, y: 11}
+  m_AnchoredPosition: {x: 199, y: 11}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1870387376
@@ -2076,14 +2083,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e18a74f7fa604414cba0825026a8cee8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33b5eaec29ee35b4baad6ae1465b17fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

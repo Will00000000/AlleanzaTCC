@@ -4,8 +4,8 @@ using UnityEngine.Video;
 
 public class CutsceneController : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;      // arraste o VideoPlayer aqui no inspector
-    public string cenaDoJogo = "Jogo";   // nome da cena do jogo
+    public VideoPlayer videoPlayer;      
+    public string cenaDoJogo = "Jogo";   
 
     void Start()
     {
@@ -15,5 +15,26 @@ public class CutsceneController : MonoBehaviour
     void QuandoVideoAcabar(VideoPlayer vp)
     {
         SceneManager.LoadScene(cenaDoJogo);
+    }
+
+   
+    public void AvancarUmSegundo()
+    {
+        if (videoPlayer != null && videoPlayer.isPlaying)
+        {
+           
+            double novoTempo = videoPlayer.time + 2.0;
+
+           
+            if (novoTempo < videoPlayer.length)
+            {
+                videoPlayer.time = novoTempo;
+            }
+            else
+            {
+               
+                SceneManager.LoadScene(cenaDoJogo);
+            }
+        }
     }
 }
