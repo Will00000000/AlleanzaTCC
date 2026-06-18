@@ -2201,6 +2201,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1193507474329340713, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1920445143577626138, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -2859,6 +2863,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1776190012}
+  - {fileID: 2127727732}
   - {fileID: 1746550195}
   - {fileID: 487163767}
   - {fileID: 1856304066}
@@ -2866,4 +2871,3 @@ SceneRoots:
   - {fileID: 1972989274}
   - {fileID: 2140675904}
   - {fileID: 1467236003}
-  - {fileID: 2127727732}

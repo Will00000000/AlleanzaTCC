@@ -83,14 +83,6 @@ public class Visao : MonoBehaviour
         if (player_obj != null)
         {
             Jogador2D_Terra jogador = player_obj.GetComponent<Jogador2D_Terra>();
-            
-            if (jogador.Is_Rua1 == true)
-            {
-                min_X = 110.5f; 
-                max_X = 129.37f;
-                min_Y = 3.32f;
-                // Importante: se Is_Rua1 for true, defina um max_Y também se necessário
-            }
         }
 
         float clampX = Mathf.Clamp(alvoSeguir.x, min_X, max_X);

@@ -9,12 +9,22 @@ public class SeguirJogador : MonoBehaviour
     public float distanciaMinima = 1.5f; 
 
     [Header("Controle")]
-    public bool deveSeguir = false; 
+    public bool deveSeguir = false;
 
+    private static SeguirJogador instancia;
     void Awake()
     {
-        // Faz com que a Mellory não suma ao mudar de cena
-        DontDestroyOnLoad(gameObject);
+        // Se ainda não existir uma instância, esta será a principal
+        if (instancia == null)
+        {
+            instancia = this;
+            DontDestroyOnLoad(gameObject); // Garante que ela não morra entre as cenas
+        }
+        else
+        {
+            // Se já existir uma Mellory vinda de outra cena, destrói essa nova que tentou nascer
+            Destroy(gameObject);
+        }
     }
 
     void OnEnable()
