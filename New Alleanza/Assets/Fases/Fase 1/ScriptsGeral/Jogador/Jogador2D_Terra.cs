@@ -1,5 +1,8 @@
+using System;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
@@ -10,6 +13,8 @@ public class Jogador2D_Terra : MonoBehaviour
 
     public bool CamSeguindo = true;
     public Vector3 destinoCam;
+    public Button btnGoOceano;
+    public bool habilitaBotao = false;
 
     string nameScene;
 
@@ -34,6 +39,7 @@ public class Jogador2D_Terra : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
 
         nameScene = SceneManager.GetActiveScene().name;
+        btnGoOceano.enabled = habilitaBotao;
     }
 
     void Update()
@@ -64,6 +70,8 @@ public class Jogador2D_Terra : MonoBehaviour
         {
             anima.SetFloat("SideMove", Mathf.Abs(xMove));
         }
+        habilitaBotao= Convert.ToBoolean(PlayerPrefs.GetString("ligar"));
+        btnGoOceano.enabled =habilitaBotao;
     }
 
     void Mover()
@@ -71,11 +79,11 @@ public class Jogador2D_Terra : MonoBehaviour
         rig.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocidade, yMove * velocidade);
         xMove = Input.GetAxisRaw("Horizontal");
 
-        if (xMove < 0)
+        if (xMove > 0)
         {
             transform.eulerAngles = new Vector2(0, 0);
         }
-        else
+        else if (xMove < 0)
         {
             transform.eulerAngles = new Vector2(0, 180);
         }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8254580052704621613}
   - component: {fileID: 848472086513471148}
   - component: {fileID: 401506574400823936}
+  - component: {fileID: 5581250031759048389}
   m_Layer: 0
   m_Name: Jogador
   m_TagString: Player
@@ -127,6 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ec5db023aca6a498dd0788eba48f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Is_Rua1: 0
+  Is_Rua2: 0
+  Is_Rua3: 0
   CamSeguindo: 1
   destinoCam: {x: 0, y: 0, z: 0}
   velocidade: 5
@@ -135,7 +139,7 @@ MonoBehaviour:
   destino: {x: 0, y: 0}
   move: {x: 0, y: 0}
   DashAtivado: 0
-  sceneController: {fileID: 0}
+  podeMover: 1
 --- !u!82 &848472086513471148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -267,3 +271,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.49630803, y: -0.030073395}
   m_Size: {x: 1.8953798, y: 8.975982}
   m_Direction: 0
+--- !u!95 &5581250031759048389
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343933573526180817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
