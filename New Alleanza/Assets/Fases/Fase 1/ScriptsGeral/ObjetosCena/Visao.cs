@@ -49,8 +49,8 @@ public class Visao : MonoBehaviour
         else if (nomeCena == "Cidade")
         {
             
-            min_X = -80f;
-            max_X = 80f;
+            min_X = 45;
+            max_X = 187;
             
             min_Y = 0f;
             max_Y = 0f;
