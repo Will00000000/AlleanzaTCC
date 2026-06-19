@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Jogador2D_Terra : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class Jogador2D_Terra : MonoBehaviour
 
     public bool CamSeguindo = true;
     public Vector3 destinoCam;
+
+    string nomeCena;
 
     [Header("Movimento")]
     [SerializeField] int velocidade;
@@ -25,6 +28,7 @@ public class Jogador2D_Terra : MonoBehaviour
     {
         anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
+        nomeCena = SceneManager.GetActiveScene().name;
     }
 
     void Update()
@@ -53,6 +57,12 @@ public class Jogador2D_Terra : MonoBehaviour
         if (DashAtivado)
         {
             DashAtaque();
+        }
+
+        if (nomeCena == "Minigame")
+        {
+            PlayerPrefs.SetInt("Visitou quebra-cabeça", 1);
+            PlayerPrefs.Save();
         }
     }
 

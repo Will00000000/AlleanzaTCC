@@ -135,6 +135,7 @@ public class Dialogo : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("Abrir", false);
+            
         }
 
         StartCoroutine(FecharDepois());

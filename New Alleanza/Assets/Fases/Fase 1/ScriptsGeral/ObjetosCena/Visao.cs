@@ -29,6 +29,14 @@ public class Visao : MonoBehaviour
             min_Y = 2.11f;
             max_Y = 2.11f;
         }
+        else if (nomeCena == "Praia2")
+        {
+            min_X = -12.6f;
+            max_X = 0;
+
+            min_Y = 0f;
+            max_Y = 0f;
+        }
         else if (nomeCena == "Escadaria")
         {
             min_X = -5.01f;
@@ -39,28 +47,28 @@ public class Visao : MonoBehaviour
         }
         else if (nomeCena == "Museu")
         {
-    
-            min_X = -9.52f;
-            max_X = 9.52f;  
 
-            min_Y = 0f;   
-            max_Y = 0f;    
+            min_X = -9.52f;
+            max_X = 9.52f;
+
+            min_Y = 0f;
+            max_Y = 0f;
         }
         else if (nomeCena == "Cidade")
         {
-            
+
             min_X = 45;
             max_X = 187;
-            
+
             min_Y = 0f;
             max_Y = 0f;
         }
         else if (nomeCena == "Atlantis")
         {
-            
+
             min_X = -42.25f;
             max_X = 0.02f;
-            
+
             min_Y = 0.01f;
             max_Y = 0.01f;
         }

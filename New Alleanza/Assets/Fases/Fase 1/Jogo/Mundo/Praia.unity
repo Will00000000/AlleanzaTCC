@@ -1650,7 +1650,7 @@ Transform:
   m_GameObject: {fileID: 699077776}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -867.08, y: -169.98, z: 9.632055}
+  m_LocalPosition: {x: -873.03, y: -169.98, z: 9.632055}
   m_LocalScale: {x: 1.0660276, y: 1.0660276, z: 1.0660276}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3911,6 +3911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: GoOceano
+      value: 
+      objectReference: {fileID: 493169512}
     - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: "bot\xE3oCasa"
       value: 

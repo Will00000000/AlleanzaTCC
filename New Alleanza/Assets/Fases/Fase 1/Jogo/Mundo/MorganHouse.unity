@@ -206,6 +206,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 742592816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &254342454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1836716279317677216, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+  m_PrefabInstance: {fileID: 8545514363767854098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &261695542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,7 +2255,7 @@ PrefabInstance:
     - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: mapaMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 254342454}
     - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: mapaButton
       value: 
