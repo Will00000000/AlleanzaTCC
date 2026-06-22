@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public static class GameManager
 {
     // Variáveis estáticas não resetam ao trocar de cena
