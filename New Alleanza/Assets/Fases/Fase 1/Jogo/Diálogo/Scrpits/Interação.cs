@@ -3,16 +3,24 @@ using UnityEngine;
 public class Interacao : MonoBehaviour
 {
     public Dialogo dialogo;
-
-    bool jaAtivado = false; //controla se já foi usado
+    
+    [Tooltip("Dê um nome único para este diálogo para o jogo lembrar que ele já foi lido.")]
+    public string idDoDialogo; 
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && !jaAtivado)
+        if (col.CompareTag("Player"))
         {
-            dialogo.IniciarDialogo();
+            // Verifica se o PlayerPrefs já tem o registro de que este diálogo foi ativado
+            // O padrão é 0 (falso), e mudamos para 1 (verdadeiro) quando ativado
+            if (PlayerPrefs.GetInt(idDoDialogo, 0) == 0)
+            {
+                dialogo.IniciarDialogo();
 
-            jaAtivado = true; // não ativa novamente
+                // Salva permanentemente que este diálogo já foi usado
+                PlayerPrefs.SetInt(idDoDialogo, 1);
+                PlayerPrefs.Save(); // Garante que o dado foi gravado no disco
+            }
         }
     }
 }

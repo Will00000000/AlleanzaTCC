@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo: {fileID: 1467236002}
+  idDoDialogo: GerenciadorDialogo
 --- !u!58 &82862976
 CircleCollider2D:
   m_ObjectHideFlags: 0
