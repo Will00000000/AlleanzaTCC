@@ -11,6 +11,7 @@ public class InteraçãoPraia : MonoBehaviour
     void Start ()
     {
         jogador = GameObject.Find("Jogador");
+        InteracaoEntreCenas();
     }
 
     void Update ()
@@ -32,7 +33,7 @@ public class InteraçãoPraia : MonoBehaviour
         }
     }
 
-    private void InteraçãoEntreCenas ()
+    private void InteracaoEntreCenas ()
     {
         if (PlayerPrefs.GetInt ("Visitou quebra-cabeça", 0) == 1)
         {

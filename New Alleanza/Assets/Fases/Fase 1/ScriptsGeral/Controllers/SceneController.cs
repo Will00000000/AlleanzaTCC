@@ -114,6 +114,14 @@ public class SceneController : MonoBehaviour
         was_Rua = true;
     }
 
+    public void GoMuseu_from_QuebraCabeca()
+    {
+        PlayerPrefs.SetInt("Visitou quebra-cabeça", 1); //cria uma variável de verificação para todo o jogo
+        PlayerPrefs.Save(); //salva o valor por garantia
+
+        SceneManager.LoadScene("Museu");
+    }
+
     public void GoQuebraCabeca()
     {
         SceneManager.LoadScene("Minigame");
@@ -131,7 +139,6 @@ public class SceneController : MonoBehaviour
 
     public void GoOceano ()
     {
-        
         SceneManager.LoadScene("Atlantis");
     }
 }
