@@ -992,7 +992,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1192266168}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-        m_MethodName: GoOceano
+        m_MethodName: GoLixos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

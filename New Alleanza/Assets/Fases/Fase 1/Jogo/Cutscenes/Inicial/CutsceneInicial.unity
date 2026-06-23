@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1045269628}
   - component: {fileID: 1045269627}
   m_Layer: 5
-  m_Name: "Avan\xE7ar +1s"
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045269625}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 14.7
+  m_fontSizeBase: 14.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 1507465780}
   - component: {fileID: 1507465779}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: "CanvasA\xE7\xF5es"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,8 +499,8 @@ Canvas:
   m_GameObject: {fileID: 1507465778}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1463710405}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -511,7 +511,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1507465782
 RectTransform:
@@ -561,7 +561,7 @@ RectTransform:
   m_GameObject: {fileID: 1716549097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5346799, y: 2.467518, z: 2.467518}
+  m_LocalScale: {x: 1.9488, y: 1.9488, z: 1.9488}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1045269626}
@@ -569,8 +569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 876, y: -482}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 833.01074, y: -459.80243}
+  m_SizeDelta: {x: 102.2188, y: 52.7808}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716549099
 MonoBehaviour:
