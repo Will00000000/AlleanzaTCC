@@ -763,7 +763,6 @@ GameObject:
   - component: {fileID: 456616547}
   - component: {fileID: 456616548}
   - component: {fileID: 456616549}
-  - component: {fileID: 456616550}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -883,31 +882,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &456616550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456616546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  is_Escadaria: 0
-  was_Escadaria: 0
-  is_Rua: 0
-  was_Rua: 0
-  is_QuartoMorgan: 0
-  was_QuartoMorgan: 0
-  is_Praia: 0
-  was_Praia: 0
-  is_Museu: 0
-  was_Museu: 0
-  is_Praia2: 0
-  was_Praia2: 0
 --- !u!1 &493169512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.55
+      value: -20.58
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2889,6 +2863,7 @@ GameObject:
   - component: {fileID: 1556566677}
   - component: {fileID: 1556566676}
   - component: {fileID: 1556566675}
+  - component: {fileID: 1556566678}
   m_Layer: 5
   m_Name: GoPraia2
   m_TagString: Untagged
@@ -3009,6 +2984,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556566673}
   m_CullTransparentMesh: 1
+--- !u!114 &1556566678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556566673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92151ea5272982f4797e2f8cc80d185f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1578305959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,7 +3276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1647160133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3546,7 +3533,6 @@ GameObject:
   - component: {fileID: 1786349787}
   - component: {fileID: 1786349788}
   - component: {fileID: 1786349789}
-  - component: {fileID: 1786349790}
   m_Layer: 0
   m_Name: Piso
   m_TagString: chao
@@ -3666,31 +3652,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1786349790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786349786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  is_Escadaria: 0
-  was_Escadaria: 0
-  is_Rua: 0
-  was_Rua: 0
-  is_QuartoMorgan: 0
-  was_QuartoMorgan: 0
-  is_Praia: 0
-  was_Praia: 0
-  is_Museu: 0
-  was_Museu: 0
-  is_Praia2: 0
-  was_Praia2: 0
 --- !u!4 &1809401867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
@@ -3763,7 +3724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -983.96, y: -535.98}
+  m_AnchoredPosition: {x: -981.02, y: -538.17}
   m_SizeDelta: {x: 164.14, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144536064
@@ -3810,7 +3771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1192266168}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: GoCasa_from_Praia
         m_Mode: 1
