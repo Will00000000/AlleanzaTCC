@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 82862975}
   m_Layer: 0
   m_Name: "Colis\xE3o_Dialogo"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo: {fileID: 1467236002}
-  idDoDialogo: GerenciadorDialogo
+  idDoDialogo: DialogoPraia2
 --- !u!58 &82862976
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: daac92f4514a3474f867d8c6c30115aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c99464680873a7f4dac56c58b2a4359c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1149,7 +1149,7 @@ GameObject:
   - component: {fileID: 1467236002}
   m_Layer: 0
   m_Name: GerenciadorDialogo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,7 +1503,7 @@ GameObject:
   - component: {fileID: 1700464898}
   m_Layer: 5
   m_Name: CaixaDialogo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dbe3b365c99f6b94a9c44da1ffec977e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f989ea6e4901dc649ad8f12b69ddb715, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
