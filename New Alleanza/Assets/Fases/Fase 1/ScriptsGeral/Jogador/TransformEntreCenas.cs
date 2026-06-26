@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class TransformEntreCenas: MonoBehaviour
 {
-    GameObject sceneController;
-    GameObject jogador;
+    [SerializeField] GameObject sceneController;
+    [SerializeField] GameObject jogador;
 
     private void Awake () 
     {
@@ -11,25 +11,23 @@ public class TransformEntreCenas: MonoBehaviour
         jogador = GameObject.Find("Jogador");
     }
 
-    private void Start ()
+    private void Update ()
     {
-        Is_Praia();
-    }
+        SceneController sController = sceneController.GetComponent<SceneController>();
+        Rigidbody2D rig = jogador.GetComponent<Rigidbody2D>();
 
-    private void Is_Praia ()
-    {
-        if (sceneController.GetComponent<SceneController>().is_Praia)
+        if (sController.is_Praia)
         {
-            if (sceneController.GetComponent <SceneController>().was_QuartoMorgan)
+            if (sController.was_QuartoMorgan)
             {
-                jogador.transform.position = new Vector2 (-20.5799999f, 0.519999981f);
                 Debug.Log("Jogador está na praia e estava no quarto");
+                rig.position = new Vector2(-20.5f, 0.51f);
             }
 
-            if (sceneController.GetComponent <SceneController>().was_Praia2)
+            if (sController.was_Praia2)
             {
-                jogador.transform.position = new Vector2 (-3.28999996f, -1.7460000f);
-                Debug.Log("Jogador está na praia e estava na segunda praia2");
+                Debug.Log("Jogador está na praia e estava na praia2");
+                rig.position = new Vector2(-30f, 0.5f);
             }
         }
     }
