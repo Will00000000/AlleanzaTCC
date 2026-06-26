@@ -26,6 +26,7 @@ public class Jogador2D_Terra : MonoBehaviour
     {
         anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
+        
     }
 
     void Update()
