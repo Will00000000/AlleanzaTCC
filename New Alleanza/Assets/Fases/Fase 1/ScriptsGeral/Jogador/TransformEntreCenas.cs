@@ -2,23 +2,20 @@ using UnityEngine;
 
 public class TransformEntreCenas: MonoBehaviour
 {
-    [SerializeField] GameObject sceneController;
-    //[SerializeField] GameObject jogador;
+    [SerializeField]
+    GameObject sceneController;
 
     SceneController sController;
 
-    private void Awake () 
+    private void Start () //no primeiro frame e depois do Awake()
     {
         sceneController = GameObject.Find("SceneController");
         sController = sceneController.GetComponent<SceneController>();
-    }
 
-    private void Update ()
-    {
         IsPraia();
     }
 
-    void IsPraia ()
+    private void IsPraia ()
     {
         if (sController.is_Praia)
         {
