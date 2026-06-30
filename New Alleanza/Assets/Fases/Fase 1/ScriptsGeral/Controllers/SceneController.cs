@@ -21,8 +21,8 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Praia2");
 
-        is_Praia2 = true;
-        was_Praia = true;
+        PlayerPrefs.SetInt ("is_Praia2", 1);
+        PlayerPrefs.SetInt ("was_Praia", 1);
     }
 
     public void GoEscadaria_from_Praia2()
@@ -43,26 +43,26 @@ public class SceneController : MonoBehaviour
 
     public void GoPraia_from_Praia2()
     {
-        SceneManager.LoadScene("Praia");
+        PlayerPrefs.SetInt ("is_Praia", 1);
+        PlayerPrefs.SetInt ("was_Praia2", 1);
 
-        is_Praia = true;
-        was_Praia2 = true;
+        SceneManager.LoadScene("Praia");
     }
 
     public void GoCasa_from_Praia ()
     {
         SceneManager.LoadScene("MorganHouse");
 
-        is_QuartoMorgan = true;
-        was_Praia = true;
+        PlayerPrefs.SetInt ("is_QuartoMorgan", 1);
+        PlayerPrefs.SetInt ("was_Praia", 1);
     }
 
     public void GoPraia_from_Casa ()
     {
-        SceneManager.LoadScene("Praia");
+        PlayerPrefs.SetInt ("is_Praia", 1);
+        PlayerPrefs.SetInt ("was_QuartoMorgan", 1);
 
-        is_Praia = true;
-        was_QuartoMorgan = true;
+        SceneManager.LoadScene("Praia");
     }
 
     public void GoPraia_from_Escadaria ()
