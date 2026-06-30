@@ -17,6 +17,30 @@ public class SceneController : MonoBehaviour
         player = GameObject.Find("Jogador");
     }
 
+    public void GoCasa_from_Praia()
+    {
+        PlayerPrefs.SetInt("is_QuartoMorgan", 1);
+        PlayerPrefs.SetInt("was_Praia", 1);
+
+        SceneManager.LoadScene("MorganHouse");
+    }
+
+    public void GoPraia_from_Casa()
+    {
+        PlayerPrefs.SetInt("is_Praia", 1);
+        PlayerPrefs.SetInt("was_QuartoMorgan", 1);
+
+        SceneManager.LoadScene("Praia");
+    }
+
+    public void GoPraia_from_Praia2()
+    {
+        PlayerPrefs.SetInt("is_Praia", 1);
+        PlayerPrefs.SetInt("was_Praia2", 1);
+
+        SceneManager.LoadScene("Praia");
+    }
+
     public void GoPraia2_from_Praia()
     {
         SceneManager.LoadScene("Praia2");
@@ -41,29 +65,11 @@ public class SceneController : MonoBehaviour
         was_Escadaria = true;
     }
 
-    public void GoPraia_from_Praia2()
-    {
-        PlayerPrefs.SetInt ("is_Praia", 1);
-        PlayerPrefs.SetInt ("was_Praia2", 1);
+    
 
-        SceneManager.LoadScene("Praia");
-    }
+    
 
-    public void GoCasa_from_Praia ()
-    {
-        SceneManager.LoadScene("MorganHouse");
-
-        PlayerPrefs.SetInt ("is_QuartoMorgan", 1);
-        PlayerPrefs.SetInt ("was_Praia", 1);
-    }
-
-    public void GoPraia_from_Casa ()
-    {
-        PlayerPrefs.SetInt ("is_Praia", 1);
-        PlayerPrefs.SetInt ("was_QuartoMorgan", 1);
-
-        SceneManager.LoadScene("Praia");
-    }
+    
 
     public void GoPraia_from_Escadaria ()
     {
