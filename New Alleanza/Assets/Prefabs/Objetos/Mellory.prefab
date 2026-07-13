@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5581250031759048389}
   - component: {fileID: 8577532087321555176}
   m_Layer: 0
-  m_Name: Jogador
+  m_Name: Mellory
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c4c4b7bce5daf0542a91828340aa987d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c28ff1b7652e2547bdbaabe4e7adf4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -266,8 +266,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.49630803, y: -0.030073395}
-  m_Size: {x: 1.8953798, y: 8.975982}
+  m_Offset: {x: 0.19831818, y: 0.077501334}
+  m_Size: {x: 3.562489, y: 10.934679}
   m_Direction: 0
 --- !u!95 &5581250031759048389
 Animator:
@@ -302,4 +302,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987302abe39f5a9478ff85d5752557d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneController: {fileID: 0}
