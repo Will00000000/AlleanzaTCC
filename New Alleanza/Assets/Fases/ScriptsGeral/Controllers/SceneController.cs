@@ -83,6 +83,7 @@ public class SceneController : MonoBehaviour
     public void GoMuseu_from_QuebraCabeca()
     {
         PlayerPrefs.SetInt("was_QuebraCabeça", 1);
+        PlayerPrefs.SetInt ("Visitou quebra-cabeça", 1);
 
         SceneManager.LoadScene("Museu");
     }
