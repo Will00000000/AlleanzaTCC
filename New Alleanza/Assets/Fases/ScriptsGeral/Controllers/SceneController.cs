@@ -73,6 +73,13 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Cidade");
     }
 
+    public void GoCidade_from_CasaHelena ()
+    {
+        PlayerPrefs.SetInt("was_CasaHelena", 1);
+
+        SceneManager.LoadScene("Cidade");
+    }
+
     public void GoMuseu_from_Cidade ()
     {
         PlayerPrefs.SetInt("was_Cidade", 1);
@@ -80,10 +87,17 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Museu");
     }
 
+    public void GoCasaHelena_from_Cidade()
+    {
+        PlayerPrefs.SetInt("was_Cidade", 1);
+
+        SceneManager.LoadScene("CasaHelena");
+    }
+
     public void GoMuseu_from_QuebraCabeca()
     {
         PlayerPrefs.SetInt("was_QuebraCabeça", 1);
-        PlayerPrefs.SetInt ("Visitou quebra-cabeça", 1);
+        PlayerPrefs.SetInt("Visitou quebra-cabeça", 1);
 
         SceneManager.LoadScene("Museu");
     }

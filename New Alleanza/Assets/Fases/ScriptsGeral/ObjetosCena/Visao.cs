@@ -65,9 +65,16 @@ public class Visao : MonoBehaviour
         }
         else if (nomeCena == "Atlantis")
         {
-
             min_X = -42.25f;
             max_X = 0.02f;
+
+            min_Y = 0.01f;
+            max_Y = 0.01f;
+        }
+        else if (nomeCena == "CasaHelena")
+        {
+            min_X = -6;
+            max_X = 6;
 
             min_Y = 0.01f;
             max_Y = 0.01f;
