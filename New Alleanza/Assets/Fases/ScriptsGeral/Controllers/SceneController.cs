@@ -102,6 +102,20 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Museu");
     }
 
+    public void GoMinigameCaixa_from_CasaHelena ()
+    {
+        PlayerPrefs.SetInt("was_CasaHelena", 1);
+
+        SceneManager.LoadScene ("MinigameCaixa");
+    }
+
+    public void GoCasaHelena_from_MinigameCaixa ()
+    {
+        PlayerPrefs.SetInt("was_MinigameCaixa", 1);
+
+        SceneManager.LoadScene ("CasaHelena");
+    }
+
     public void GoQuebraCabeca()
     {
         SceneManager.LoadScene("Minigame");
