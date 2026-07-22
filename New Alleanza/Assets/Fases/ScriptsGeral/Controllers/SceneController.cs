@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
         player = GameObject.Find("Jogador");
     }
 
+    #region Fase1
     public void GoCasa_from_Praia()
     {
         PlayerPrefs.SetInt("was_Praia", 1);
@@ -86,6 +87,7 @@ public class SceneController : MonoBehaviour
 
         SceneManager.LoadScene("Museu");
     }
+    #endregion
 
     public void GoCasaHelena_from_Cidade()
     {

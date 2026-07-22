@@ -17,6 +17,7 @@ public class InteraçãoPraia : MonoBehaviour
     void Update ()
     {
         InteracaoEstruturas();
+        InteracaoEntreCenas();
 
         distancia_botaoCasa = Vector2.Distance(jogador.transform.position, botãoCasa.transform.position);
     }

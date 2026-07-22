@@ -45,9 +45,15 @@ EditorBuildSettings:
     path: Assets/Fases/Fase 2/Jogo/Mundo/Atlantis.unity
     guid: 9a8ac3ee6af89714291cb0486051303c
   - enabled: 1
-    path: Assets/Fases/Fase 3/Jogo/Mundo/Castelo.unity
+    path: Assets/Fases/Fase 2/Jogo/Mundo/Castelo.unity
     guid: 946c08e89d0319048aa5f7a1d0ba892e
   - enabled: 1
     path: Assets/Fases/Fase 3/Jogo/Mundo/CasaHelena.unity
     guid: f1bddafa08ebdb340872980968987483
+  - enabled: 1
+    path: "Assets/Fases/Fase 3/Jogo/Mundo/Ref\xFAgio.unity"
+    guid: 5250561627747494fb4342f82f0c6e24
+  - enabled: 1
+    path: Assets/Fases/Fase 3/Jogo/Cutscenes/CampoAstral.unity
+    guid: b7a974e376f66bc48b9f278cab84e73f
   m_configObjects: {}
