@@ -74,12 +74,7 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Cidade");
     }
 
-    public void GoCidade_from_CasaHelena ()
-    {
-        PlayerPrefs.SetInt("was_CasaHelena", 1);
-
-        SceneManager.LoadScene("Cidade");
-    }
+    
 
     public void GoMuseu_from_Cidade ()
     {
@@ -89,13 +84,6 @@ public class SceneController : MonoBehaviour
     }
     #endregion
 
-    public void GoCasaHelena_from_Cidade()
-    {
-        PlayerPrefs.SetInt("was_Cidade", 1);
-
-        SceneManager.LoadScene("CasaHelena");
-    }
-
     public void GoMuseu_from_QuebraCabeca()
     {
         PlayerPrefs.SetInt("was_QuebraCabeça", 1);
@@ -104,10 +92,43 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Museu");
     }
 
-    public void GoMinigameCaixa_from_CasaHelena ()
+    public void GoCastelo_from_Atlantis ()
+    {
+        PlayerPrefs.SetInt ("was_Atlantis", 1);
+
+        SceneManager.LoadScene ("Castelo");
+    }
+
+    public void GoAtlantis_from_Castelo ()
+    {
+        PlayerPrefs.SetInt ("was_Castelo", 1);
+
+        SceneManager.LoadScene ("Atlantis");
+    }
+
+    public void GoPraia_from_Atlantis ()
+    {
+        PlayerPrefs.SetInt ("was_Atlantis", 1);
+
+        SceneManager.LoadScene ("Praia");
+    }
+
+    public void GoCasaHelena_from_Cidade ()
+    {
+        PlayerPrefs.SetInt ("was_Cidade", 1);
+
+        SceneManager.LoadScene ("CasaHelena");
+    }
+
+    public void GoCidade_from_CasaHelena ()
     {
         PlayerPrefs.SetInt("was_CasaHelena", 1);
 
+        SceneManager.LoadScene("Cidade");
+    }
+
+    public void GoMinigameCaixa_from_CasaHelena ()
+    {
         SceneManager.LoadScene ("MinigameCaixa");
     }
 
@@ -116,6 +137,18 @@ public class SceneController : MonoBehaviour
         PlayerPrefs.SetInt("was_MinigameCaixa", 1);
 
         SceneManager.LoadScene ("CasaHelena");
+    }
+
+    public void GoRefugio_from_Praia ()
+    {
+        SceneManager.LoadScene ("Refúgio"); //Não precisa de verificação de entrada porque o jogador não volta do refúgio
+    }
+
+    public void GoPraia_from_Refugio ()
+    {
+        PlayerPrefs.SetInt ("was_Refúgio", 1);
+
+        SceneManager.LoadScene ("Praia");
     }
 
     public void GoQuebraCabeca()

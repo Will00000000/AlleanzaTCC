@@ -1233,7 +1233,6 @@ GameObject:
   - component: {fileID: 1443581112}
   - component: {fileID: 1443581115}
   - component: {fileID: 1443581114}
-  - component: {fileID: 1443581116}
   - component: {fileID: 1443581113}
   m_Layer: 5
   m_Name: GoPraia
@@ -1355,18 +1354,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443581111}
   m_CullTransparentMesh: 1
---- !u!114 &1443581116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443581111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92151ea5272982f4797e2f8cc80d185f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1472930518
 PrefabInstance:
   m_ObjectHideFlags: 0

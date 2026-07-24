@@ -558,7 +558,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 564930932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1358034554}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: GoAtlantis_from_Castelo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &564930932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,6 +950,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
+--- !u!114 &1358034554 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
+  m_PrefabInstance: {fileID: 1358034553}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570107813
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +972,7 @@ GameObject:
   - component: {fileID: 1570107816}
   - component: {fileID: 1570107815}
   - component: {fileID: 1570107814}
+  - component: {fileID: 1570107817}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1030,6 +1054,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1570107817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570107813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509b6c1d9352f714ab4c9551db8aeb9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alvo: {fileID: 1687156649}
 --- !u!1001 &1687156648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1095,6 +1132,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54162ead4160e4f46aeef4157d2413f5, type: 3}
+--- !u!4 &1687156649 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917969892716137283, guid: 54162ead4160e4f46aeef4157d2413f5, type: 3}
+  m_PrefabInstance: {fileID: 1687156648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1794892898
 GameObject:
   m_ObjectHideFlags: 0

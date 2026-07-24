@@ -61,12 +61,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3234797088976738630}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c4b8f0b42e9a8341ac21475a58a9e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   "bot\xE3oCasa": {fileID: 0}
+  GoOceano: {fileID: 0}
   distancia_botaoCasa: 0
 --- !u!114 &4397257261527399190
 MonoBehaviour:
