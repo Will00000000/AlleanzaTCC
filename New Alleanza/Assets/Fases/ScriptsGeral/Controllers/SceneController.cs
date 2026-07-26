@@ -74,8 +74,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("Cidade");
     }
 
-    
-
     public void GoMuseu_from_Cidade ()
     {
         PlayerPrefs.SetInt("was_Cidade", 1);
@@ -95,6 +93,7 @@ public class SceneController : MonoBehaviour
     public void GoCastelo_from_Atlantis ()
     {
         PlayerPrefs.SetInt ("was_Atlantis", 1);
+        PlayerPrefs.SetInt ("Visitou o castelo", 1);
 
         SceneManager.LoadScene ("Castelo");
     }
