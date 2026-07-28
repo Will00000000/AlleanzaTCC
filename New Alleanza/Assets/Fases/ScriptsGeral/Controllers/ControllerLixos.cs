@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class ControllerLixos : MonoBehaviour
 {
     //MINIGAME DOS LIXOS
     public Transform[] pontoOrigem;
