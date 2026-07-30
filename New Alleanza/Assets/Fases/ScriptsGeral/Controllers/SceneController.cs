@@ -133,6 +133,7 @@ public class SceneController : MonoBehaviour
 
     public void GoCasaHelena_from_MinigameCaixa ()
     {
+        PlayerPrefs.SetInt("Visitou o minigame das caixas", 1);
         PlayerPrefs.SetInt("was_MinigameCaixa", 1);
 
         SceneManager.LoadScene ("CasaHelena");

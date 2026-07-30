@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Fases/Fase 3/Jogo/Mundo/CasaHelena.unity
     guid: f1bddafa08ebdb340872980968987483
   - enabled: 1
+    path: Assets/Fases/Fase 3/Jogo/Minigames/MinigameCaixa.unity
+    guid: 49633c2d86c09c54fae5624acf401edb
+  - enabled: 1
     path: "Assets/Fases/Fase 3/Jogo/Mundo/Ref\xFAgio.unity"
     guid: 5250561627747494fb4342f82f0c6e24
   - enabled: 1

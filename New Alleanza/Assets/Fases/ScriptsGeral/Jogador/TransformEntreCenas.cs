@@ -24,37 +24,48 @@ public class TransformEntreCenas: MonoBehaviour
         {
             IsEscadaria();
         }
+
         if (SceneManager.GetActiveScene().name == "Cidade")
         {
             IsCidade();
         }
+
         if (SceneManager.GetActiveScene().name == "Museu")
         {
             IsMuseu();
         }
+
+        Debug.Log(PlayerPrefs.GetInt("was_QuartoMorgan"));
     }
-    private void IsQuartoMorgan()
+    private void IsQuartoMorgan() // verificação de origem no quarto
     {
         if (PlayerPrefs.GetInt("was_Praia", 0) == 1) // se estava na praia...
         {
-            Debug.Log("Jogador está no quarto e estava na praia");
-            transform.position = new Vector2(-3, transform.position.y); // posição no quarto vai para a porta
+            transform.position = new Vector2(-3, transform.position.y); //... x = -3
+
+            PlayerPrefs.SetInt("was_Praia", 0);
         }
+
+        PlayerPrefs.SetInt("was_QuartoMorgan", 0); // como ele está no quarto no presente, não tem como considerar que ele estava no passado
     }
 
-    private void IsPraia ()
+    private void IsPraia () //verificação de origem na praia
     {
-        if (PlayerPrefs.GetInt ("was_QuartoMorgan", 0) == 1)
+        if (PlayerPrefs.GetInt ("was_QuartoMorgan", 0) == 1) //se o jogador estava no quarto
         {
-            Debug.Log("Jogador está na praia e estava no quarto");
-            transform.position = new Vector2(-20, transform.position.y);
+            transform.position = new Vector2(-20, transform.position.y); //x = -20
+
+            PlayerPrefs.SetInt("was_QuartoMorgan", 0); //e como o jogador já foi deslocado, não precisamos saber que estava no quarto
         }
 
-        if (PlayerPrefs.GetInt("was_Praia2", 0) == 1)
+        if (PlayerPrefs.GetInt("was_Praia2", 0) == 1) //se o jogador estava no quarto...
         {
-            Debug.Log("Jogador está na praia e estava na praia2");
-            transform.position = new Vector2(-30f, transform.position.y);
+            transform.position = new Vector2(-30, transform.position.y); //...x = -30
+
+            PlayerPrefs.SetInt("was_Praia2", 0); //e como o jogador já foi deslocado, não precisamos saber que estava na praia 2
         }
+
+        PlayerPrefs.SetInt("was_Praia", 0); //como ele está na praia no presente, não tem como considerar que ele estava no passado
     }
 
     private void IsPraia2 ()
@@ -62,12 +73,18 @@ public class TransformEntreCenas: MonoBehaviour
         if (PlayerPrefs.GetInt ("was_Praia", 0) == 1)
         {
             transform.position = new Vector2(6, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Praia", 0);
         }
 
         if (PlayerPrefs.GetInt ("was_Escadaria", 0) == 1)
         {
             transform.position = new Vector2(-12, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Escadaria", 0);
         }
+
+        PlayerPrefs.SetInt("was_Praia2", 0);
     }
 
     private void IsEscadaria()
