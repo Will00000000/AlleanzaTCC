@@ -35,6 +35,26 @@ public class TransformEntreCenas: MonoBehaviour
             IsMuseu();
         }
 
+        if (SceneManager.GetActiveScene().name == "Atlantis")
+        {
+            IsAtlantis();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Castelo")
+        {
+            IsCastelo();
+        }
+
+        if (SceneManager.GetActiveScene().name == "CasaHelena")
+        {
+            IsCasaHelena();
+        }
+
+        if (SceneManager.GetActiveScene().name == "Refúgio")
+        {
+            IsRefúgio();
+        }
+
         Debug.Log(PlayerPrefs.GetInt("was_QuartoMorgan"));
     }
     private void IsQuartoMorgan() // verificação de origem no quarto
@@ -92,12 +112,18 @@ public class TransformEntreCenas: MonoBehaviour
         if (PlayerPrefs.GetInt("was_Praia2", 0) == 1)
         {
             transform.position = new Vector2(9, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Praia2", 0);
         }
 
         if (PlayerPrefs.GetInt("was_Cidade", 0) == 1)
         {
             transform.position = new Vector2(-2, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Cidade", 0);
         }
+
+        PlayerPrefs.SetInt("was_Escadaria", 0);
     }
 
     private void IsCidade()
@@ -105,12 +131,18 @@ public class TransformEntreCenas: MonoBehaviour
         if (PlayerPrefs.GetInt("was_Escadaria", 0) == 1)
         {
             transform.position = new Vector2(195, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Escadaria", 0);
         }
 
         if (PlayerPrefs.GetInt("was_Museu", 0) == 1)
         {
             transform.position = new Vector2(65, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Museu", 0);
         }
+
+        PlayerPrefs.SetInt("was_Cidade", 0);
     }
 
     private void IsMuseu()
@@ -118,16 +150,80 @@ public class TransformEntreCenas: MonoBehaviour
         if (PlayerPrefs.GetInt("was_Cidade", 0) == 1)
         {
             transform.position = new Vector2(17, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Cidade", 0);
         }
 
         if (PlayerPrefs.GetInt("was_QuebraCabeça", 0) == 1)
         {
             transform.position = new Vector2(-6, transform.position.y);
+
+            PlayerPrefs.SetInt("was_QuebraCabeça", 0);
         }
+
+        PlayerPrefs.SetInt("was_Museu", 0);
     }
 
     private void IsAtlantis()
     {
+        if (PlayerPrefs.GetInt("was_Praia", 0) == 1)
+        {
+            transform.position = new Vector2(-50, transform.position.y);
 
+            PlayerPrefs.SetInt("was_Praia", 0);
+        }
+
+        if (PlayerPrefs.GetInt("was_Castelo", 0) == 1)
+        {
+            transform.position = new Vector2(3, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Castelo", 0);
+        }
+
+        PlayerPrefs.SetInt("was_Atlantis", 0);
     }
+
+    private void IsCastelo()
+    {
+        if (PlayerPrefs.GetInt("was_Atlantis", 0) == 1)
+        {
+            transform.position = new Vector2(-20, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Atlantis", 0);
+        }
+
+        PlayerPrefs.SetInt("was_Castelo", 0);
+    }
+
+    private void IsCasaHelena()
+    {
+        if (PlayerPrefs.GetInt("was_Cidade", 0) == 1)
+        {
+            transform.position = new Vector2(17, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Cidade", 0);
+        }
+
+        if (PlayerPrefs.GetInt("was_MinigameCaixa", 0) == 1)
+        {
+            transform.position = new Vector2(-6, transform.position.y);
+
+            PlayerPrefs.SetInt("was_MinigameCaixa", 0);
+        }
+
+        PlayerPrefs.SetInt("was_CasaHelena", 0);
+    }
+
+    private void IsRefúgio()
+    {
+        if (PlayerPrefs.GetInt("was_Praia", 0) == 1)
+        {
+            transform.position = new Vector2(17, transform.position.y);
+
+            PlayerPrefs.SetInt("was_Praia", 0);
+        }
+
+        PlayerPrefs.SetInt("was_Refúgio", 0);
+    }
+
 }
