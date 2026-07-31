@@ -85,6 +85,13 @@ public class TransformEntreCenas: MonoBehaviour
             PlayerPrefs.SetInt("was_Praia2", 0); //e como o jogador já foi deslocado, não precisamos saber que estava na praia 2
         }
 
+        if (PlayerPrefs.GetInt("was_Refúgio", 0) == 1)
+        {
+            transform.position = new Vector2(5, transform.position.y);
+
+            PlayerPrefs.SetInt ("was_Refúgio", 0);
+        }
+
         PlayerPrefs.SetInt("was_Praia", 0); //como ele está na praia no presente, não tem como considerar que ele estava no passado
     }
 
@@ -199,14 +206,14 @@ public class TransformEntreCenas: MonoBehaviour
     {
         if (PlayerPrefs.GetInt("was_Cidade", 0) == 1)
         {
-            transform.position = new Vector2(17, transform.position.y);
+            transform.position = new Vector2(20, transform.position.y);
 
             PlayerPrefs.SetInt("was_Cidade", 0);
         }
 
         if (PlayerPrefs.GetInt("was_MinigameCaixa", 0) == 1)
         {
-            transform.position = new Vector2(-6, transform.position.y);
+            transform.position = new Vector2(-33, transform.position.y);
 
             PlayerPrefs.SetInt("was_MinigameCaixa", 0);
         }
@@ -218,7 +225,7 @@ public class TransformEntreCenas: MonoBehaviour
     {
         if (PlayerPrefs.GetInt("was_Praia", 0) == 1)
         {
-            transform.position = new Vector2(17, transform.position.y);
+            transform.position = new Vector2(-1, transform.position.y);
 
             PlayerPrefs.SetInt("was_Praia", 0);
         }

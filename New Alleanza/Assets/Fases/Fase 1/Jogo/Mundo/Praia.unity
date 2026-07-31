@@ -4278,9 +4278,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1161349887}
     - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: GoCasa
+      value: 
+      objectReference: {fileID: 2144536062}
+    - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: GoOceano
       value: 
       objectReference: {fileID: 493169512}
+    - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: GoPraia2
+      value: 
+      objectReference: {fileID: 1556566673}
     - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: m_Enabled
       value: 1

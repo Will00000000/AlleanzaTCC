@@ -4,11 +4,17 @@ public class InteraçãoPraia : MonoBehaviour
 {
     GameObject jogador;
 
-    public GameObject botãoCasa;
-    public GameObject GoOceano;
     public GameObject Fase3; //Objeto que contém os objetos de acesso à fase 3
-    [SerializeField] float distancia_botaoCasa;
-    
+
+    [Header("EntreCenas")]
+    public GameObject GoPraia2;
+    public GameObject GoOceano;
+    public GameObject GoCasa;
+
+    float distancia_GoCasa;
+    float distancia_GoPraia2;
+    float distancia_GoOceano;
+
     void Start ()
     {
         jogador = GameObject.Find("Morgan");
@@ -17,27 +23,16 @@ public class InteraçãoPraia : MonoBehaviour
 
     void Update ()
     {
-        InteracaoEstruturas();
         InteracaoEntreCenas();
 
-        distancia_botaoCasa = Vector2.Distance(jogador.transform.position, botãoCasa.transform.position);
-    }
-
-    private void InteracaoEstruturas()
-    {
-        if (distancia_botaoCasa < 2)
-        {
-            botãoCasa.SetActive(true);
-        }
-        else
-        {
-            botãoCasa.SetActive(false);
-        }
+        distancia_GoCasa = Vector2.Distance(jogador.transform.position, GoCasa.transform.position);
+        distancia_GoPraia2 = Vector2.Distance(jogador.transform.position, GoPraia2.transform.position);
+        distancia_GoOceano = Vector2.Distance(jogador.transform.position, GoOceano.transform.position);
     }
 
     private void InteracaoEntreCenas ()
     {
-        if (PlayerPrefs.GetInt ("Visitou quebra-cabeça", 0) == 1)
+        if (PlayerPrefs.GetInt ("Visitou quebra-cabeça", 0) == 1 & distancia_GoOceano < 2)
         {
             GoOceano.SetActive(true);
         }
@@ -53,6 +48,24 @@ public class InteraçãoPraia : MonoBehaviour
         else
         {
             Fase3.SetActive(false); //Fase 3 estão desativa
+        }
+
+        if (distancia_GoCasa < 5)
+        {
+            GoCasa.SetActive(true);
+        }
+        else
+        {
+            GoCasa.SetActive(false);
+        }
+
+        if (distancia_GoPraia2 < 5)
+        {
+            GoPraia2.SetActive(true);
+        }
+        else
+        {
+            GoPraia2.SetActive(false);
         }
     }
 }
