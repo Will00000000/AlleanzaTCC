@@ -2513,7 +2513,7 @@ Transform:
   m_GameObject: {fileID: 1161349887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.981946, y: 3.3586245, z: -9.982836}
+  m_LocalPosition: {x: 9.66, y: -0.27, z: -9.982836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4296,7 +4296,7 @@ PrefabInstance:
     - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: "GoRef\xFAgio"
       value: 
-      objectReference: {fileID: 1161349887}
+      objectReference: {fileID: 984750229}
     - target: {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: "bot\xE3oCasa"
       value: 
@@ -4304,8 +4304,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 689849236424741518}
   m_SourcePrefab: {fileID: 100100000, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+--- !u!1 &689849236424741517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+  m_PrefabInstance: {fileID: 689849236424741516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &689849236424741518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689849236424741517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4b8f0b42e9a8341ac21475a58a9e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fase3: {fileID: 1161349887}
+  GoPraia2: {fileID: 1556566673}
+  GoOceano: {fileID: 493169512}
+  GoCasa: {fileID: 2144536062}
+  "GoRef\xFAgio": {fileID: 984750229}
 --- !u!1 &2255051932986712157
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,11 +4378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7248761095093264681, guid: ae5391c1966dc2644969c27ca5766a4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.49
+      value: -5.36
       objectReference: {fileID: 0}
     - target: {fileID: 7248761095093264681, guid: ae5391c1966dc2644969c27ca5766a4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 7248761095093264681, guid: ae5391c1966dc2644969c27ca5766a4c, type: 3}
       propertyPath: m_LocalPosition.z

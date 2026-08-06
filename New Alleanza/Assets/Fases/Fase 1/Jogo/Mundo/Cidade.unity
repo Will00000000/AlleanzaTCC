@@ -525,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_Name
-      value: Jogador
+      value: Morgan
       objectReference: {fileID: 0}
     - target: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_LocalPosition.x
@@ -580,6 +580,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
+--- !u!1 &652908368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
+  m_PrefabInstance: {fileID: 652908367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &737869316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -632,7 +637,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+    - {fileID: 2491021828148885786, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -658,6 +665,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GoCasaHelena: {fileID: 269980968}
+  GoEscadaria: {fileID: 4915824412862528077}
+  GoMuseu: {fileID: 1848578097789160824}
+  jogador: {fileID: 652908368}
 --- !u!1001 &843988193
 PrefabInstance:
   m_ObjectHideFlags: 0

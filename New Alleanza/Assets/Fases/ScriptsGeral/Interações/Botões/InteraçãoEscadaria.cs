@@ -3,6 +3,7 @@ using UnityEngine;
 public class InteraçãoEscadaria : MonoBehaviour
 {
     public GameObject placa;
+    public GameObject OpenPlaca;
     public GameObject jogador;
     public GameObject InterfaceGeral;
 
@@ -12,17 +13,20 @@ public class InteraçãoEscadaria : MonoBehaviour
 
     float distancia_GoPraia2;
     float distancia_GoCidade;
+    float distancia_OpenPlaca;
 
     private void Start()
     {
         jogador = GameObject.Find("Morgan");
-        InteracaoEntreCenas();
     }
 
     private void Update()
     {
         distancia_GoPraia2 = Vector2.Distance(jogador.transform.position, GoPraia2.transform.position);
         distancia_GoCidade = Vector2.Distance(jogador.transform.position, GoCidade.transform.position);
+        distancia_OpenPlaca = Vector2.Distance(jogador.transform.position, OpenPlaca.transform.position);
+
+        InteracaoEntreCenas();
     }
 
     private void InteracaoEntreCenas()
@@ -43,6 +47,15 @@ public class InteraçãoEscadaria : MonoBehaviour
         else
         {
             GoCidade.SetActive(false);
+        }
+
+        if (distancia_OpenPlaca < 5)
+        {
+            OpenPlaca.SetActive(true);
+        }
+        else
+        {
+            OpenPlaca.SetActive(false);
         }
     }
 

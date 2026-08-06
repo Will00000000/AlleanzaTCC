@@ -10,15 +10,16 @@ public class InteraçãoPraia : MonoBehaviour
     public GameObject GoPraia2;
     public GameObject GoOceano;
     public GameObject GoCasa;
+    public GameObject GoRefúgio;
 
     float distancia_GoCasa;
     float distancia_GoPraia2;
     float distancia_GoOceano;
+    float distancia_GoRefúgio;
 
     void Start ()
     {
         jogador = GameObject.Find("Morgan");
-        InteracaoEntreCenas();
     }
 
     void Update ()
@@ -28,11 +29,12 @@ public class InteraçãoPraia : MonoBehaviour
         distancia_GoCasa = Vector2.Distance(jogador.transform.position, GoCasa.transform.position);
         distancia_GoPraia2 = Vector2.Distance(jogador.transform.position, GoPraia2.transform.position);
         distancia_GoOceano = Vector2.Distance(jogador.transform.position, GoOceano.transform.position);
+        distancia_GoRefúgio = Vector2.Distance(jogador.transform.position, GoRefúgio.transform.position);
     }
 
     private void InteracaoEntreCenas ()
     {
-        if (PlayerPrefs.GetInt ("Visitou quebra-cabeça", 0) == 1 & distancia_GoOceano < 2)
+        if (PlayerPrefs.GetInt ("Visitou quebra-cabeça", 0) == 1 & distancia_GoOceano < 5)
         {
             GoOceano.SetActive(true);
         }
@@ -47,7 +49,7 @@ public class InteraçãoPraia : MonoBehaviour
         }
         else
         {
-            Fase3.SetActive(false); //Fase 3 estão desativa
+            Fase3.SetActive(false); //Fase 3 está desativada
         }
 
         if (distancia_GoCasa < 5)
@@ -66,6 +68,15 @@ public class InteraçãoPraia : MonoBehaviour
         else
         {
             GoPraia2.SetActive(false);
+        }
+
+        if (distancia_GoRefúgio < 5)
+        {
+            GoRefúgio.SetActive(true);
+        }
+        else
+        {
+            GoRefúgio.SetActive(false);
         }
     }
 }

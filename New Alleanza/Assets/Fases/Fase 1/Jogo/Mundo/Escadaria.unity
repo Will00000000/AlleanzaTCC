@@ -370,7 +370,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012389666}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: "Intera\xE7\xE3oEscadaria, Assembly-CSharp"
         m_MethodName: FecharPlaca
         m_Mode: 1
@@ -627,6 +627,91 @@ RectTransform:
   m_AnchoredPosition: {x: 169.2, y: 426}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &446220819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_Name
+      value: InteractController
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.27692676
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.322384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7560913
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6695312202686250934, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+    - {fileID: 2491021828148885786, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 446220821}
+  m_SourcePrefab: {fileID: 100100000, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+--- !u!1 &446220820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+  m_PrefabInstance: {fileID: 446220819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446220821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446220820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 332c2fd449d7c79469f3adfebe884f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placa: {fileID: 778156441}
+  OpenPlaca: {fileID: 1685773162}
+  jogador: {fileID: 778156441}
+  InterfaceGeral: {fileID: 1165463484}
+  GoPraia2: {fileID: 1437409664}
+  GoCidade: {fileID: 172906557}
 --- !u!4 &536710169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
@@ -1108,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_Name
-      value: Jogador
+      value: Morgan
       objectReference: {fileID: 0}
     - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_TagString
@@ -1310,10 +1395,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2429322704156968256, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2012389666}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
 --- !u!1 &1271169368
 GameObject:
@@ -1785,7 +1867,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012389666}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: "Intera\xE7\xE3oEscadaria, Assembly-CSharp"
         m_MethodName: AbrirPlaca
         m_Mode: 1
@@ -2596,31 +2678,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
---- !u!1 &2012389665 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2429322704156968256, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
-  m_PrefabInstance: {fileID: 1227603180}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2012389666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012389665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 332c2fd449d7c79469f3adfebe884f4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placa: {fileID: 1792613951}
-  InterfaceGeral: {fileID: 1165463484}
 --- !u!114 &2012389667 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
   m_PrefabInstance: {fileID: 1227603180}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012389665}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63674c7b16b639d47a8f8a86bfd90f31, type: 3}
@@ -3072,6 +3135,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 2108925616}
   - {fileID: 2012370949}
+  - {fileID: 446220819}
   - {fileID: 1227603180}
   - {fileID: 1023841627}
   - {fileID: 1502497485}

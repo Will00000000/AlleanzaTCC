@@ -1,47 +1,47 @@
 using UnityEngine;
 
-public class InteraçãoMuseu : MonoBehaviour
+public class InteraçãoCasaHelena : MonoBehaviour
 {
     GameObject jogador;
 
-    public GameObject GoQuebraCabeça;
     public GameObject GoCidade;
+    public GameObject GoMinigameCaixa;
 
     [Header("EntreCenas")]
-    float distancia_GoQuebraCabeça;
     float distancia_GoCidade;
+    float distancia_GoMinigameCaixa;
 
-    private void Start ()
+    private void Start()
     {
         jogador = GameObject.Find("Morgan");
     }
 
     private void Update()
     {
-        distancia_GoQuebraCabeça = Vector2.Distance (jogador.transform.position, GoQuebraCabeça.transform.position);
         distancia_GoCidade = Vector2.Distance(jogador.transform.position, GoCidade.transform.position);
+        distancia_GoMinigameCaixa = Vector2.Distance(jogador.transform.position, GoMinigameCaixa.transform.position);
 
         InteraçãoEntreCenas();
     }
 
     private void InteraçãoEntreCenas()
     {
-        if (distancia_GoQuebraCabeça < 5)
-        {
-            GoQuebraCabeça.SetActive(true);
-        }
-        else
-        {
-            GoQuebraCabeça.SetActive(false);
-        }
-
         if (distancia_GoCidade < 5)
         {
-            GoCidade.SetActive (true);
+            GoCidade.SetActive(true);
         }
         else
         {
-            GoCidade.SetActive (false);
+            GoCidade.SetActive(false);
+        }
+
+        if (distancia_GoMinigameCaixa < 5)
+        {
+            GoMinigameCaixa.SetActive(true);
+        }
+        else
+        {
+            GoMinigameCaixa.SetActive(false);
         }
     }
 }

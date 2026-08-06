@@ -855,8 +855,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 969839259}
   m_SourcePrefab: {fileID: 100100000, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+--- !u!1 &969839258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3234797088976738630, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+  m_PrefabInstance: {fileID: 969839257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &969839259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969839258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4c73e15cffbaf4698e38c8b8a1fa02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoCidade: {fileID: 1504727271}
+  GoMinigameCaixa: {fileID: 1378401417}
 --- !u!1001 &1125694155
 PrefabInstance:
   m_ObjectHideFlags: 0
