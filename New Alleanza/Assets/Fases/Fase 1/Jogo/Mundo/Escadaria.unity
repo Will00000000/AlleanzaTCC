@@ -370,7 +370,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 446220821}
         m_TargetAssemblyTypeName: "Intera\xE7\xE3oEscadaria, Assembly-CSharp"
         m_MethodName: FecharPlaca
         m_Mode: 1
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 332c2fd449d7c79469f3adfebe884f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placa: {fileID: 778156441}
+  placa: {fileID: 1792613951}
   OpenPlaca: {fileID: 1685773162}
   jogador: {fileID: 778156441}
   InterfaceGeral: {fileID: 1165463484}
@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 446220821}
         m_TargetAssemblyTypeName: "Intera\xE7\xE3oEscadaria, Assembly-CSharp"
         m_MethodName: AbrirPlaca
         m_Mode: 1

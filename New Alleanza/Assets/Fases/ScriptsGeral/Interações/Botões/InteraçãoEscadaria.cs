@@ -40,7 +40,7 @@ public class InteraçãoEscadaria : MonoBehaviour
             GoPraia2.SetActive(false);
         }
 
-        if (distancia_GoCidade < 5)
+        if (PlayerPrefs.GetInt ("Abriu placa", 0) == 1 && distancia_GoCidade < 5)
         {
             GoCidade.SetActive(true);
         }
@@ -63,6 +63,8 @@ public class InteraçãoEscadaria : MonoBehaviour
     {
         placa.SetActive (true);
         InterfaceGeral.SetActive (false);
+
+        PlayerPrefs.SetInt("Abriu placa", 1);
     }
 
     public void FecharPlaca ()

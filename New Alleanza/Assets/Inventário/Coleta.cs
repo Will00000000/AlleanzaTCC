@@ -17,6 +17,7 @@ public class Coleta : MonoBehaviour
     public void ColetarPeca()
     {
         itensGeral[1].transform.localScale = new Vector3(0, 0, 0); //objeto peça é desabilitado
+        PlayerPrefs.SetInt("Coletou peça", 1);
         //spriteItem = sprite_itensGeral[1].sprite; //pega o sprite 2 "peça"
     }
 

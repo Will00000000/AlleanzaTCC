@@ -26,26 +26,11 @@ public class Jogador2D_Terra : MonoBehaviour
     {
         anima = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
-        
     }
 
     void Update()
     {
         Mover();
-
-        //se não puder mover (diálogo ativo)
-        if (!podeMover)
-        {
-            rig.velocity = Vector2.zero; // para o movimento
-
-            // Alteração: Verificação de segurança para o erro parar
-            if (anima != null)
-            {
-                anima.SetFloat("SideMove", 0);
-            }
-
-            return; // impede qualquer outro movimento
-        }
 
         if (anima != null)
         {

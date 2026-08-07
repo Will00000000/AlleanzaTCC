@@ -7,6 +7,7 @@ public class InteraçãoPraia : MonoBehaviour
     public GameObject Fase3; //Objeto que contém os objetos de acesso à fase 3
 
     [Header("EntreCenas")]
+    public GameObject coletarPeça;
     public GameObject GoPraia2;
     public GameObject GoOceano;
     public GameObject GoCasa;
@@ -16,6 +17,7 @@ public class InteraçãoPraia : MonoBehaviour
     float distancia_GoPraia2;
     float distancia_GoOceano;
     float distancia_GoRefúgio;
+    float distancia_coletarPeça;
 
     void Start ()
     {
@@ -30,6 +32,7 @@ public class InteraçãoPraia : MonoBehaviour
         distancia_GoPraia2 = Vector2.Distance(jogador.transform.position, GoPraia2.transform.position);
         distancia_GoOceano = Vector2.Distance(jogador.transform.position, GoOceano.transform.position);
         distancia_GoRefúgio = Vector2.Distance(jogador.transform.position, GoRefúgio.transform.position);
+        distancia_coletarPeça = Vector2.Distance(jogador.transform.position, coletarPeça.transform.position);
     }
 
     private void InteracaoEntreCenas ()
@@ -61,7 +64,7 @@ public class InteraçãoPraia : MonoBehaviour
             GoCasa.SetActive(false);
         }
 
-        if (distancia_GoPraia2 < 5)
+        if (PlayerPrefs.GetInt("Coletou peça", 0) == 1 && distancia_GoPraia2 < 5) //IR PARA A PRAIA 2
         {
             GoPraia2.SetActive(true);
         }
@@ -77,6 +80,15 @@ public class InteraçãoPraia : MonoBehaviour
         else
         {
             GoRefúgio.SetActive(false);
+        }
+
+        if (distancia_coletarPeça < 5)
+        {
+            coletarPeça.SetActive(true);
+        }
+        else
+        {
+            coletarPeça.SetActive(false);
         }
     }
 }

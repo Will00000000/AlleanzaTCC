@@ -11,7 +11,7 @@ public class QuartoSeleneInteração : MonoBehaviour
 
     private void Start()
     {
-        jogador = GameObject.Find("Morgan");
+        jogador = GameObject.Find("Mellory");
     }
 
     private void Update()

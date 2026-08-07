@@ -13,7 +13,7 @@ public class InteraçãoCasaHelena : MonoBehaviour
 
     private void Start()
     {
-        jogador = GameObject.Find("Morgan");
+        jogador = GameObject.Find("Melissa");
     }
 
     private void Update()
