@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &153905736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1836716279317677216, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+  m_PrefabInstance: {fileID: 1162376170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &182266703 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2996823264010805718, guid: db94bc32db998d44abd9f0dd76ea29a0, type: 3}
@@ -658,6 +663,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GoCasaHelena: {fileID: 269980968}
+--- !u!1 &813142671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4306536813540882901, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+  m_PrefabInstance: {fileID: 1162376170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &843988193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -843,7 +853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482652859421571042, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3984640900372007478, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -885,6 +895,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: MapaCenario
+      value: 
+      objectReference: {fileID: 153905736}
+    - target: {fileID: 5481188505051315081, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: MochilaCenario
+      value: 
+      objectReference: {fileID: 813142671}
     - target: {fileID: 5709275480485148620, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Camera
       value: 
