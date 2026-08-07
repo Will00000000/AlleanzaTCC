@@ -473,10 +473,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c233620a83ec0ef47b581511dab5f135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jogador: {fileID: 0}
+  jogador: {fileID: 1040734682}
   velocidade: 3
   distanciaMinima: 1.5
   deveSeguir: 0
+--- !u!4 &1040734682 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917969892716137283, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
+  m_PrefabInstance: {fileID: 869795375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1358034553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -671,6 +676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mellory
       objectReference: {fileID: 0}
+    - target: {fileID: 5581250031759048389, guid: 54162ead4160e4f46aeef4157d2413f5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fddc7234649ce8549b3e6c8724ac892d, type: 2}
     - target: {fileID: 7917969892716137283, guid: 54162ead4160e4f46aeef4157d2413f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
