@@ -3,14 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public GameObject player;
-
-    private void Start()
-    {
-        player = GameObject.Find("Jogador");
-    }
-
-    #region Fase1
     public void GoCasa_from_Praia()
     {
         PlayerPrefs.SetInt("was_Praia", 1);
@@ -80,7 +72,6 @@ public class SceneController : MonoBehaviour
 
         SceneManager.LoadScene("Museu");
     }
-    #endregion
 
     public void GoMuseu_from_QuebraCabeca()
     {
@@ -93,7 +84,7 @@ public class SceneController : MonoBehaviour
     public void GoCastelo_from_Atlantis ()
     {
         PlayerPrefs.SetInt ("was_Atlantis", 1);
-        PlayerPrefs.SetInt ("Visitou o quarto de Selene", 1);
+        PlayerPrefs.SetInt ("Visitou o castelo", 1);
 
         SceneManager.LoadScene ("Castelo");
     }

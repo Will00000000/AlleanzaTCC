@@ -13,7 +13,7 @@ public class AtlantisInteração : MonoBehaviour
 
     private void Start()
     {
-        jogador = GameObject.Find("Morgan");
+        jogador = GameObject.Find("Mellory");
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class AtlantisInteração : MonoBehaviour
 
     private void InteraçãoEntreCenas()
     {
-        if (distancia_GoPraia < 5 && PlayerPrefs.GetInt ("Visitou o quarto de Selene", 0) == 1)
+        if (distancia_GoPraia < 5 && PlayerPrefs.GetInt ("Visitou o castelo", 0) == 1)
         {
             GoPraia.SetActive(true);
         }

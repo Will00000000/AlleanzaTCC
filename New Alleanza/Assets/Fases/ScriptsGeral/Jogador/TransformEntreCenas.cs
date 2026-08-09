@@ -57,6 +57,7 @@ public class TransformEntreCenas: MonoBehaviour
 
         Debug.Log(PlayerPrefs.GetInt("was_QuartoMorgan"));
     }
+
     private void IsQuartoMorgan() // verificação de origem no quarto
     {
         if (PlayerPrefs.GetInt("was_Praia", 0) == 1) // se estava na praia...
@@ -206,7 +207,7 @@ public class TransformEntreCenas: MonoBehaviour
     {
         if (PlayerPrefs.GetInt("was_Cidade", 0) == 1)
         {
-            transform.position = new Vector2(20, transform.position.y);
+            transform.position = new Vector2(12, transform.position.y);
 
             PlayerPrefs.SetInt("was_Cidade", 0);
         }
@@ -232,5 +233,4 @@ public class TransformEntreCenas: MonoBehaviour
 
         PlayerPrefs.SetInt("was_Refúgio", 0);
     }
-
 }
