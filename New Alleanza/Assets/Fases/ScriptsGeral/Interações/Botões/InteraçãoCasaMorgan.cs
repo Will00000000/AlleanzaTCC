@@ -17,7 +17,7 @@ public class InteraçãoCasaMorgan : MonoBehaviour
     void Update()
     {
         InteracaoColeta();
-        InteracaoEstruturas();
+        InteracaoEntreCenas();
 
         // --- ADAPTADO COM CHECAGEM DE SEGURANÇA ---
         // Só calcula a distância se o jogador existir e o item NÃO tiver sido pego ainda
@@ -72,7 +72,7 @@ public class InteraçãoCasaMorgan : MonoBehaviour
         }
     }
 
-    private void InteracaoEstruturas()
+    private void InteracaoEntreCenas()
     {
         // Ajustado para verificar se o botão de sair está atribuído (evita erros se mudar de cena)
         if (botaoSair != null)

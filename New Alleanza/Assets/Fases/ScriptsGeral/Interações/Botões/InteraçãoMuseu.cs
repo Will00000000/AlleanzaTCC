@@ -2,20 +2,46 @@ using UnityEngine;
 
 public class InteraçãoMuseu : MonoBehaviour
 {
-    GameObject quebraCabeca;
+    GameObject jogador;
 
-    void Start ()
+    public GameObject GoQuebraCabeça;
+    public GameObject GoCidade;
+
+    [Header("EntreCenas")]
+    float distancia_GoQuebraCabeça;
+    float distancia_GoCidade;
+
+    private void Start ()
     {
-        quebraCabeca = GameObject.Find ("CanvasQuebraCabeca");
+        jogador = GameObject.Find("Morgan");
     }
 
-    public void AbrirQuebraCabeca ()
+    private void Update()
     {
-        quebraCabeca.SetActive (true);
+        distancia_GoQuebraCabeça = Vector2.Distance (jogador.transform.position, GoQuebraCabeça.transform.position);
+        distancia_GoCidade = Vector2.Distance(jogador.transform.position, GoCidade.transform.position);
+
+        InteraçãoEntreCenas();
     }
 
-    public void FecharQuebraCabeca ()
+    private void InteraçãoEntreCenas()
     {
-        quebraCabeca.SetActive (false);
+        if (distancia_GoQuebraCabeça < 5)
+        {
+            GoQuebraCabeça.SetActive(true);
+        }
+        else
+        {
+            GoQuebraCabeça.SetActive(false);
+        }
+
+        if (distancia_GoCidade < 5)
+        {
+            GoCidade.SetActive (true);
+        }
+        else
+        {
+            GoCidade.SetActive (false);
+        }
     }
 }

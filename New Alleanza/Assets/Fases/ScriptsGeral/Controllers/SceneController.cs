@@ -93,9 +93,23 @@ public class SceneController : MonoBehaviour
     public void GoCastelo_from_Atlantis ()
     {
         PlayerPrefs.SetInt ("was_Atlantis", 1);
-        PlayerPrefs.SetInt ("Visitou o castelo", 1);
+        PlayerPrefs.SetInt ("Visitou o quarto de Selene", 1);
 
         SceneManager.LoadScene ("Castelo");
+    }
+
+    public void GoCastelo_from_QuartoSelene ()
+    {
+        PlayerPrefs.SetInt("was_QuartoSelene", 1);
+
+        SceneManager.LoadScene("Castelo");
+    }
+
+    public void GoQuartoSelene_from_Castelo ()
+    {
+        PlayerPrefs.SetInt("was_QuartoSelene", 1);
+
+        SceneManager.LoadScene("QuartoSelene");
     }
 
     public void GoAtlantis_from_Castelo ()
