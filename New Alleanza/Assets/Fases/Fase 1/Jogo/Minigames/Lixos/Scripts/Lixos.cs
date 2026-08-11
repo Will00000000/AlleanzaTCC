@@ -12,7 +12,7 @@ public class Lixos : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector2 (transform.position.x - velocidade, transform.position.y);
+        transform.position = new Vector2 (transform.position.x - velocidade * Time.deltaTime, transform.position.y);
     }
 
     void OnTriggerEnter2D (Collider2D col)

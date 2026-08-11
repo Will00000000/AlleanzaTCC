@@ -412,6 +412,10 @@ PrefabInstance:
       propertyPath: corPeca.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -558,6 +562,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 227824832}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -804,6 +812,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 7810175}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1767,6 +1779,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1375826294}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1908,6 +1924,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 338384776}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2054,6 +2074,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 827872389}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2514,6 +2538,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1894090269}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2655,6 +2683,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1764763970}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2953,6 +2985,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 867441390}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3261,6 +3297,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 2031504779}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4325,6 +4365,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 690856503}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4466,6 +4510,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 933553863}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4607,6 +4655,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1736708175}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4665,7 +4717,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4906,6 +4958,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1724711157}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5204,6 +5260,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 841256886}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5836,6 +5896,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1722480275}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6144,6 +6208,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1703284334}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7150,6 +7218,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 661245072}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7473,6 +7545,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1560188060}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7644,6 +7720,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1601138259}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7785,6 +7865,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 457580371}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8161,6 +8245,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 169464890}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8488,6 +8576,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 216185831}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8634,6 +8726,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 721436573}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8942,6 +9038,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 1283250437}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9405,6 +9505,10 @@ PrefabInstance:
       propertyPath: sombras
       value: 
       objectReference: {fileID: 232610192}
+    - target: {fileID: 6995432072637308365, guid: 0dcda93d625b0634d8b6dc9caa2ee342, type: 3}
+      propertyPath: canvasMontagem
+      value: 
+      objectReference: {fileID: 1045388110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

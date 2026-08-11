@@ -5,6 +5,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 {
     RectTransform rt;
     CanvasGroup colide;
+    public Canvas canvasMontagem;
 
     public RectTransform sombra;
 
@@ -21,7 +22,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrag (PointerEventData eventData)
     {
-        rt.anchoredPosition += eventData.delta * 2;
+        rt.anchoredPosition += eventData.delta / canvasMontagem.scaleFactor;
         colide.blocksRaycasts = false;
     }
 
