@@ -7,6 +7,11 @@ public class Dialogo : MonoBehaviour
     public GameObject caixaDialogo; // caixa original (Player1)
     public GameObject caixaPlayer2; // caixa do segundo personagem
 
+    public GameObject button_PraiaDialogo;
+    public GameObject button_MelloryDialogo;
+    //public GameObject button_MelloryDialogo;
+    
+
     public TMP_Text textoDialogo;
 
     public Jogador2D_Terra jogador;
