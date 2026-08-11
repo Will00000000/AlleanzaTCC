@@ -55,8 +55,8 @@ public class HUD_Principal : MonoBehaviour
 
     public void InventarioAbre()
     {
-        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (200, 190);
-        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (-200, -50);
+        inventarioMenu.GetComponent<RectTransform>().offsetMin = new Vector2 (500, 190);
+        inventarioMenu.GetComponent<RectTransform>().offsetMax = new Vector2 (-500, -50);
 
         UI.SetActive(false);
     }

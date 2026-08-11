@@ -175,7 +175,7 @@ TextureImporter:
         serializedVersion: 2
         x: 480
         y: 867
-        width: 2046
+        width: 959
         height: 976
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -186,6 +186,27 @@ TextureImporter:
       bones: []
       spriteID: f50454837a3370a42805ffe05745e330
       internalID: 981283547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fundo
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1855
+        width: 2288
+        height: 1144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c6cc376c28ac7428a2e77ee2bfec3e
+      internalID: -1380291392
       vertices: []
       indices: 
       edges: []
@@ -202,6 +223,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Botao_Fechar: -794010074
+      Fundo: -1380291392
       Slots: 981283547
       UI_1: 1846424152
       UI_2: -447821253

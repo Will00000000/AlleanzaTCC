@@ -6,20 +6,15 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
     public Image[] slot;
 
     public GameObject script_coleta;
-    public GerenciadorDescricao script_descricao;
 
     private void Update()
     {
-        script_coleta = GameObject.Find("InteractController");
-
         Color novaCor;
 
         #region Slot 1
         if (slot[0].sprite == null)
         {
             slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
-
-            script_descricao = GetComponent<GerenciadorDescricao>();
         }
         #endregion
 
