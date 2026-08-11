@@ -5,7 +5,6 @@ public class SceneController : MonoBehaviour
 {
     public void GoCasa_from_Praia()
     {
-        PlayerPrefs.SetInt("was_Praia", 1);
 
         SceneManager.LoadScene("MorganHouse");
     }
