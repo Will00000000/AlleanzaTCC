@@ -228,7 +228,7 @@ PrefabInstance:
       addedObject: {fileID: 1086674851}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 830398948}
     - targetCorrespondingSourceObject: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       insertIndex: -1
@@ -441,8 +441,7 @@ MonoBehaviour:
   - {fileID: 191425816}
   - {fileID: 1223891356}
   - {fileID: 370974577}
-  pontoFinal: {fileID: 0}
-  Lixo: {fileID: 4539459369516870337, guid: 68c1ab897b699aa4ba63c683e953f341, type: 3}
+  Lixo: {fileID: 8301644193668764453, guid: c6816e1293475704dac61173c476a005, type: 3}
   timer: 1
   intervaloTempo: 1.5
   tempoMin: -20
@@ -829,7 +828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 8
-  projetil: {fileID: 6711432922364400150, guid: c0b45eb1c02625546a44bf401bcf436f, type: 3}
+  projetil: {fileID: 1312984853821957526, guid: 374f04a00694e144887cbb792b42eb64, type: 3}
   disparo: {fileID: 1086674851}
 --- !u!4 &830398955 stripped
 Transform:
@@ -846,7 +845,7 @@ Animator:
   m_GameObject: {fileID: 830398947}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6d7872b371b8884588f889fe65d796d, type: 2}
+  m_Controller: {fileID: 9100000, guid: fbac1558d76e78440b5eed5547e8829d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1086,7 +1085,7 @@ Transform:
   m_GameObject: {fileID: 1086674850}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.89, y: 4.45, z: 0}
+  m_LocalPosition: {x: 1.4, y: 4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1721,7 +1720,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 311244704}
   - {fileID: 1165653617}
+  - {fileID: 202547619}
   - {fileID: 876695}
   - {fileID: 1060865705}
-  - {fileID: 202547619}
   - {fileID: 283688112}

@@ -2,25 +2,25 @@ using UnityEngine;
 
 public class JogadorOceano : MonoBehaviour
 {
-    Rigidbody2D rig;
+    Rigidbody2D rig; //variável que recebe o componente de física do jogador
 
-    [Range (0, 10)] public int velocidade;
+    [Range (0, 10)] public int velocidade; //velocidade do jogador
 
-    Vector2 posicaoMouse;
+    Vector2 posicaoMouse; //variável que pega a posição do mouse
     float anguloMira;
 
-    public GameObject projetil;
-    public Transform disparo;
+    public GameObject projetil; //variável para o prefab do projétil
+    public Transform disparo; //local de onde o projétil será atirado
 
     void Start ()
     {
-        rig = GetComponent <Rigidbody2D> ();
+        rig = GetComponent <Rigidbody2D> (); //rig pega o componente de física que está no objeto do jogador
     }
 
     void Update ()
     {
-        Vector2 distancia = posicaoMouse - rig.position;
-        posicaoMouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+        posicaoMouse = Camera.main.ScreenToWorldPoint (Input.mousePosition); //variável recebe a localização do cursor do mouse na tela
+        Vector2 distancia = posicaoMouse - rig.position; //cria uma variável para calcular a distância entre o cursor do mouse e o jogador
 
         Disparar ();
         Mover ();
@@ -28,14 +28,14 @@ public class JogadorOceano : MonoBehaviour
 
     void Mover ()
     {
-        rig.velocity = new Vector2 (rig.velocity.x, Input.GetAxisRaw ("Vertical") * velocidade);
+        rig.velocity = new Vector2 (rig.velocity.x, Input.GetAxisRaw ("Vertical") * velocidade); //movimento apenas no eixo y
     }
 
-    private void Disparar ()
+    private void Disparar () //função para os tiros
     {
-        if (Input.GetButtonDown ("Fire1"))
+        if (Input.GetButtonDown ("Fire1")) //se apertar o botão padrão para atirar...
         {
-            Instantiate (projetil, disparo.position, disparo.rotation);
+            Instantiate (projetil, disparo.position, disparo.rotation); //instancia o projetil
         }
     }
 }
