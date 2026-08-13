@@ -2,16 +2,15 @@ using UnityEngine;
 
 public class Coleta : MonoBehaviour
 {
-    public Sprite spriteItem;
+    public Sprite spriteItem; //variável que recebe o sprite a ser enviado para o primeiro slot disponível
 
     public SpriteRenderer[] sprite_itensGeral; //lista que recebe todos os sprites dos itens do jogo (uma biblioteca)
     public GameObject[] itensGeral; //lista que recebe todos os gameObjects de itens do jogo (biblioteca)
 
-
     public void ColetarChave ()
     {
-        itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); //objeto chave é desabilitado
-        spriteItem = sprite_itensGeral[0].sprite; //pega o sprite 1 "chave"
+        itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); //objeto chave é desabilitado (reduzido a zero)
+        spriteItem = sprite_itensGeral[0].sprite; //pega o sprite 1 "chave" e atribui à variável que será enviada para o primeiro slot disponível
     }
 
     public void ColetarPeca()

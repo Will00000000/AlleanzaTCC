@@ -3,28 +3,27 @@ using UnityEngine.UI;
 
 public class VarreduraSlots : Singleton<VarreduraSlots>
 {
-    public Image[] slot;
+    public Image[] slot; //lista das imagens de cada um dos slots
 
-    public GameObject script_coleta;
+    public GameObject script_coleta; //variável que pega o objeto que contém o script de coleta de um item; para assim acessar o script dentro dele e acessar o sprite do último item coletado
+
+    private void Start()
+    {
+        script_coleta = GameObject.Find("InteractController");
+    }
 
     private void Update()
     {
-        Color novaCor;
-
         #region Slot 1
-        if (slot[0].sprite == null)
+        if (slot[0].sprite == null) //se o o sprite do slot 1 estiver vazio...
         {
-            slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
+            slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem; //...sprite do slot 1 vira o sprite do útlimo item coletado
         }
         #endregion
 
         #region Slot 2
         else if (slot[1].sprite == null)
         {
-            novaCor = slot[0].color;
-            novaCor.a = 1f;
-            slot[0].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 slot[1].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
@@ -35,10 +34,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 3
         else if (slot[2].sprite == null)
         {
-            novaCor = slot[1].color;
-            novaCor.a = 1f;
-            slot[1].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -52,10 +47,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 4
         else if (slot[3].sprite == null)
         {
-            novaCor = slot[2].color;
-            novaCor.a = 1f;
-            slot[2].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -72,10 +63,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 5
         else if (slot[4].sprite == null)
         {
-            novaCor = slot[3].color;
-            novaCor.a = 1f;
-            slot[3].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -95,10 +82,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 6
         else if (slot[5].sprite == null)
         {
-            novaCor = slot[4].color;
-            novaCor.a = 1f;
-            slot[4].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -121,10 +104,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 7
         else if (slot[6].sprite == null)
         {
-            novaCor = slot[5].color;
-            novaCor.a = 1f;
-            slot[5].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -150,10 +129,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 8
         else if (slot[7].sprite == null)
         {
-            novaCor = slot[6].color;
-            novaCor.a = 1f;
-            slot[6].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -182,10 +157,6 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         #region Slot 9
         else if (slot[8].sprite == null)
         {
-            novaCor = slot[7].color;
-            novaCor.a = 1f;
-            slot[7].color = novaCor;
-
             if (slot[0].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
             {
                 if (slot[1].sprite != script_coleta.GetComponent<Coleta>().spriteItem)
@@ -213,12 +184,5 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
             }
         }
         #endregion
-
-        else
-        {
-            novaCor = slot[8].color;
-            novaCor.a = 1f;
-            slot[8].color = novaCor;
-        }
     }
 }
