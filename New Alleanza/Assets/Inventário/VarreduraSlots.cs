@@ -1,19 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VarreduraSlots : Singleton<VarreduraSlots>
+public class VarreduraSlots : MonoBehaviour
 {
     public Image[] slot; //lista das imagens de cada um dos slots
 
     public GameObject script_coleta; //variável que pega o objeto que contém o script de coleta de um item; para assim acessar o script dentro dele e acessar o sprite do último item coletado
 
-    private void Start()
-    {
-        script_coleta = GameObject.Find("InteractController");
-    }
-
     private void Update()
     {
+        script_coleta = GameObject.Find("InteractController");
+
         #region Slot 1
         if (slot[0].sprite == null) //se o o sprite do slot 1 estiver vazio...
         {
