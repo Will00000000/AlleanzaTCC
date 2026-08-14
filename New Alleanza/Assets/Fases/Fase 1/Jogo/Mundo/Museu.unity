@@ -932,6 +932,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caixaDialogo: {fileID: 457249500}
   caixaPlayer2: {fileID: 0}
+  button_PraiaDialogo: {fileID: 0}
+  button_MelloryDialogo: {fileID: 0}
   textoDialogo: {fileID: 712319339}
   jogador: {fileID: 0}
   animator: {fileID: 457249501}
@@ -1060,7 +1062,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!1 &385405314
 GameObject:
@@ -1163,7 +1165,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!1001 &389957072
 PrefabInstance:
@@ -1880,7 +1882,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!1001 &570783637
 PrefabInstance:
@@ -1890,6 +1892,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 902856190193114609, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_Name
       value: Morgan
@@ -2860,7 +2866,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_TargetDisplay: 0
 --- !u!1 &831931337
 GameObject:
@@ -3752,7 +3758,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -200
   m_Sprite: {fileID: 21300000, guid: a55599258a5a23b4a965c17ecb31573d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4100,6 +4106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caixaDialogo: {fileID: 1261630847}
   caixaPlayer2: {fileID: 0}
+  button_PraiaDialogo: {fileID: 0}
+  button_MelloryDialogo: {fileID: 0}
   textoDialogo: {fileID: 1266633851}
   jogador: {fileID: 0}
   animator: {fileID: 1261630848}
@@ -4290,6 +4298,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caixaDialogo: {fileID: 261295456}
   caixaPlayer2: {fileID: 261295456}
+  button_PraiaDialogo: {fileID: 0}
+  button_MelloryDialogo: {fileID: 0}
   textoDialogo: {fileID: 598507134}
   jogador: {fileID: 0}
   animator: {fileID: 261295457}
@@ -4616,7 +4626,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -200
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5175,6 +5185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caixaDialogo: {fileID: 963573721}
   caixaPlayer2: {fileID: 0}
+  button_PraiaDialogo: {fileID: 0}
+  button_MelloryDialogo: {fileID: 0}
   textoDialogo: {fileID: 1042625908}
   jogador: {fileID: 0}
   animator: {fileID: 963573722}
