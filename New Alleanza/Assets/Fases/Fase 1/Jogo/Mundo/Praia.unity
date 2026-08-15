@@ -427,7 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 831477443}
   SFXSource: {fileID: 75543104}
-  background: {fileID: 8300000, guid: f8fd0326e87603f42a38c05708b2fda3, type: 3}
+  background: {fileID: 8300000, guid: 9fffcce527e5f8e43b7509e7f69a7c06, type: 3}
   "bot\xE3o": {fileID: 8300000, guid: f4fc4f2c72e04a842884f8a75ee72169, type: 3}
 --- !u!4 &157677917
 Transform:
@@ -1287,7 +1287,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  "Pe\xE7a": {fileID: 1661484766}
 --- !u!1001 &610556469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1300,14 +1299,50 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1578305961}
+    - target: {fileID: 1103341694080830862, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103341694080830862, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193507474329340713, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836716279317677216, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2202606415765536186, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Name
       value: InterfaceGeral
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319305673910135361, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319305673910135361, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319305673910135361, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482652859421571042, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3467454582549790093, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1578305961}
+    - target: {fileID: 3467454582549790093, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3984640900372007478, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 849.00354
@@ -1352,10 +1387,54 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1578305961}
+    - target: {fileID: 6212904603010353529, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212904603010353529, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594658517263774896, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594658517263774896, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594658517263774896, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158389415113549435, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7443386528084170230, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1578305961}
+    - target: {fileID: 8244877281451647035, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244877281451647035, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203639269638583070, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203639269638583070, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203639269638583070, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1765,7 +1844,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5031657543912399471, guid: 9b8b842916442214eacf11a007091d55, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3504,9 +3583,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8a61d4e4789b047a0b6d4f1b09b5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idDialogo: dialogo_Praia1
   caixaDialogo: {fileID: 651426949}
   caixaPlayer2: {fileID: 651426949}
   button_PraiaDialogo: {fileID: 0}
+  button_MelloryDialogo: {fileID: 0}
   textoDialogo: {fileID: 1087841864}
   jogador: {fileID: 0}
   animator: {fileID: 651426952}
@@ -3514,6 +3595,7 @@ MonoBehaviour:
   - "Que pe\xE7a bonita\u2026 agora \xE9 minha."
   quemFala: 0100000000000000
   velocidadeTexto: 0.05
+  dialogoConcluido: 0
   mellory: {fileID: 0}
 --- !u!4 &1647160134
 Transform:
