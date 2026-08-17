@@ -61,6 +61,14 @@ public class Visao : MonoBehaviour
             min_Y = 0f;
             max_Y = 0f;
         }
+        else if (nomeCena == "MinigameLixos")
+        {
+            min_X = -3.5f;
+            max_X = 0;
+
+            min_Y = -2;
+            max_Y = 2;
+        }
         else if (nomeCena == "Atlantis")
         {
             min_X = -42;

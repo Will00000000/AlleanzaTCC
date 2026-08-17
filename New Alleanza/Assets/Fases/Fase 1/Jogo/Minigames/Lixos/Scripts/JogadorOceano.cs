@@ -12,6 +12,9 @@ public class JogadorOceano : MonoBehaviour
     public GameObject projetil; //variável para o prefab do projétil
     public Transform disparo; //local de onde o projétil será atirado
 
+    [SerializeField] private float tempoDeRecarga = 0.5f;
+    private float proximoTiroDisponível = 0f;
+
     void Start ()
     {
         rig = GetComponent <Rigidbody2D> (); //rig pega o componente de física que está no objeto do jogador
@@ -33,9 +36,10 @@ public class JogadorOceano : MonoBehaviour
 
     private void Disparar () //função para os tiros
     {
-        if (Input.GetButtonDown ("Fire1")) //se apertar o botão padrão para atirar...
+        if (Input.GetButtonDown ("Fire1") && Time.time >= proximoTiroDisponível) //se apertar o botão padrão para atirar...
         {
             Instantiate (projetil, disparo.position, disparo.rotation); //instancia o projetil
+            proximoTiroDisponível = Time.time + tempoDeRecarga;
         }
     }
 }

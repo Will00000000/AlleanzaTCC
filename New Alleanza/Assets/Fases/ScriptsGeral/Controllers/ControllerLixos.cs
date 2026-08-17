@@ -34,7 +34,7 @@ public class ControllerLixos : MonoBehaviour
             timer = intervaloTempo;
             intervaloTempo -= 0.01f;
 
-            if (intervaloTempo > 0.20f)
+            if (intervaloTempo > 0.50f)
             {
                 int pontoAleatorio = Random.Range(0, pontoOrigem.Length - 1);
                 Instantiate(Lixo, pontoOrigem[pontoAleatorio].position, pontoOrigem[pontoAleatorio].rotation);
