@@ -930,6 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8a61d4e4789b047a0b6d4f1b09b5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idDialogo: dialogo_Almofada
   caixaDialogo: {fileID: 457249500}
   caixaPlayer2: {fileID: 0}
   button_PraiaDialogo: {fileID: 0}
@@ -4360,6 +4361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8a61d4e4789b047a0b6d4f1b09b5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idDialogo: dialogo_estatua
   caixaDialogo: {fileID: 1261630847}
   caixaPlayer2: {fileID: 0}
   button_PraiaDialogo: {fileID: 0}
@@ -4552,6 +4554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8a61d4e4789b047a0b6d4f1b09b5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idDialogo: "dialogo_Lan\xE7a"
   caixaDialogo: {fileID: 261295456}
   caixaPlayer2: {fileID: 261295456}
   button_PraiaDialogo: {fileID: 0}
@@ -5489,6 +5492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe8a61d4e4789b047a0b6d4f1b09b5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idDialogo: dialogo_peixe
   caixaDialogo: {fileID: 963573721}
   caixaPlayer2: {fileID: 0}
   button_PraiaDialogo: {fileID: 0}
