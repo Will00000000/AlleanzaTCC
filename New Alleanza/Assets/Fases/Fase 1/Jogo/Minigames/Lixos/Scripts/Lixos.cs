@@ -17,9 +17,15 @@ public class Lixos : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D col)
     {
-        if (col.gameObject.tag == "projetil" || col.gameObject.tag == "limite")
+        if (col.gameObject.tag == "projetil")
         {
             Destroy(gameObject);
+            ControllerLixos.pontuação += 1;
+        }
+
+        if (col.gameObject.tag == "limite")
+        {
+            Destroy (gameObject);
         }
     }
 }

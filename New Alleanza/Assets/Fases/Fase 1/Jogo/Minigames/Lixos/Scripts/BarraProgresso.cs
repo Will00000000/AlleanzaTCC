@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BarraProgresso : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Slider barraDeProgresso;
+    public TMP_Text contagemLixos;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        barraDeProgresso.value = ControllerLixos.pontuação / 100;
+        contagemLixos.text = $"{ControllerLixos.pontuação}/100";
     }
 }

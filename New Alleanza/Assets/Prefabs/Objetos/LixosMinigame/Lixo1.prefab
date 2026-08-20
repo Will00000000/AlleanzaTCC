@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: -1290312397084309292}
   - component: {fileID: 1135089073857578273}
   - component: {fileID: -5876036530277682486}
+  - component: {fileID: 447076256887676498}
   m_Layer: 0
-  m_Name: Lixo
+  m_Name: Lixo1
   m_TagString: lixo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -172,3 +173,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &447076256887676498
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8301644193668764453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8b91799a16053f4894273745d52ab82, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
