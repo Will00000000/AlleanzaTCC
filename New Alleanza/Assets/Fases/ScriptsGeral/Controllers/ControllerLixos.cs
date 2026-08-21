@@ -40,8 +40,8 @@ public class ControllerLixos : MonoBehaviour
 
             if (intervaloTempo > 0.50f)
             {
-                int pontoAleatorio = Random.Range(0, Origem.Length - 1);
-                int lixoleatorio = Random.Range(0, Lixo.Length - 1);
+                int pontoAleatorio = Random.Range(0, Origem.Length);
+                int lixoleatorio = Random.Range(0, Lixo.Length);
                 Instantiate(Lixo[lixoleatorio], Origem[pontoAleatorio].position, Origem[pontoAleatorio].rotation);
             }
             
