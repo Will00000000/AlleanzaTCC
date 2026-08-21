@@ -1,23 +1,12 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ControllerLixos : MonoBehaviour
 {
     //MINIGAME DOS LIXOS
-    public Transform[] Origem1; //lista de variáveis do tipo Transform para os pontos de origem dos lixosWS
-  //  public Transform[] Origem2;
-   // public Transform[] Origem3;
-  //  public Transform[] Origem4;
- //   public Transform[] Origem5;
-//    public Transform[] Origem6;
+    public Transform[] Origem; //lista de variáveis do tipo Transform para os pontos de origem dos lixosWS
 
     public GameObject[] Lixo; //variável para receber o prefab do lixo
- //   public GameObject Lixo2;
-  //  public GameObject Lixo3;
-  //  public GameObject Lixo4;
- //   public GameObject Lixo5;
-//    public GameObject Lixo6;
 
     public float timer; //temporizador para cada surgimento
     public float intervaloTempo; //intervalo entre os surgimentos que vai ficando cada vez menor
@@ -36,11 +25,11 @@ public class ControllerLixos : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MinigameLixos")
         {
-            criaAsteroides();
+            criaLixos();
         }
     }
 
-    void criaAsteroides()
+    void criaLixos()
     {
         timer -= Time.deltaTime;
 
@@ -51,12 +40,9 @@ public class ControllerLixos : MonoBehaviour
 
             if (intervaloTempo > 0.50f)
             {
-                int pontoAleatorio1 = Random.Range(0, Origem1.Length - 1);
-                int lixoleatorio1 = Random.Range(0, Origem1.Length - 1);
-                Instantiate(Lixo[lixoleatorio1], Origem1[pontoAleatorio1].position, Origem1[pontoAleatorio1].rotation);
-
-              //  int pontoAleatorio2 = Random.Range(0, Origem2.Length - 1);
-            //    Instantiate(Lixo2[], Origem2[pontoAleatorio2].position, Origem1[pontoAleatorio2].rotation);
+                int pontoAleatorio = Random.Range(0, Origem.Length - 1);
+                int lixoleatorio = Random.Range(0, Lixo.Length - 1);
+                Instantiate(Lixo[lixoleatorio], Origem[pontoAleatorio].position, Origem[pontoAleatorio].rotation);
             }
             
             if (intervaloTempo < tempoMin)
