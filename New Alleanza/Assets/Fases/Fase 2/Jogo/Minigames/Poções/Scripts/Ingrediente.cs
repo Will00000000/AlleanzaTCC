@@ -1,35 +1,45 @@
 using UnityEngine;
 
-public class Arrastavel : MonoBehaviour
+public class Ingrediente : MonoBehaviour
 {
-    private Vector3 offset;
-    private bool arrastando = false;
+    private Camera mainCamera;
+    private Rigidbody2D rb;
+    private bool isDragging = false;
+    private Vector3 targetPosition;
+    private float zDistance;
+
+    void Start()
+    {
+        mainCamera = Camera.main;
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void OnMouseDown()
     {
-        offset = transform.position - GetMouseWorldPosition();
-        arrastando = true;
+        isDragging = true;
+        zDistance = mainCamera.WorldToScreenPoint(transform.position).z;
     }
 
     void OnMouseUp()
     {
-        arrastando = false;
+        isDragging = false;
     }
 
     void Update()
     {
-        if (arrastando)
+        if (isDragging)
         {
-            transform.position = GetMouseWorldPosition() + offset;
+            Vector3 mouseScreenPos = Input.mousePosition;
+            mouseScreenPos.z = zDistance;
+            targetPosition = mainCamera.ScreenToWorldPoint(mouseScreenPos);
         }
     }
 
-    Vector3 GetMouseWorldPosition()
+    void FixedUpdate()
     {
-        Vector3 mousePoint = Input.mousePosition;
-        mousePoint.z = 10f;
-        return Camera.main.ScreenToWorldPoint(mousePoint);
+        if (isDragging)
+        {
+            rb.MovePosition(targetPosition);
+        }
     }
-
-    
 }
