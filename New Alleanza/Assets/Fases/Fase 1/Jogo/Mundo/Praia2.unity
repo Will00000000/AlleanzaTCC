@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 4900805}
   - component: {fileID: 4900804}
   - component: {fileID: 4900803}
+  - component: {fileID: 4900806}
   m_Layer: 5
   m_Name: GoPraia
   m_TagString: Untagged
@@ -157,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -951.71, y: -791.49}
-  m_SizeDelta: {x: 164.14, y: 180}
+  m_AnchoredPosition: {x: -951.70197, y: -791.84344}
+  m_SizeDelta: {x: 196.5503, y: 203.4457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4900803
 MonoBehaviour:
@@ -236,7 +237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aebe26653decbe648a84b869ebfbb071, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 097f790867284a947958eb02e80695b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -254,6 +255,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4900801}
   m_CullTransparentMesh: 1
+--- !u!95 &4900806
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900801}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a26094dc132e8748ad6ae4cdc2712b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &82862973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1467236002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2258,6 +2280,7 @@ GameObject:
   - component: {fileID: 1846646956}
   - component: {fileID: 1846646955}
   - component: {fileID: 1846646954}
+  - component: {fileID: 1846646957}
   m_Layer: 5
   m_Name: GoEscadaria
   m_TagString: Untagged
@@ -2360,7 +2383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aebe26653decbe648a84b869ebfbb071, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 097f790867284a947958eb02e80695b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2378,6 +2401,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846646952}
   m_CullTransparentMesh: 1
+--- !u!95 &1846646957
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846646952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a26094dc132e8748ad6ae4cdc2712b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1870387374
 GameObject:
   m_ObjectHideFlags: 0
