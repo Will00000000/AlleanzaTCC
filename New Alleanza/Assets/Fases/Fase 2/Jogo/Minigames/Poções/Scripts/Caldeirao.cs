@@ -4,6 +4,10 @@ public class Caldeirao : MonoBehaviour
 {
     public ParticleSystem fumaca;
 
+    public static bool primeiroIngrediente = false; //primeiro ingrediente certo
+    public static bool segundoIngrediente = false; //segundo ingrediente certo
+    public static bool terceiroIngrediente = false; //terceiro ingrediente certo
+
     void Start()
     {
         // garante que a fumaça não comece ativa
@@ -29,6 +33,21 @@ public class Caldeirao : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+
+            if (other.name == "Ingrediente1 (certo)")
+            {
+                primeiroIngrediente = true;
+            }
+
+            if (other.name == "Ingrediente2 (certo)")
+            {
+                segundoIngrediente = true;
+            }
+
+            if (other.name == "Ingrediente3 (certo)")
+            {
+                terceiroIngrediente = true;
+            }
         }
     }
 
