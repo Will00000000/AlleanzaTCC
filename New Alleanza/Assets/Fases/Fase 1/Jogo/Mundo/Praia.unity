@@ -1694,27 +1694,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a59a074ee72c448822262d596cdd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteItem: {fileID: 0}
+  spriteItem: {fileID: 21300000, guid: 90280ec8dd8b3c445b8f728944c9d496, type: 3}
   sprite_itensGeral:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   itensGeral:
-  - {fileID: 0}
   - {fileID: 1661484766}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &610556469
 PrefabInstance:
   m_ObjectHideFlags: 0
