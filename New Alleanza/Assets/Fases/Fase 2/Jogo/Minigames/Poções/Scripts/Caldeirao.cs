@@ -19,7 +19,7 @@ public class Caldeirao : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Ingrediente"))
+        if (other.CompareTag("Ingrediente"))
         {
             Debug.Log("Ingrediente adicionado: " + other.name);
 
@@ -32,22 +32,22 @@ public class Caldeirao : MonoBehaviour
                 Invoke("PararFumaca", 2f);
             }
 
+            if (other.name == "Ingrediente4 (certo)") //se o nome do ingrediente colidido for o ingrediente 5...
+            {
+                primeiroIngrediente = true; //o primeiro ingrediente necessário para a poção será misturado.
+            }
+
+            if (primeiroIngrediente == true && other.name == "Ingrediente6 (certo)") //se o primeiro ingrediente estiver na mistura e o nome do ingrediente colidido for o ingrediente 7...
+            {
+                segundoIngrediente = true; //o segundo ingrediente necessário para a poção será misturado.
+            }
+
+            if (segundoIngrediente = true && other.name == "Ingrediente7 (certo)") //se o segundo ingrediente estiver na mistura e o nome do ingrediente colidido for o ingrediente 8...
+            {
+                terceiroIngrediente = true; //o terceiro ingrediente necessário para a poção será misturado.
+            }
+
             Destroy(other.gameObject);
-
-            if (other.name == "Ingrediente1 (certo)")
-            {
-                primeiroIngrediente = true;
-            }
-
-            if (other.name == "Ingrediente2 (certo)")
-            {
-                segundoIngrediente = true;
-            }
-
-            if (other.name == "Ingrediente3 (certo)")
-            {
-                terceiroIngrediente = true;
-            }
         }
     }
 
