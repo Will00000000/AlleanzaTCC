@@ -1639,16 +1639,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientes:
-  - {fileID: 948271996}
-  - {fileID: 1627360728}
-  - {fileID: 1109597256}
-  - {fileID: 321993370}
-  - {fileID: 43784624}
-  - {fileID: 477828014}
-  - {fileID: 100761938}
-  - {fileID: 365719089}
-  - {fileID: 449963147}
+  - {fileID: 948271995}
+  - {fileID: 1627360727}
+  - {fileID: 1109597255}
+  - {fileID: 321993369}
+  - {fileID: 43784623}
+  - {fileID: 477828013}
+  - {fileID: 100761937}
+  - {fileID: 365719088}
+  - {fileID: 449963146}
   "contornoDeSele\xE7\xE3o": {fileID: 2067866890}
+  ingredienteSelecionado: 0
 --- !u!1 &948271995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,7 +1748,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 38.399998, y: 21.599998}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1797,7 +1798,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97318a9a18087284ca8dd9c9185a487f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
