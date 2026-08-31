@@ -32,24 +32,23 @@ public class SelecionarIngrediente : MonoBehaviour
 
     void ContornoIngrediente ()
     {
-        if (ingredientes[índiceLista] != null)
+        if (ingredientes[índiceLista] != null) // se a variável com o ingrediente atual estiver atribuída...
         {
             contornoDeSeleção.transform.position = new Vector2(ingredientes[índiceLista].transform.position.x, ingredientes[índiceLista].transform.position.y); //o contorno de seleção segue o item em foco
 
-            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>().sprite;
-            contornoDeSeleção.transform.localScale = ingredientes[índiceLista].transform.localScale * 1.2f;
+            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>().sprite; // o contorno se apropria do sprite do item em foco
+            contornoDeSeleção.transform.localScale = ingredientes[índiceLista].transform.localScale * 1.2f; //... o contorno aumenta de escala em 1.2 vezes
         }
 
-        if (ingredientes[índiceLista] == null) //se a variável com o ingrediente atual fique vazio, ou seja, suma...
+        if (ingredientes[índiceLista] == null) //se a variável com o ingrediente atual ficar vazio, ou seja, suma...
         {
-            Debug.Log("Verificação concluída");
+            for (int indice = 0; indice < ingredientes.Length; indice++) //... o código faz uma verificação item por item da lista de ingredientes
+            {
+                contornoDeSeleção.transform.position = new Vector2(ingredientes[indice].transform.position.x, ingredientes[indice].transform.position.y); //... e o primeiro ingrediente disponível recebe o foco
 
-            int ingredienteAleatório = Random.Range(0, ingredientes.Length); //... o código faz uma escolha aleatória de itens da lista
-
-            contornoDeSeleção.transform.position = new Vector2(ingredientes[ingredienteAleatório].transform.position.x, ingredientes[ingredienteAleatório].transform.position.y); //o contorno de seleção segue o item em foco
-
-            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[ingredienteAleatório].GetComponent<SpriteRenderer>().sprite;
-            contornoDeSeleção.transform.localScale = ingredientes[ingredienteAleatório].transform.localScale * 1.2f;
+                contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[indice].GetComponent<SpriteRenderer>().sprite; //... o primeiro ingrediente disponível dá o próprio sprite para o contorno
+                contornoDeSeleção.transform.localScale = ingredientes[indice].transform.localScale * 1.2f; //... o primeiro ingrediente disponível dá um tamanho a mais para o contorno
+            }
         }
     }
 
@@ -57,8 +56,6 @@ public class SelecionarIngrediente : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && ingredienteSelecionado == false) // se o jogador apertar Enter...
         {
-            Debug.Log("Enter apertado");
-
             ingredientes[índiceLista].GetComponent<MoverIngrediente>().enabled = true; // ... o jogador consegue mover o ingrediente
             ingredienteSelecionado = true; // ...agora é possível o jogar o ingrediente
         }
@@ -72,8 +69,6 @@ public class SelecionarIngrediente : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Enter apertado mais uma vez");
-
             ingredientes[índiceLista].GetComponent<MoverIngrediente>().enabled = false; //... o jogador não consegue mais mover o ingrediente
             ingredienteSelecionado = false; // ... não há mais nenhum ingrediente selecionada
         }
