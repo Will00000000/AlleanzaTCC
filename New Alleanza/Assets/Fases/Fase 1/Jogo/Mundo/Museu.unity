@@ -2157,7 +2157,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 902856190193114609, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5343933573526180817, guid: 2a53847245539224eb66291b3b2f5655, type: 3}
       propertyPath: m_Name
@@ -3588,6 +3588,8 @@ GameObject:
   m_Component:
   - component: {fileID: 993892005}
   - component: {fileID: 993892006}
+  - component: {fileID: 993892008}
+  - component: {fileID: 993892009}
   m_Layer: 0
   m_Name: Melissa
   m_TagString: Untagged
@@ -3650,7 +3652,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: f30b669e7f204dc4ab164199450c7cae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3662,6 +3664,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &993892008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993892004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c233620a83ec0ef47b581511dab5f135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jogador: {fileID: 1032626397}
+  velocidade: 3
+  distanciaMinima: 1.5
+  offsetTeleport: {x: -1, y: 0}
+  deveSeguir: 0
+  animator: {fileID: 0}
+  parametroAndando: estaAndando
+--- !u!95 &993892009
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993892004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f997c9644db527a4eadcfe347418a2b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1030065584
 GameObject:
   m_ObjectHideFlags: 0
@@ -4729,7 +4771,7 @@ MonoBehaviour:
     de terranis?"
   quemFala: 00000000010000000000000001000000
   velocidadeTexto: 0.05
-  mellory: {fileID: 0}
+  mellory: {fileID: 993892008}
 --- !u!4 &1150810867
 Transform:
   m_ObjectHideFlags: 0

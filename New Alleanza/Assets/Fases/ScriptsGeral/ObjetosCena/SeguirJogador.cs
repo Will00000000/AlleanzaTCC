@@ -7,25 +7,22 @@ public class SeguirJogador : MonoBehaviour
     public Transform jogador; 
     public float velocidade = 3f;
     public float distanciaMinima = 1.5f; 
+    public Vector2 offsetTeleport = new Vector2(-1f, 0f);
 
     [Header("Controle")]
-    // Mantém o estado de seguir salvo entre a troca de todas as cenas!
-    public static bool deveSeguir = false; 
+    public bool deveSeguir = false; 
 
-    private static SeguirJogador instancia;
+    [Header("Animação")]
+    public Animator animator;
+    public string parametroAndando = "estaAndando"; 
 
     void Awake()
     {
-        if (instancia == null)
+        DontDestroyOnLoad(gameObject);
+
+        if (animator == null)
         {
-            instancia = this;
-            DontDestroyOnLoad(gameObject); // Não destrói a Mellory ao mudar de cena
-        }
-        else
-        {
-            // Se já existe uma Mellory vinda da praia, apaga a duplicada da nova cena
-            Destroy(gameObject);
-            return;
+            animator = GetComponent<Animator>();
         }
     }
 
@@ -48,22 +45,18 @@ public class SeguirJogador : MonoBehaviour
             return;
         }
 
-        // Tenta achar o Morgan pelo nome ou pela Tag "Player"
         BuscarJogador();
 
         if (deveSeguir && jogador != null)
         {
-            // Teleporta a Mellory imediatamente para perto do Morgan na nova cena
-            transform.position = new Vector3(jogador.position.x - 1f, jogador.position.y, transform.position.z);
+            transform.position = new Vector3(jogador.position.x + offsetTeleport.x, jogador.position.y + offsetTeleport.y, transform.position.z);
         }
     }
 
     void BuscarJogador()
     {
-        // 1. Tenta buscar pelo nome exato "Jogador"
         GameObject playerObj = GameObject.Find("Jogador"); 
 
-        // 2. Se não encontrar pelo nome, busca pela Tag "Player"
         if (playerObj == null)
         {
             playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -75,18 +68,22 @@ public class SeguirJogador : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[Mellory] Não foi possível encontrar o jogador na cena atual!");
+            Debug.LogWarning($"[{gameObject.name}] Não foi possível encontrar o jogador na cena atual!");
         }
     }
 
     void Update()
     {
-        if (!deveSeguir) return;
+        if (!deveSeguir) 
+        {
+            AtualizarAnimacao(false);
+            return;
+        }
 
-        // Caso tenha perdido a referência (ex: transição de cena atrasada), busca novamente
         if (jogador == null)
         {
             BuscarJogador();
+            AtualizarAnimacao(false);
             return;
         }
 
@@ -97,15 +94,31 @@ public class SeguirJogador : MonoBehaviour
             Vector2 posicaoAlvo = new Vector2(jogador.position.x, jogador.position.y); 
             transform.position = Vector2.MoveTowards(transform.position, posicaoAlvo, velocidade * Time.deltaTime);
 
-            // Vira o sprite da Mellory
+            // CORREÇÃO: Sinais invertidos para ajustar à orientação original dos sprites da Melissa
             if (jogador.position.x > transform.position.x)
             {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                // Morgan à DIREITA: aplica sinal negativo para a Melissa olhar para a direita
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else if (jogador.position.x < transform.position.x)
             {
-                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                // Morgan à ESQUERDA: aplica sinal positivo para a Melissa olhar para a esquerda
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
+
+            AtualizarAnimacao(true);
+        }
+        else
+        {
+            AtualizarAnimacao(false);
+        }
+    }
+
+    void AtualizarAnimacao(bool estaAndando)
+    {
+        if (animator != null)
+        {
+            animator.SetBool(parametroAndando, estaAndando);
         }
     }
 
