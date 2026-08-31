@@ -5,7 +5,7 @@ public class SelecionarIngrediente : MonoBehaviour
     public GameObject[] ingredientes;
     public GameObject contornoDeSeleção;
 
-   public bool ingredienteSelecionado; //se existe algum item selecionado no momento
+    public bool ingredienteSelecionado; //se existe algum item selecionado no momento
 
     int índiceLista;
 
@@ -29,12 +29,28 @@ public class SelecionarIngrediente : MonoBehaviour
         }
     }
 
+
     void ContornoIngrediente ()
     {
-        contornoDeSeleção.transform.position = new Vector2(ingredientes[índiceLista].transform.position.x, ingredientes[índiceLista].transform.position.y); //o contorno de seleção segue o item em foco
+        if (ingredientes[índiceLista] != null)
+        {
+            contornoDeSeleção.transform.position = new Vector2(ingredientes[índiceLista].transform.position.x, ingredientes[índiceLista].transform.position.y); //o contorno de seleção segue o item em foco
 
-        contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>().sprite;
-        contornoDeSeleção.transform.localScale = ingredientes[índiceLista].transform.localScale * 1.2f;
+            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>().sprite;
+            contornoDeSeleção.transform.localScale = ingredientes[índiceLista].transform.localScale * 1.2f;
+        }
+
+        if (ingredientes[índiceLista] == null) //se a variável com o ingrediente atual fique vazio, ou seja, suma...
+        {
+            Debug.Log("Verificação concluída");
+
+            int ingredienteAleatório = Random.Range(0, ingredientes.Length); //... o código faz uma escolha aleatória de itens da lista
+
+            contornoDeSeleção.transform.position = new Vector2(ingredientes[ingredienteAleatório].transform.position.x, ingredientes[ingredienteAleatório].transform.position.y); //o contorno de seleção segue o item em foco
+
+            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[ingredienteAleatório].GetComponent<SpriteRenderer>().sprite;
+            contornoDeSeleção.transform.localScale = ingredientes[ingredienteAleatório].transform.localScale * 1.2f;
+        }
     }
 
     void MoverIngrediente ()
