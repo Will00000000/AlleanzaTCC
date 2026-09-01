@@ -8,6 +8,8 @@ public class Caldeirao : MonoBehaviour
     public static bool segundoIngrediente = false; //segundo ingrediente certo
     public static bool terceiroIngrediente = false; //terceiro ingrediente certo
 
+    public static bool ingredienteDestruído;
+
     void Start()
     {
         // garante que a fumaça não comece ativa
@@ -48,6 +50,7 @@ public class Caldeirao : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+            ingredienteDestruído = true;
         }
     }
 

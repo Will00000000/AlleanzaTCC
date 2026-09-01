@@ -12,7 +12,7 @@ public class SelecionarIngrediente : MonoBehaviour
     private void Update()
     {
         SeleçaoIngrediente();
-        MoverIngrediente();
+        ArrastarIngrediente();
         ContornoIngrediente();
     }
 
@@ -27,32 +27,41 @@ public class SelecionarIngrediente : MonoBehaviour
                 índiceLista = 0; //... ele volta para o começo
             }
         }
-    }
 
+        if (Caldeirao.ingredienteDestruído == true)
+        {
+            índiceLista = 0;
+            Caldeirao.ingredienteDestruído = false;
+        }
+    }
 
     void ContornoIngrediente ()
     {
-        if (ingredientes[índiceLista] != null) // se a variável com o ingrediente atual estiver atribuída...
+        if (Caldeirao.ingredienteDestruído == false) // se a variável com o ingrediente atual estiver atribuída...
         {
             contornoDeSeleção.transform.position = new Vector2(ingredientes[índiceLista].transform.position.x, ingredientes[índiceLista].transform.position.y); //o contorno de seleção segue o item em foco
 
             contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>().sprite; // o contorno se apropria do sprite do item em foco
             contornoDeSeleção.transform.localScale = ingredientes[índiceLista].transform.localScale * 1.2f; //... o contorno aumenta de escala em 1.2 vezes
         }
-
-        if (ingredientes[índiceLista] == null) //se a variável com o ingrediente atual ficar vazio, ou seja, suma...
+        else //se a variável com o ingrediente atual ficar vazio, ou seja, suma...
         {
             for (int indice = 0; indice < ingredientes.Length; indice++) //... o código faz uma verificação item por item da lista de ingredientes
             {
-                contornoDeSeleção.transform.position = new Vector2(ingredientes[indice].transform.position.x, ingredientes[indice].transform.position.y); //... e o primeiro ingrediente disponível recebe o foco
+                if (ingredientes[indice] != null)
+                {
+                    contornoDeSeleção.transform.position = new Vector2(ingredientes[indice].transform.position.x, ingredientes[indice].transform.position.y); //... e o primeiro ingrediente disponível recebe o foco
 
-                contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[indice].GetComponent<SpriteRenderer>().sprite; //... o primeiro ingrediente disponível dá o próprio sprite para o contorno
-                contornoDeSeleção.transform.localScale = ingredientes[indice].transform.localScale * 1.2f; //... o primeiro ingrediente disponível dá um tamanho a mais para o contorno
+                    contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[indice].GetComponent<SpriteRenderer>().sprite; //... o primeiro ingrediente disponível dá o próprio sprite para o contorno
+                    contornoDeSeleção.transform.localScale = ingredientes[indice].transform.localScale * 1.2f; //... o primeiro ingrediente disponível dá um tamanho a mais para o contorno
+                }
             }
+
+            Caldeirao.ingredienteDestruído = false;
         }
     }
 
-    void MoverIngrediente ()
+    void ArrastarIngrediente ()
     {
         if (Input.GetKeyDown(KeyCode.Return) && ingredienteSelecionado == false) // se o jogador apertar Enter...
         {

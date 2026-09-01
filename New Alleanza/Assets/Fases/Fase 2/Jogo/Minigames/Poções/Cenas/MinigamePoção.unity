@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barraTempo: {fileID: 233610672}
-  tempoMaximo: 10
+  tempoMaximo: 30
 --- !u!1 &321993369
 GameObject:
   m_ObjectHideFlags: 0
