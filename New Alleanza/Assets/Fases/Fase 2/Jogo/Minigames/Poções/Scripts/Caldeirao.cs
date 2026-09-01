@@ -4,9 +4,11 @@ public class Caldeirao : MonoBehaviour
 {
     public ParticleSystem fumaca;
 
-    public static bool primeiroIngrediente = false; //primeiro ingrediente certo
-    public static bool segundoIngrediente = false; //segundo ingrediente certo
-    public static bool terceiroIngrediente = false; //terceiro ingrediente certo
+    public static bool primeiroIngredienteCerto = false; //primeiro ingrediente certo
+    public static bool segundoIngredienteCerto = false; //segundo ingrediente certo
+    public static bool terceiroIngredienteCerto = false; //terceiro ingrediente certo
+
+    public static bool jogadorGanhou;
 
     public static bool ingredienteDestruído;
 
@@ -19,14 +21,14 @@ public class Caldeirao : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.CompareTag("Ingrediente"))
+        if (col.gameObject.tag == "Ingrediente")
         {
-            Debug.Log("Ingrediente adicionado: " + other.name);
+            Debug.Log("Ingrediente adicionado: " + col.name);
 
             // ativa a fumaça
-            if(fumaca != null)
+            if (fumaca != null)
             {
                 fumaca.Play();
 
@@ -34,23 +36,23 @@ public class Caldeirao : MonoBehaviour
                 Invoke("PararFumaca", 2f);
             }
 
-            if (other.name == "Ingrediente4 (certo)") //se o nome do ingrediente colidido for o ingrediente 5...
+            if (col.name == "Ingrediente4 (certo)") //se o nome do ingrediente colidido for o ingrediente 4...
             {
-                primeiroIngrediente = true; //o primeiro ingrediente necessário para a poção será misturado.
+                primeiroIngredienteCerto = true; //o primeiro ingrediente necessário para a poção será misturado.
             }
 
-            if (primeiroIngrediente == true && other.name == "Ingrediente6 (certo)") //se o primeiro ingrediente estiver na mistura e o nome do ingrediente colidido for o ingrediente 7...
+            if (primeiroIngredienteCerto == true && col.name == "Ingrediente6 (certo)") //se o primeiro ingrediente estiver na mistura e o nome do ingrediente colidido for o ingrediente 6...
             {
-                segundoIngrediente = true; //o segundo ingrediente necessário para a poção será misturado.
+                segundoIngredienteCerto = true; //o segundo ingrediente necessário para a poção será misturado.  
             }
 
-            if (segundoIngrediente = true && other.name == "Ingrediente7 (certo)") //se o segundo ingrediente estiver na mistura e o nome do ingrediente colidido for o ingrediente 8...
+            if (segundoIngredienteCerto == true && segundoIngredienteCerto == true && col.name == "Ingrediente7 (certo)") //se o segundo ingrediente estiver na mistura e o nome do ingrediente colidido for o ingrediente 8...
             {
-                terceiroIngrediente = true; //o terceiro ingrediente necessário para a poção será misturado.
+                terceiroIngredienteCerto = true; //o terceiro ingrediente necessário para a poção será misturado.
             }
 
-            Destroy(other.gameObject);
-            ingredienteDestruído = true;
+            Destroy(col.gameObject);
+            ingredienteDestruído = true; //diz a variável que o ingrediente jogado foi destruído
         }
     }
 

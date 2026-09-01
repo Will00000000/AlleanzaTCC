@@ -5,81 +5,102 @@ public class SelecionarIngrediente : MonoBehaviour
     public GameObject[] ingredientes;
     public GameObject contornoDeSeleção;
 
-    public bool ingredienteSelecionado; //se existe algum item selecionado no momento
+    public bool ingredienteSelecionado; // Se existe algum item sendo movido no momento
 
-    int índiceLista;
+    int índiceLista = 0;
 
     private void Update()
     {
+        ValidarIngredienteAtual();
         SeleçaoIngrediente();
         ArrastarIngrediente();
         ContornoIngrediente();
     }
 
-    void SeleçaoIngrediente ()
+    // Procura um ingrediente válido caso o atual tenha sido destruído pelo caldeirão
+    void ValidarIngredienteAtual()
     {
-        if (ingredienteSelecionado == false && Input.GetKeyDown(KeyCode.RightArrow)) //se não houver nenhum item selecionado e o jogador apertar a seta para a direita...
+        // Se o ingrediente atual no índice foi destruído (é null)
+        if (ingredientes[índiceLista] == null)
         {
-            índiceLista += 1; //... o foco vai para o próximo ingrediente da lista.
+            ingredienteSelecionado = false; // Libera o estado de seleção
 
-            if (índiceLista > ingredientes.Length - 1) //se o índice atribuído passar do tamanho da lista...
+            // Procura o primeiro ingrediente da lista que ainda existe
+            for (int i = 0; i < ingredientes.Length; i++)
             {
-                índiceLista = 0; //... ele volta para o começo
-            }
-        }
-
-        if (Caldeirao.ingredienteDestruído == true)
-        {
-            índiceLista = 0;
-            Caldeirao.ingredienteDestruído = false;
-        }
-    }
-
-    void ContornoIngrediente ()
-    {
-        if (Caldeirao.ingredienteDestruído == false) // se a variável com o ingrediente atual estiver atribuída...
-        {
-            contornoDeSeleção.transform.position = new Vector2(ingredientes[índiceLista].transform.position.x, ingredientes[índiceLista].transform.position.y); //o contorno de seleção segue o item em foco
-
-            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>().sprite; // o contorno se apropria do sprite do item em foco
-            contornoDeSeleção.transform.localScale = ingredientes[índiceLista].transform.localScale * 1.2f; //... o contorno aumenta de escala em 1.2 vezes
-        }
-        else //se a variável com o ingrediente atual ficar vazio, ou seja, suma...
-        {
-            for (int indice = 0; indice < ingredientes.Length; indice++) //... o código faz uma verificação item por item da lista de ingredientes
-            {
-                if (ingredientes[indice] != null)
+                if (ingredientes[i] != null)
                 {
-                    contornoDeSeleção.transform.position = new Vector2(ingredientes[indice].transform.position.x, ingredientes[indice].transform.position.y); //... e o primeiro ingrediente disponível recebe o foco
-
-                    contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = ingredientes[indice].GetComponent<SpriteRenderer>().sprite; //... o primeiro ingrediente disponível dá o próprio sprite para o contorno
-                    contornoDeSeleção.transform.localScale = ingredientes[indice].transform.localScale * 1.2f; //... o primeiro ingrediente disponível dá um tamanho a mais para o contorno
+                    índiceLista = i;
+                    return;
                 }
             }
-
-            Caldeirao.ingredienteDestruído = false;
         }
     }
 
-    void ArrastarIngrediente ()
+    void SeleçaoIngrediente()
     {
-        if (Input.GetKeyDown(KeyCode.Return) && ingredienteSelecionado == false) // se o jogador apertar Enter...
+        // Avança na lista ao pressionar a seta para a direita
+        if (!ingredienteSelecionado && Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ingredientes[índiceLista].GetComponent<MoverIngrediente>().enabled = true; // ... o jogador consegue mover o ingrediente
-            ingredienteSelecionado = true; // ...agora é possível o jogar o ingrediente
+            int tentativas = 0;
+
+            // Avança para o próximo ingrediente e pula os que já foram destruídos
+            do
+            {
+                índiceLista++;
+
+                if (índiceLista >= ingredientes.Length)
+                {
+                    índiceLista = 0; // Volta para o início da lista
+                }
+
+                tentativas++;
+            }
+            while (ingredientes[índiceLista] == null && tentativas < ingredientes.Length);
+        }
+    }
+
+    void ContornoIngrediente()
+    {
+        // Se existir um ingrediente válido no índice atual
+        if (ingredientes[índiceLista] != null)
+        {
+            contornoDeSeleção.SetActive(true);
+
+            Transform target = ingredientes[índiceLista].transform;
+            SpriteRenderer targetSprite = ingredientes[índiceLista].GetComponent<SpriteRenderer>();
+
+            // Ajusta posição, sprite e escala do contorno
+            contornoDeSeleção.transform.position = new Vector2(target.position.x, target.position.y);
+            contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = targetSprite.sprite;
+            contornoDeSeleção.transform.localScale = target.localScale * 1.2f;
         }
         else
         {
-            JogarIngrediente();
+            // Se TODOS os ingredientes forem destruídos, esconde o contorno
+            contornoDeSeleção.SetActive(false);
         }
     }
 
-    void JogarIngrediente ()
+    void ArrastarIngrediente()
     {
+        // Se não houver nenhum ingrediente no índice, ignora a tecla
+        if (ingredientes[índiceLista] == null) return;
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            ingredientes[índiceLista].GetComponent<MoverIngrediente>().enabled = false; //... o jogador não consegue mais mover o ingrediente
-            ingredienteSelecionado = false; // ... não há mais nenhum ingrediente selecionada
+            if (!ingredienteSelecionado)
+            {
+                // Começa a mover o ingrediente
+                ingredientes[índiceLista].GetComponent<MoverIngrediente>().enabled = true;
+                ingredienteSelecionado = true;
+            }
+            else
+            {
+                // Solta o ingrediente
+                ingredientes[índiceLista].GetComponent<MoverIngrediente>().enabled = false;
+                ingredienteSelecionado = false;
+            }
         }
     }
 }

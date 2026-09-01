@@ -26,7 +26,7 @@ public class TempoMinigame : MonoBehaviour
         }
     }
 
-    void Perdeu()
+    public static void Perdeu()
     {
         SceneManager.LoadScene("CenaDerrota");
     }

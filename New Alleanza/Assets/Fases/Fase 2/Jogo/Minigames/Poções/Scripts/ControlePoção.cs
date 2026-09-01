@@ -1,20 +1,30 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControlePoção : MonoBehaviour
+public class ControleMinigamePoção : MonoBehaviour
 {
     private void Update()
     {
-        if (Caldeirao.primeiroIngrediente == true)
+        SequênciaIngredientes();
+    }
+
+    void SequênciaIngredientes ()
+    {
+        if (Caldeirao.primeiroIngredienteCerto == true && Caldeirao.segundoIngredienteCerto == true && Caldeirao.terceiroIngredienteCerto == true)
         {
-            if (Caldeirao.segundoIngrediente == true)
-            {
-                if (Caldeirao.terceiroIngrediente == true)
-                {
-                    SceneManager.LoadScene("QuartoSelene");
-                    Debug.Log("Parabéns! Agora o sangue da Selene não estará mais nas suas mãos!");
-                }
-            }
+            JogadorGanhou();
         }
+    }
+
+    void JogadorGanhou ()
+    {
+        SceneManager.LoadScene("QuartoSelene");
+        Debug.Log("Parabéns! Agora o sangue da Selene não estará mais nas suas mãos!");
+    }
+
+    void JogadorPerdeu ()
+    {
+        SceneManager.LoadScene("CenaDerrota");
+        Debug.Log("Assassino!");
     }
 }
