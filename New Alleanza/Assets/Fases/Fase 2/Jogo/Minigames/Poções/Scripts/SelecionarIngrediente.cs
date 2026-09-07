@@ -7,7 +7,7 @@ public class SelecionarIngrediente : MonoBehaviour
 
     public bool ingredienteSelecionado; // Se existe algum item sendo movido no momento
 
-    int índiceLista = 0;
+    public int índiceLista = 0;
 
     private void Update()
     {
