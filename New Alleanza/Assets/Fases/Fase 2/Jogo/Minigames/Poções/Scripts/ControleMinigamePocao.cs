@@ -30,11 +30,11 @@ public class ControleMinigamePocao : MonoBehaviour
             {
                 JogadorGanhou();
             }
+            else
+            {
+                JogadorPerdeu();
+            }
         }
-    }
-    void SequênciaIngredientes()
-    {
-        
     }
 
     void JogadorGanhou ()
