@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Necessário para detectar mudança de cena
+using UnityEngine.SceneManagement;
 
 public class SeguirJogador : MonoBehaviour
 {
@@ -7,29 +7,27 @@ public class SeguirJogador : MonoBehaviour
     public Transform jogador; 
     public float velocidade = 3f;
     public float distanciaMinima = 1.5f; 
+    public Vector2 offsetTeleport = new Vector2(-1f, 0f);
 
     [Header("Controle")]
-    public bool deveSeguir = false;
+    public bool deveSeguir = false; 
 
-    private static SeguirJogador instancia;
+    [Header("Animação")]
+    public Animator animator;
+    public string parametroAndando = "estaAndando"; 
+
     void Awake()
     {
-        // Se ainda não existir uma instância, esta será a principal
-        if (instancia == null)
+        DontDestroyOnLoad(gameObject);
+
+        if (animator == null)
         {
-            instancia = this;
-            DontDestroyOnLoad(gameObject); // Garante que ela não morra entre as cenas
-        }
-        else
-        {
-            // Se já existir uma Mellory vinda de outra cena, destrói essa nova que tentou nascer
-            Destroy(gameObject);
+            animator = GetComponent<Animator>();
         }
     }
 
     void OnEnable()
     {
-        // Avisa ao Unity para rodar uma função sempre que uma cena carregar
         SceneManager.sceneLoaded += AoCarregarCena;
     }
 
@@ -38,58 +36,99 @@ public class SeguirJogador : MonoBehaviour
         SceneManager.sceneLoaded -= AoCarregarCena;
     }
 
-    // Função que roda automaticamente toda vez que muda de fase
     void AoCarregarCena(Scene scene, LoadSceneMode mode)
     {
-        // Se mudou para o Menu Principal, destrói a Mellory para ela não ir pro menu
         if (scene.name == "MenuPrincipal")
         {
+            deveSeguir = false;
             Destroy(gameObject);
             return;
         }
 
-        // Procura o "Novo" Morgan que nasceu na nova cena
-        GameObject playerObj = GameObject.Find("Jogador"); // Coloque o nome EXATO do objeto do seu jogador aqui
+        BuscarJogador();
+
+        if (deveSeguir && jogador != null)
+        {
+            transform.position = new Vector3(jogador.position.x + offsetTeleport.x, jogador.position.y + offsetTeleport.y, transform.position.z);
+        }
+    }
+
+    void BuscarJogador()
+    {
+        GameObject playerObj = GameObject.Find("Jogador"); 
+
+        if (playerObj == null)
+        {
+            playerObj = GameObject.FindGameObjectWithTag("Player");
+        }
+
         if (playerObj != null)
         {
             jogador = playerObj.transform;
-
-            // --- ADAPTADO: TELEPORTE IMEDIATO AO MUDAR DE CENA ---
-            if (deveSeguir)
-            {
-                // Coloca a Mellory um pouco para a esquerda (-1f) do Morgan instantaneamente
-                transform.position = new Vector3(jogador.position.x - 1f, jogador.position.y, transform.position.z);
-            }
+        }
+        else
+        {
+            Debug.LogWarning($"[{gameObject.name}] Não foi possível encontrar o jogador na cena atual!");
         }
     }
 
     void Update()
     {
-        if (!deveSeguir || jogador == null) return;
+        if (!deveSeguir) 
+        {
+            AtualizarAnimacao(false);
+            return;
+        }
+
+        if (jogador == null)
+        {
+            BuscarJogador();
+            AtualizarAnimacao(false);
+            return;
+        }
 
         float distancia = Vector2.Distance(transform.position, jogador.position);
 
         if (distancia > distanciaMinima)
         {
-            // Ajustado para seguir nos dois eixos
             Vector2 posicaoAlvo = new Vector2(jogador.position.x, jogador.position.y); 
-
             transform.position = Vector2.MoveTowards(transform.position, posicaoAlvo, velocidade * Time.deltaTime);
 
-            // Vira o sprite da Mellory
+            // CORREÇÃO: Sinais invertidos para ajustar à orientação original dos sprites da Melissa
             if (jogador.position.x > transform.position.x)
             {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else
-            {
+                // Morgan à DIREITA: aplica sinal negativo para a Melissa olhar para a direita
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
+            else if (jogador.position.x < transform.position.x)
+            {
+                // Morgan à ESQUERDA: aplica sinal positivo para a Melissa olhar para a esquerda
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+
+            AtualizarAnimacao(true);
+        }
+        else
+        {
+            AtualizarAnimacao(false);
+        }
+    }
+
+    void AtualizarAnimacao(bool estaAndando)
+    {
+        if (animator != null)
+        {
+            animator.SetBool(parametroAndando, estaAndando);
         }
     }
 
     public void ComeçarASeguir()
     {
         deveSeguir = true;
+
+        if (jogador == null)
+        {
+            BuscarJogador();
+        }
     }
 }

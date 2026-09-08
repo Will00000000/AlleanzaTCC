@@ -5,78 +5,96 @@ public class Coleta : MonoBehaviour
 {
     public Sprite spriteItem;
 
-    public SpriteRenderer[] sprite_itensGeral; //lista que recebe todos os sprites dos itens do jogo (uma biblioteca)
-    public GameObject[] itensGeral; //lista que recebe todos os gameObjects de itens do jogo (biblioteca)
+    public SpriteRenderer[] sprite_itensGeral; // Lista que recebe todos os sprites dos itens
+    public GameObject[] itensGeral;            // Lista que recebe todos os GameObjects de itens
 
-    //public GameObject Peça;
+    // VariÃ¡veis estÃ¡ticas salvam o estado na memÃ³ria enquanto o jogo estiver aberto.
+    // Elas persistem entre trocas de cenas, mas resetam quando o jogo Ã© fechado e reaberto.
+    public static bool pecaFoiColetada = false;
+    public static bool chaveFoiColetada = false;
 
-    /*private void Update()
+    private void Start()
     {
-        if (PlayerPrefs.GetInt ("Pegou peça", 0) == 1)
+        // Se a peÃ§a jÃ¡ foi coletada nesta sessÃ£o de jogo, mantÃ©m desativada ao carregar a cena
+        if (pecaFoiColetada)
         {
-            Peça.SetActive(false);
+            if (itensGeral != null && itensGeral.Length > 0 && itensGeral[0] != null)
+            {
+                itensGeral[0].SetActive(false);
+            }
         }
-        else
+
+        // Se a chave jÃ¡ foi coletada nesta sessÃ£o de jogo
+        if (chaveFoiColetada)
         {
-            Peça.SetActive(true);
+            if (itensGeral != null && itensGeral.Length > 0 && itensGeral[0] != null)
+            {
+                itensGeral[0].SetActive(false);
+            }
         }
-    }*/
-
-    public void ColetarChave ()
-    {
-        itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); //objeto chave é desabilitado
-        spriteItem = sprite_itensGeral[0].sprite; //pega o sprite 1 "chave"
-
-        PlayerPrefs.SetInt("Pegou peça", 1);
     }
 
     public void ColetarPeca()
     {
-        itensGeral[1].transform.localScale = new Vector3(0, 0, 0); //objeto peça é desabilitado
-        PlayerPrefs.SetInt("Coletou peça", 1);
-        //spriteItem = sprite_itensGeral[1].sprite; //pega o sprite 2 "peça"
+        if (itensGeral != null && itensGeral.Length > 0 && itensGeral[0] != null)
+        {
+            itensGeral[0].SetActive(false); // Desativa o objeto da peÃ§a
+            pecaFoiColetada = true;         // Marca como coletada apenas na memÃ³ria atual
+        }
+    }
+
+    public void ColetarChave()
+    {
+        ColetarGenerico(0);
+        chaveFoiColetada = true;
     }
 
     public void ColetarItem3()
     {
-        itensGeral[2].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[2].sprite; //pega o sprite 1 "chave"
+        ColetarGenerico(2);
     }
+
     public void ColetarItem4()
     {
-        itensGeral[3].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[3].sprite; //pega o sprite 1 "chave"
+        ColetarGenerico(3);
     }
+
     public void ColetarItem5()
     {
-        itensGeral[4].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[4].sprite; //pega o sprite 1 "chave"
+        ColetarGenerico(4);
     }
+
     public void ColetarItem6()
     {
-        itensGeral[5].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[5].sprite; //pega o sprite 1 "chave"
+        ColetarGenerico(5);
     }
+
     public void ColetarItem7()
     {
-        itensGeral[6].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[6].sprite; //pega o sprite 1 "chave"
+        ColetarGenerico(6);
     }
+
     public void ColetarItem8()
     {
-        itensGeral[7].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
-
-        spriteItem = sprite_itensGeral[7].sprite; //pega o sprite 1 "chave"
+        ColetarGenerico(7);
     }
+
     public void ColetarItem9()
     {
-        itensGeral[8].transform.localScale = new Vector3(0, 0, 0); //objeto dhave é desabilitado
+        ColetarGenerico(8);
+    }
 
-        spriteItem = sprite_itensGeral[8].sprite; //pega o sprite 1 "chave"
+    // FunÃ§Ã£o auxiliar para desativar objetos e atribuir o sprite sem repetir cÃ³digo
+    private void ColetarGenerico(int indice)
+    {
+        if (itensGeral != null && itensGeral.Length > indice && itensGeral[indice] != null)
+        {
+            itensGeral[indice].SetActive(false);
+        }
+
+        if (sprite_itensGeral != null && sprite_itensGeral.Length > indice && sprite_itensGeral[indice] != null)
+        {
+            spriteItem = sprite_itensGeral[indice].sprite;
+        }
     }
 }
