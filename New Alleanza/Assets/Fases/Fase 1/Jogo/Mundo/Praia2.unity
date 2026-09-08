@@ -3165,6 +3165,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 6672384368847205033, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3e0de614fbbccd49a4bef074c5cab97, type: 3}
     - target: {fileID: 7131018812325714686, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
@@ -3501,6 +3505,10 @@ MonoBehaviour:
   jogador: {fileID: 1843146556}
   velocidade: 3
   distanciaMinima: 1.5
+  offsetTeleport: {x: -1, y: 0}
+  deveSeguir: 0
+  animator: {fileID: 0}
+  parametroAndando: estaAndando
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -2072,6 +2072,7 @@ GameObject:
   - component: {fileID: 769929517}
   - component: {fileID: 769929519}
   - component: {fileID: 769929518}
+  - component: {fileID: 769929520}
   m_Layer: 5
   m_Name: Mapa
   m_TagString: Untagged
@@ -2136,6 +2137,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769929516}
   m_CullTransparentMesh: 1
+--- !u!114 &769929520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769929516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8f7f92afc2ae34bba11a073e8653dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipoItem: 0
 --- !u!1 &796064758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,6 +4190,7 @@ GameObject:
   - component: {fileID: 1895166491}
   - component: {fileID: 1895166493}
   - component: {fileID: 1895166492}
+  - component: {fileID: 1895166494}
   m_Layer: 5
   m_Name: Mochila
   m_TagString: Untagged
@@ -4240,6 +4255,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895166490}
   m_CullTransparentMesh: 1
+--- !u!114 &1895166494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895166490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8f7f92afc2ae34bba11a073e8653dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tipoItem: 1
 --- !u!1 &1917037885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,6 +5294,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6672384368847205033, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3e0de614fbbccd49a4bef074c5cab97, type: 3}
     - target: {fileID: 6972011444334691659, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_IsActive
       value: 1
