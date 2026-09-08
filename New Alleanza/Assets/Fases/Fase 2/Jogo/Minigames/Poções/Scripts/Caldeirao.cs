@@ -3,6 +3,7 @@ using UnityEngine;
 public class Caldeirao : MonoBehaviour
 {
     public ParticleSystem fumaca;
+    GameObject gameController;
 
     public static bool primeiroIngredienteCerto = false; //primeiro ingrediente certo
     public static bool segundoIngredienteCerto = false; //segundo ingrediente certo
@@ -18,6 +19,8 @@ public class Caldeirao : MonoBehaviour
 
     void Start()
     {
+        gameController = GameObject.Find("GameController");
+
         // garante que a fumaça não comece ativa
         if (fumaca != null)
         {
@@ -31,9 +34,9 @@ public class Caldeirao : MonoBehaviour
         {
             Destroy (col.gameObject);
 
-            if (ControleMinigamePoção.ingredienteJogado_1 == false && ControleMinigamePoção.ingredienteJogado_2 == false)
+            if (ControleMinigamePocao.ingredienteJogado_1 == false && ControleMinigamePocao.ingredienteJogado_2 == false)
             {
-                ControleMinigamePoção.VerificaçãoLimiteIngredientes ();
+                ControleMinigamePocao.VerificaçãoLimiteIngredientes ();
 
                 Debug.Log("Ingrediente adicionado: " + col.name);
 
@@ -46,7 +49,7 @@ public class Caldeirao : MonoBehaviour
                     Invoke("PararFumaca", 2f);
                 }
 
-                ControleMinigamePoção.ingredienteJogado_1 = true;
+                ControleMinigamePocao.ingredienteJogado_1 = true;
 
                 //VERIFICAÇÃO DE INGREDIENTES E ORDEM CORRETOS
                 if (col.name == "Ingrediente4 (certo)") // ... e se o nome do ingrediente colidido for o ingrediente 4...
@@ -66,18 +69,18 @@ public class Caldeirao : MonoBehaviour
                 
                 ingredienteDestruído = true; //... e diz à variável que o ingrediente jogado foi destruído
             }
-            else if (ControleMinigamePoção.ingredienteJogado_1 == true)
+            else if (ControleMinigamePocao.ingredienteJogado_1 == true)
             {
-                ControleMinigamePoção.ingredienteJogado_1 = false;
-                ControleMinigamePoção.ingredienteJogado_2 = true;
+                ControleMinigamePocao.ingredienteJogado_1 = false;
+                ControleMinigamePocao.ingredienteJogado_2 = true;
             }
-            else if (ControleMinigamePoção.ingredienteJogado_1 == false && ControleMinigamePoção.ingredienteJogado_2 == true)
+            else if (ControleMinigamePocao.ingredienteJogado_1 == false && ControleMinigamePocao.ingredienteJogado_2 == true)
             {
-                ControleMinigamePoção.ingredienteJogado_2 = false;
-                ControleMinigamePoção.ingredienteJogado_3 = true;
+                ControleMinigamePocao.ingredienteJogado_2 = false;
+                ControleMinigamePocao.ingredienteJogado_3 = true;
             }
 
-            ControleMinigamePoção.VerificaçãoLimiteIngredientes ();
+            gameController.GetComponent<ControleMinigamePocao>().VerificaçãoLimiteIngredientes ();
         }
     }
 

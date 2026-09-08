@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControleMinigamePoção : MonoBehaviour
+public class ControleMinigamePocao : MonoBehaviour
 {
     public GameObject Caldeirão;
 
@@ -10,20 +10,7 @@ public class ControleMinigamePoção : MonoBehaviour
     public static bool ingredienteJogado_2 = false;
     public static bool ingredienteJogado_3 = false;
 
-    private void Update()
-    {
-        SequênciaIngredientes();
-    }
-
-    void SequênciaIngredientes ()
-    {
-        if (Caldeirao.primeiroIngredienteCerto == true && Caldeirao.segundoIngredienteCerto == true && Caldeirao.terceiroIngredienteCerto == true)
-        {
-            JogadorGanhou();
-        }
-    }
-
-    public static void VerificaçãoLimiteIngredientes ()
+    public void VerificaçãoLimiteIngredientes ()
     {
         if (ingredienteJogado_1 == true)
         {
@@ -38,7 +25,16 @@ public class ControleMinigamePoção : MonoBehaviour
         if (ingredienteJogado_3 == true)
         {
             Debug.Log ("Joguei o terceiro ingrediente");
+
+            if (Caldeirao.primeiroIngredienteCerto == true && Caldeirao.segundoIngredienteCerto == true && Caldeirao.terceiroIngredienteCerto == true)
+            {
+                JogadorGanhou();
+            }
         }
+    }
+    void SequênciaIngredientes()
+    {
+        
     }
 
     void JogadorGanhou ()

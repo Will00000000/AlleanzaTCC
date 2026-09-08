@@ -1780,8 +1780,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885106077}
-  - component: {fileID: 885106078}
   - component: {fileID: 885106079}
+  - component: {fileID: 885106080}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1804,21 +1804,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &885106078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885106076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42e2f6db8afed4440bf698881b98da6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "Caldeir\xE3o": {fileID: 1361044825}
-  ingredienteJogado_1: 0
-  podeIr_2: 0
 --- !u!114 &885106079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1843,6 +1828,20 @@ MonoBehaviour:
   - {fileID: 449963146}
   "contornoDeSele\xE7\xE3o": {fileID: 2067866890}
   ingredienteSelecionado: 0
+  "\xEDndiceLista": 0
+--- !u!114 &885106080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885106076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e2f6db8afed4440bf698881b98da6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Caldeir\xE3o": {fileID: 1361044825}
 --- !u!1 &948271995
 GameObject:
   m_ObjectHideFlags: 0
