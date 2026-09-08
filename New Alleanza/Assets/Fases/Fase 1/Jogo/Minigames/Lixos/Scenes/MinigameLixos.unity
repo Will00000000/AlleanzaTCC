@@ -580,8 +580,8 @@ MonoBehaviour:
   - {fileID: 1200540271728899515, guid: c5153f2a245bc004795a29d03a693e9f, type: 3}
   - {fileID: 1181759508471162324, guid: fe24853ee193b4c408b9c7c6e1b0c291, type: 3}
   - {fileID: 3616539373378389480, guid: 90c6e04cd1e4d354eb9d63b006f65d94, type: 3}
-  timer: 1
-  intervaloTempo: 1.5
+  timer: 1.5
+  intervaloTempo: 2
   tempoMin: 0.3
 --- !u!4 &202547619
 Transform:
