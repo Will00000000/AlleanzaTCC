@@ -92,14 +92,16 @@ public class HUD_Quarto : MonoBehaviour
     public void HabilitarInventario()
     {
         GameManager.MorganPegouMochila = true; 
-        if (inventarioButton != null) inventarioButton.SetActive(true);      
+        if (inventarioButton != null) inventarioButton.SetActive(true); 
+        PlayerPrefs.SetInt("tem_Mochila",1);      
         if (MochilaCenario != null) MochilaCenario.SetActive(false);      
     }
 
     public void HabilitarMapa()
     {
         GameManager.MorganPegouMapa = true;   
-        if (mapaButton != null) mapaButton.SetActive(true);            
+        if (mapaButton != null) mapaButton.SetActive(true); 
+        PlayerPrefs.SetInt("tem_Mapa",1);            
         if (MapaCenario != null) MapaCenario.SetActive(false);         
     }
 

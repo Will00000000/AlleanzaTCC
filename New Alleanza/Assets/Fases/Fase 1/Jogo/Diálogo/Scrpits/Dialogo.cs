@@ -37,6 +37,7 @@ public class Dialogo : MonoBehaviour
     {
         caixaDialogo.SetActive(false);
         if (caixaPlayer2 != null) caixaPlayer2.SetActive(false);
+          
     }
 
     void Update()

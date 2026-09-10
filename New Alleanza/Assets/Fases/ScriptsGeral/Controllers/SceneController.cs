@@ -12,9 +12,27 @@ public class SceneController : MonoBehaviour
 
     public void GoPraia_from_Casa()
     {
-        PlayerPrefs.SetInt("was_QuartoMorgan", 1);
+        // Verifica se o jogador já coletou tanto a mochila quanto o mapa
+        bool temMochila = PlayerPrefs.GetInt("tem_Mochila") == 1;
+        bool temMapa = PlayerPrefs.GetInt("tem_Mapa") == 1;
 
-        SceneManager.LoadScene("Praia");
+        if ((temMochila && temMapa) ||  PlayerPrefs.GetInt("Ja_Peguei") ==1 )
+        {
+            PlayerPrefs.SetInt("was_QuartoMorgan", 1);
+            PlayerPrefs.SetInt("tem_Mochila",0);  
+            PlayerPrefs.SetInt("tem_Mapa",0); 
+            PlayerPrefs.SetInt("Ja_Peguei",1);  
+            SceneManager.LoadScene("Praia");
+
+        }
+        else
+        {
+            Debug.Log("Você precisa pegar a Mochila e o Mapa antes de sair para a Praia!");
+            Debug.Log(PlayerPrefs.GetInt("tem_Mochila") + " seila " + PlayerPrefs.GetInt("tem_Mapa"));
+             PlayerPrefs.SetInt("Ja_Peguei",0); 
+           
+        }
+         Debug.Log("Mochila " + PlayerPrefs.GetInt("tem_Mochila") + " Mapa " + PlayerPrefs.GetInt("tem_Mapa") + " peguei tudo  " + PlayerPrefs.GetInt("Ja_Peguei"));
     }
 
     public void GoPraia_from_Praia2()
@@ -28,9 +46,9 @@ public class SceneController : MonoBehaviour
     {
         PlayerPrefs.SetInt ("was_Praia", 1);
 
-        SceneManager.LoadScene("Praia2");
+        SceneManager.LoadScene ("Praia2");
     }
-
+    
     public void GoPraia2_from_Escadaria()
     {
         PlayerPrefs.SetInt ("was_Escadaria", 1);
