@@ -70,6 +70,14 @@ public class Caldeirao : MonoBehaviour
                     segundoIngredienteCerto = true; //... então o segundo ingrediente necessário para a poção será misturado.  
                     Debug.Log("Segundo ingrediente certo colocado");
                 }
+
+                if (fumaca != null)
+                {
+                    fumaca.Play();
+
+                    // para a fumaça depois de 2 segundos
+                    Invoke("PararFumaca", 2f);
+                }
             }
             else if (ControleMinigamePocao.ingredienteJogado_1 == false && ControleMinigamePocao.ingredienteJogado_2 == true)
             {
@@ -80,6 +88,14 @@ public class Caldeirao : MonoBehaviour
                 {
                     terceiroIngredienteCerto = true; //... então o terceiro ingrediente necessário para a poção será misturado.
                     Debug.Log("Terceiro ingrediente certo colocado");
+                }
+
+                if (fumaca != null)
+                {
+                    fumaca.Play();
+
+                    // para a fumaça depois de 2 segundos
+                    Invoke("PararFumaca", 2f);
                 }
             }
 
