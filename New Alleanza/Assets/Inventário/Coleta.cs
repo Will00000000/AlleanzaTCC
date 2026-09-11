@@ -40,6 +40,8 @@ public class Coleta : MonoBehaviour
         {
             itensGeral[0].SetActive(false); // Desativa o objeto da peça
             pecaFoiColetada = true;         // Marca como coletada apenas na memória atual
+
+            PlayerPrefs.SetInt("Coletou peça", 1);
         }
     }
 

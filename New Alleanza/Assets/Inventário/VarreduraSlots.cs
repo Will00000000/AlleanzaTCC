@@ -5,18 +5,21 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
 {
     public Image[] slot;
 
+    Color novaCor;
     public GameObject script_coleta;
 
     private void Update()
     {
         script_coleta = GameObject.Find("InteractController");
 
-        Color novaCor;
+        novaCor.a = 0f;
 
         #region Slot 1
         if (slot[0].sprite == null)
         {
             slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
+
+            slot[0].color = novaCor;
         }
         #endregion
 
@@ -218,9 +221,7 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
 
         else
         {
-            novaCor = slot[8].color;
-            novaCor.a = 1f;
-            slot[8].color = novaCor;
+
         }
     }
 }
