@@ -33,6 +33,10 @@ public class ControleMinigamePocao : MonoBehaviour
             else
             {
                 JogadorPerdeu();
+
+                ingredienteJogado_1 = false;
+                ingredienteJogado_2 = false;
+                ingredienteJogado_3 = false;
             }
         }
     }

@@ -99,7 +99,7 @@ public class Caldeirao : MonoBehaviour
                 }
             }
 
-            gameController.GetComponent<ControleMinigamePocao>().VerificaçãoLimiteIngredientes ();
+                gameController.GetComponent<ControleMinigamePocao>().VerificaçãoLimiteIngredientes();
         }
     }
 
