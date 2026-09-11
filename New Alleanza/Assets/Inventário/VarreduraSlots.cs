@@ -10,6 +10,8 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
 
     private void Update()
     {
+        Slots();
+
         script_coleta = GameObject.Find("InteractController");
 
         novaCor.a = 0f;
@@ -223,5 +225,10 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         {
 
         }
+    }
+
+    private void Slots ()
+    {
+
     }
 }

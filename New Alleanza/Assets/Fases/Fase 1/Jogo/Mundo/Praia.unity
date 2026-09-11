@@ -1654,7 +1654,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 596262120}
-  - component: {fileID: 596262124}
   m_Layer: 0
   m_Name: "ColetarPe\xE7a"
   m_TagString: Untagged
@@ -1682,23 +1681,6 @@ RectTransform:
   m_AnchoredPosition: {x: 960.7231, y: 543.3224}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &596262124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596262119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4a59a074ee72c448822262d596cdd42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteItem: {fileID: 21300000, guid: 90280ec8dd8b3c445b8f728944c9d496, type: 3}
-  sprite_itensGeral:
-  - {fileID: 0}
-  itensGeral:
-  - {fileID: 1661484766}
 --- !u!1001 &610556469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3057,7 +3039,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 596262124}
+      - m_Target: {fileID: 689849236424741519}
         m_TargetAssemblyTypeName: Coleta, Assembly-CSharp
         m_MethodName: ColetarPeca
         m_Mode: 1
@@ -5798,7 +5780,11 @@ PrefabInstance:
     - target: {fileID: 4397257261527399190, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: itensGeral.Array.data[0]
       value: 
-      objectReference: {fileID: 596262119}
+      objectReference: {fileID: 1661484766}
+    - target: {fileID: 4397257261527399190, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+      propertyPath: sprite_itensGeral.Array.data[0]
+      value: 
+      objectReference: {fileID: 1661484768}
     - target: {fileID: 5751429312126233272, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.27692676
@@ -5898,6 +5884,17 @@ MonoBehaviour:
   GoOceano: {fileID: 493169512}
   GoCasa: {fileID: 2144536062}
   "GoRef\xFAgio": {fileID: 984750229}
+--- !u!114 &689849236424741519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4397257261527399190, guid: 1778479376cfd7242a514e27a9058eb2, type: 3}
+  m_PrefabInstance: {fileID: 689849236424741516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689849236424741517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a59a074ee72c448822262d596cdd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2255051932986712157
 GameObject:
   m_ObjectHideFlags: 0
