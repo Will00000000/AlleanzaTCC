@@ -1,8 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class SeguirJogador : MonoBehaviour
 {
+    // Dicionário estático para guardar UMA instância de cada personagem pelo ID
+    private static Dictionary<string, SeguirJogador> instancias = new Dictionary<string, SeguirJogador>();
+
+    [Header("Identificação do Personagem")]
+    [Tooltip("Dê um ID único para cada NPC (ex: 'Melory', 'Melissa')")]
+    public string idPersonagem = "NPC_Unico";
+
     [Header("Configurações de Movimento")]
     public Transform jogador; 
     public float velocidade = 3f;
@@ -18,6 +26,19 @@ public class SeguirJogador : MonoBehaviour
 
     void Awake()
     {
+        // Limpa referências nulas que possam ter sobrado de cenas anteriores
+        LimparInstanciasNulas();
+
+        // Se já existe um personagem com este MESMO ID no dicionário...
+        if (instancias.ContainsKey(idPersonagem) && instancias[idPersonagem] != this)
+        {
+            // É uma duplicata real do MESMO personagem! Destrói esta nova cópia.
+            Destroy(gameObject);
+            return;
+        }
+
+        // Se é o primeiro dessa ID, registra e mantém entre cenas
+        instancias[idPersonagem] = this;
         DontDestroyOnLoad(gameObject);
 
         if (animator == null)
@@ -41,6 +62,13 @@ public class SeguirJogador : MonoBehaviour
         if (scene.name == "MenuPrincipal")
         {
             deveSeguir = false;
+            
+            // Remove do dicionário antes de destruir
+            if (instancias.ContainsKey(idPersonagem) && instancias[idPersonagem] == this)
+            {
+                instancias.Remove(idPersonagem);
+            }
+
             Destroy(gameObject);
             return;
         }
@@ -53,9 +81,25 @@ public class SeguirJogador : MonoBehaviour
         }
     }
 
+    void LimparInstanciasNulas()
+    {
+        List<string> chavesParaRemover = new List<string>();
+        foreach (var item in instancias)
+        {
+            if (item.Value == null)
+            {
+                chavesParaRemover.Add(item.Key);
+            }
+        }
+        foreach (var chave in chavesParaRemover)
+        {
+            instancias.Remove(chave);
+        }
+    }
+
     void BuscarJogador()
     {
-        GameObject playerObj = GameObject.Find("Jogador"); 
+        GameObject playerObj = GameObject.Find("Morgan"); 
 
         if (playerObj == null)
         {
@@ -94,15 +138,12 @@ public class SeguirJogador : MonoBehaviour
             Vector2 posicaoAlvo = new Vector2(jogador.position.x, jogador.position.y); 
             transform.position = Vector2.MoveTowards(transform.position, posicaoAlvo, velocidade * Time.deltaTime);
 
-            // CORREÇÃO: Sinais invertidos para ajustar à orientação original dos sprites da Melissa
             if (jogador.position.x > transform.position.x)
             {
-                // Morgan à DIREITA: aplica sinal negativo para a Melissa olhar para a direita
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else if (jogador.position.x < transform.position.x)
             {
-                // Morgan à ESQUERDA: aplica sinal positivo para a Melissa olhar para a esquerda
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
 

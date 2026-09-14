@@ -3819,9 +3819,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c233620a83ec0ef47b581511dab5f135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idPersonagem: Melissa
   jogador: {fileID: 1032626397}
   velocidade: 3
-  distanciaMinima: 1.5
+  distanciaMinima: 3
   offsetTeleport: {x: -1, y: 0}
   deveSeguir: 0
   animator: {fileID: 0}
