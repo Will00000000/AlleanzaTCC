@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 public class SeguirJogador : MonoBehaviour
@@ -72,6 +73,15 @@ public class SeguirJogador : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        // Aguarda 1 frame para garantir que o Morgan já foi reposicionado pelo SpawnPoint da cena
+        StartCoroutine(PosicionarJuntoAoJogador());
+    }
+
+    IEnumerator PosicionarJuntoAoJogador()
+    {
+        // Espera o final do frame atual e a inicialização de todos os scripts
+        yield return new WaitForEndOfFrame();
 
         BuscarJogador();
 
