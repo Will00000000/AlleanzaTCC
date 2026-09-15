@@ -15,6 +15,9 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
         script_coleta = GameObject.Find("InteractController");
 
         novaCor.a = 0f;
+        novaCor.r = 1f;
+        novaCor.g = 1f;
+        novaCor.b = 1f;
 
         #region Slot 1
         if (slot[0].sprite == null)

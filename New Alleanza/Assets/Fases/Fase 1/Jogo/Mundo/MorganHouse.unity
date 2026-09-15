@@ -5027,6 +5027,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1107179841435057416, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.11764706
+      objectReference: {fileID: 0}
     - target: {fileID: 1495438859960830545, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5382,6 +5386,10 @@ PrefabInstance:
     - target: {fileID: 7443386528084170230, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_SortingOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227539316231236033, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8244877281451647035, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_AnchorMax.x
