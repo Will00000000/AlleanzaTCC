@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CamSeguindo: 1
   destinoCam: {x: 0, y: 0, z: 0}
-  velocidade: 5
+  velocidade: 6
   velocidadeDash: 40
   pulo: 0
   destino: {x: 0, y: 0}
