@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class Drop : MonoBehaviour, IDropHandler
 {
     RectTransform posicaoSombra; //acessar a posição da sombra que recebeu o drop
-    [SerializeField] bool correta; //variável que diz se a peça conectada é a correta ou não
+    public bool correta; //variável que diz se a peça conectada é a correta ou não
 
     DragDrop corPeca, peca;
 

@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class QuebraCabecaInteracao : MonoBehaviour
 {
-    public GameObject peça;
+    public RectTransform peça;
 
     public void AtivarPeca ()
     {
-        peça.SetActive (true);
+        peça.localScale = new Vector2 (0.35f, 0.35f);
     }
 }
