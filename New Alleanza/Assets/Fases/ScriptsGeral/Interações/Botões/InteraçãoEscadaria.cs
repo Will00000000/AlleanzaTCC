@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InteraçãoEscadaria : MonoBehaviour
+public class InteracaoEscadaria : MonoBehaviour
 {
     public GameObject placa;
     public GameObject OpenPlaca;
@@ -11,65 +11,94 @@ public class InteraçãoEscadaria : MonoBehaviour
     public GameObject GoPraia2;
     public GameObject GoCidade;
 
-    float distancia_GoPraia2;
-    float distancia_GoCidade;
-    float distancia_OpenPlaca;
+    [Header("Distância de Interação")]
+    public float distanciaInteracao = 5f;
+
+    private float distancia_GoPraia2;
+    private float distancia_GoCidade;
+    private float distancia_OpenPlaca;
+
+    // Controla se o jogador já interagiu com a placa na cena atual
+    private bool placaFoiLida = false;
 
     private void Start()
     {
-        jogador = GameObject.Find("Morgan");
+        BuscarJogador();
+
+        // Garante que o estado inicial ao entrar na cena comece limpo
+        placaFoiLida = false;
+
+        // Descomente abaixo se quiser que o jogo lembre que a placa já foi lida mesmo trocando de cena:
+        // placaFoiLida = PlayerPrefs.GetInt("Abriu placa", 0) == 1;
     }
 
     private void Update()
     {
-        distancia_GoPraia2 = Vector2.Distance(jogador.transform.position, GoPraia2.transform.position);
-        distancia_GoCidade = Vector2.Distance(jogador.transform.position, GoCidade.transform.position);
-        distancia_OpenPlaca = Vector2.Distance(jogador.transform.position, OpenPlaca.transform.position);
+        if (jogador == null)
+        {
+            BuscarJogador();
+            if (jogador == null) return; // Se ainda assim não achar, ignora o Update
+        }
+
+        // Calcula as distâncias com proteção contra objetos não atribuídos no Inspector
+        if (GoPraia2 != null)
+            distancia_GoPraia2 = Vector2.Distance(jogador.transform.position, GoPraia2.transform.position);
+
+        if (GoCidade != null)
+            distancia_GoCidade = Vector2.Distance(jogador.transform.position, GoCidade.transform.position);
+
+        if (OpenPlaca != null)
+            distancia_OpenPlaca = Vector2.Distance(jogador.transform.position, OpenPlaca.transform.position);
 
         InteracaoEntreCenas();
     }
 
+    private void BuscarJogador()
+    {
+        jogador = GameObject.Find("Morgan");
+
+        if (jogador == null)
+        {
+            GameObject objTag = GameObject.FindGameObjectWithTag("Player");
+            if (objTag != null) jogador = objTag;
+        }
+    }
+
     private void InteracaoEntreCenas()
     {
-        if (distancia_GoPraia2 < 5)
+        // 1. Botão para Ir à Praia 2 (liberado por proximidade)
+        if (GoPraia2 != null)
         {
-            GoPraia2.SetActive(true);
-        }
-        else
-        {
-            GoPraia2.SetActive(false);
+            GoPraia2.SetActive(distancia_GoPraia2 < distanciaInteracao);
         }
 
-        if (PlayerPrefs.GetInt ("Abriu placa", 0) == 1 && distancia_GoCidade < 5)
+        // 2. Botão para Abrir Placa (só aparece se estiver perto E ainda NÃO tiver lido)
+        if (OpenPlaca != null)
         {
-            GoCidade.SetActive(true);
-        }
-        else
-        {
-            GoCidade.SetActive(false);
+            OpenPlaca.SetActive(distancia_OpenPlaca < distanciaInteracao && !placaFoiLida);
         }
 
-        if (distancia_OpenPlaca < 5)
+        // 3. Botão para Ir à Cidade (só aparece se estiver perto E JÁ tiver lido a placa)
+        if (GoCidade != null)
         {
-            OpenPlaca.SetActive(true);
-        }
-        else
-        {
-            OpenPlaca.SetActive(false);
+            GoCidade.SetActive(distancia_GoCidade < distanciaInteracao && placaFoiLida);
         }
     }
 
-    public void AbrirPlaca ()
+    public void AbrirPlaca()
     {
-        placa.SetActive (true);
-        InterfaceGeral.SetActive (false);
+        if (placa != null) placa.SetActive(true);
+        if (InterfaceGeral != null) InterfaceGeral.SetActive(false);
 
+        // Marca que a placa foi lida para liberar o botão da cidade e ocultar o da placa
+        placaFoiLida = true;
         PlayerPrefs.SetInt("Abriu placa", 1);
+        PlayerPrefs.Save();
     }
 
-    public void FecharPlaca ()
+    public void FecharPlaca()
     {
-        placa.SetActive (false);
-        InterfaceGeral.SetActive (true);
+        if (placa != null) placa.SetActive(false);
+        if (InterfaceGeral != null) InterfaceGeral.SetActive(true);
     }
 }

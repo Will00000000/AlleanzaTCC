@@ -10,6 +10,7 @@ public class CutsceneController : MonoBehaviour
     void Start()
     {
         videoPlayer.loopPointReached += QuandoVideoAcabar;
+           PlayerPrefs.SetInt("Ja_Peguei",0); 
     }
 
     void QuandoVideoAcabar(VideoPlayer vp)
