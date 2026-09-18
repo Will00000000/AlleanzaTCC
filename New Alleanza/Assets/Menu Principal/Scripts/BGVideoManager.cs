@@ -23,5 +23,8 @@ public class BGVideoManager: MonoBehaviour
             rawImage.texture = vp.targetTexture;
             videoPlayer.Play();
         };
+
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }
