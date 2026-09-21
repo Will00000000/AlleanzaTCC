@@ -3661,15 +3661,15 @@ RectTransform:
   m_GameObject: {fileID: 750559590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.119046, y: 1.1619717, z: 2.4555}
+  m_LocalScale: {x: 1.0187125, y: 1.3399857, z: 2.8316824}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1319471673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 188, y: 36}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -15, y: 113.13269}
+  m_SizeDelta: {x: -116.1506, y: -20.8206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750559592
 MonoBehaviour:
@@ -3691,7 +3691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f989ea6e4901dc649ad8f12b69ddb715, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f8ac4cb15a72d84897f2e9edc2ee601, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6132,11 +6132,12 @@ MonoBehaviour:
   jogador: {fileID: 0}
   animator: {fileID: 1460115059}
   falas:
-  - "Mellory! E a\xED, tudo pronto para o museu? "
-  - Tudo certo, amigo. Ai, eu to muito ansiosa pra visitar o museu!
-  - "Eu tamb\xE9m, cara, vai ser irado!"
-  - "Demais. Ah, Morg, o que voc\xEA achou do meu disfarce hoje, hein? To bem disfar\xE7ada
-    de terranis?"
+  - "Boa tarde! Sejam bem-vindos ao museu Melindre, se quiserem perguntar alguma
+    coisa\r\nou precisarem de algo, podem me chamar. Meu nome \xE9 Melissa"
+  - "Boa tarde, pode deixar que qualquer coisa n\xF3s te chamamos, Melissa! Eu sou
+    o Mellory, prazer!"
+  - "Voc\xEAs querem um tour pelas obras daqui? Eu vejo com voc\xEAs, vamos l\xE1.
+    \r\n"
   quemFala: 00000000010000000000000001000000
   velocidadeTexto: 0.05
   mellory: {fileID: 993892008}
@@ -7267,15 +7268,15 @@ RectTransform:
   m_GameObject: {fileID: 1460115058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.119046, y: 1.1619717, z: 2.4555}
+  m_LocalScale: {x: 1.0257959, y: 1.2975738, z: 2.4555}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1319471673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 189, y: 37}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -12, y: 114}
+  m_SizeDelta: {x: -137.1166, y: 11.028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1460115061
 CanvasGroup:
@@ -7309,7 +7310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c99464680873a7f4dac56c58b2a4359c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43a4caa56c7eae14a80180a77017af71, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9453,7 +9454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -297}
+  m_AnchoredPosition: {x: 1, y: -256}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924375397 stripped
