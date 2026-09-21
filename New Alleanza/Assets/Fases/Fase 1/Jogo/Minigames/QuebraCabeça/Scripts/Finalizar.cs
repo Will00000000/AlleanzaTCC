@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 public class Finalizar : MonoBehaviour
 {
     public List<Drop> drops; //lista de encaixes para as peças
+    public List<DragDrop> pecas; //lista de peças
     int pecasCertas; //Quantidade de peças que estão encaixadas certo
 
     public GameObject telaMontada;
+    public GameObject botaoSair;
 
     private void Update ()
     {
@@ -44,6 +46,12 @@ public class Finalizar : MonoBehaviour
             drops[i].gameObject.SetActive (false);
         }
 
+        for (int i = 0; i < pecas.Count; i++)
+        {
+            pecas[i].gameObject.SetActive (false);
+        }
+
         telaMontada.SetActive(true);
+        botaoSair.SetActive(true);
     }
 }
