@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class SelecionarItem : MonoBehaviour
 {
-    Image spriteSlot;
+    [HideInInspector] public Image spriteSlot;
     private Color novaCor;
 
     public Image espaçoItem;

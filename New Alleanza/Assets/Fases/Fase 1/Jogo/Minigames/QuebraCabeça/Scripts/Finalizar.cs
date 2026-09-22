@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Finalizar : MonoBehaviour
 {
@@ -9,6 +8,7 @@ public class Finalizar : MonoBehaviour
     int pecasCertas; //Quantidade de peças que estão encaixadas certo
 
     public GameObject telaMontada;
+    public GameObject poema;
     public GameObject botaoSair;
 
     private void Update ()
@@ -52,6 +52,7 @@ public class Finalizar : MonoBehaviour
         }
 
         telaMontada.SetActive(true);
+        poema.SetActive(true);
         botaoSair.SetActive(true);
     }
 }

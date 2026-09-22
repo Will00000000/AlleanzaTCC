@@ -17,19 +17,15 @@ public class Coleta : MonoBehaviour
     {
         PlayerPrefs.SetInt("Coletou peça", 1);
 
-        itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); // Desativa o objeto da peça
-        spriteItem = sprite_itensGeral[0].sprite;
+        itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); // faz a peça sumir
+        spriteItem = sprite_itensGeral[0].sprite; // pega o sprite da variável que pertence à chave
     }
 
-    public void ColetarChave()
+    public void ColetarPoema()
     {
-        ColetarGenerico(0);
-        chaveFoiColetada = true;
-    }
+        itensGeral[2].GetComponent<RectTransform>().localScale = Vector3.zero; //faz o objeto sumir
 
-    public void ColetarItem3()
-    {
-        ColetarGenerico(2);
+        ColetarGenerico(2); //pega o sprite do poema na lista de itens do jogo e joga para a variável de último item coletado
     }
 
     public void ColetarItem4()

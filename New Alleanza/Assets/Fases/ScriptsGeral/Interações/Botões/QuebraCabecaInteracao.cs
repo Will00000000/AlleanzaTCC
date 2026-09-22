@@ -8,4 +8,6 @@ public class QuebraCabecaInteracao : MonoBehaviour
     {
         peça.localScale = new Vector2 (0.35f, 0.35f);
     }
+
+    public void PegarPoema 
 }

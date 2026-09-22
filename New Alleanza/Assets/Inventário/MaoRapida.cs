@@ -5,6 +5,8 @@ public class MaoRapida : MonoBehaviour
 {
     private Image maoRapida;
 
+    public SelecionarItem selecionarItem;
+
     Color novaCor;
 
     private void Start()
@@ -17,5 +19,7 @@ public class MaoRapida : MonoBehaviour
         maoRapida.sprite = null;
         novaCor.a = 0f;
         maoRapida.color = novaCor;
+
+        selecionarItem.spriteSlot.sprite = null;
     }
 }
