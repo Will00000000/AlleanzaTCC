@@ -4835,7 +4835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1045388108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7639,7 +7639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1520163563
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10377,6 +10377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selecionarItem: {fileID: 127573291}
+  "espa\xE7oItem": {fileID: 0}
+  poema: {fileID: 0}
 --- !u!1001 &2119184273
 PrefabInstance:
   m_ObjectHideFlags: 0

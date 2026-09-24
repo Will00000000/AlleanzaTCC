@@ -40,9 +40,10 @@ public class Inventario : MonoBehaviour
     {
         if (slotsLimpos == 9)
         {
-            Debug.Log("9 slots limpos");
+            Debug.Log ("9 slots limpos");
 
             script_coleta.GetComponent<Coleta>().spriteItem = poema; // muda o sprite do primeiro slot
+
         }
     }
 }

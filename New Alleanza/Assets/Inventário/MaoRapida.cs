@@ -9,6 +9,9 @@ public class MaoRapida : MonoBehaviour
 
     Color novaCor;
 
+    public Image espaçoItem;
+    public GameObject poema;
+
     private void Start()
     {
         maoRapida = GetComponent<Image>();
