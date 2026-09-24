@@ -848,8 +848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 189, y: 37}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 149, y: 88}
+  m_SizeDelta: {x: 133.98, y: 75.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &261295459
 CanvasGroup:
@@ -1903,8 +1903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 189, y: 37}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 139, y: 83.5}
+  m_SizeDelta: {x: 142.64, y: 80.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &457249503
 CanvasGroup:
@@ -2819,7 +2819,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -580.8166, y: -2.1275082, z: -216.43172, w: -10.541412}
+  m_margin: {x: -683.9298, y: -19.469204, z: -216.43172, w: -10.541412}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3335,7 +3335,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -517.1321, y: 3.0167239, z: 16.156288, w: -42.81119}
+  m_margin: {x: -610.5231, y: -18.98249, z: 16.156288, w: -42.81119}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3691,8 +3691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15, y: 113.13269}
-  m_SizeDelta: {x: -116.1506, y: -20.8206}
+  m_AnchoredPosition: {x: -22.801025, y: 113.130005}
+  m_SizeDelta: {x: -111.4822, y: -18.0793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750559592
 MonoBehaviour:
@@ -4703,8 +4703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 189, y: 37}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 146, y: 84}
+  m_SizeDelta: {x: 141.93, y: 79.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &963573724
 CanvasGroup:
@@ -5326,7 +5326,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -450.82758, y: 3.1309547, z: -346.56708, w: -10.541412}
+  m_margin: {x: -556.28406, y: -12.043154, z: -346.56708, w: -10.541412}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6096,8 +6096,8 @@ MonoBehaviour:
   jogador: {fileID: 0}
   animator: {fileID: 1261630848}
   falas:
-  - "Um terranis e um abyssalis juntos\u2026 que surpresa encontrar isso em um museu
-    criado pelos terranis"
+  - "Um terranis e um abyssalis juntos, uou! Os terranis devem ir \xE0 loucura com
+    essa est\xE1tua, eu me divirto."
   quemFala: 00000000
   velocidadeTexto: 0.05
   mellory: {fileID: 0}
@@ -6155,12 +6155,11 @@ MonoBehaviour:
   jogador: {fileID: 0}
   animator: {fileID: 1460115059}
   falas:
-  - "Boa tarde! Sejam bem-vindos ao museu Melindre, se quiserem perguntar alguma
-    coisa\r\nou precisarem de algo, podem me chamar. Meu nome \xE9 Melissa"
-  - "Boa tarde, pode deixar que qualquer coisa n\xF3s te chamamos, Melissa! Eu sou
-    o Mellory, prazer!"
-  - "Voc\xEAs querem um tour pelas obras daqui? Eu vejo com voc\xEAs, vamos l\xE1.
-    \r\n"
+  - "Boa tarde! Meu nome \xE9 Melissa. Sejam bem-vindos ao museu Melindre, eu vou
+    acompanhar voc\xEAs, tudo bem?"
+  - "Claro, Melissa! Eu sou a Mellory e esse \xE9 o Morgan."
+  - "Ali\xE1s, o seu cabelo \xE9 lindo, parab\xE9ns!"
+  - "Ah, muito obrigada, o teu que \xE9!"
   quemFala: 00000000010000000000000001000000
   velocidadeTexto: 0.05
   mellory: {fileID: 993892008}
@@ -6459,7 +6458,7 @@ MonoBehaviour:
   jogador: {fileID: 0}
   animator: {fileID: 261295457}
   falas:
-  - "Uou, lan\xE7a maneira! Mas\u2026 pegaram o peixe com ela, tadinho."
+  - "Lan\xE7a maneira! Pena que foi usada para matar o coitado do peixe."
   quemFala: 01000000
   velocidadeTexto: 0.05
   mellory: {fileID: 0}
@@ -6536,8 +6535,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 189, y: 37}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 147, y: 84}
+  m_SizeDelta: {x: 137.18, y: 77.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1261630850
 CanvasGroup:
@@ -6690,7 +6689,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -575.2362, y: 4.1826143, z: -220.66354, w: -22.110218}
+  m_margin: {x: -680.69293, y: -13.159129, z: -220.66354, w: -22.110218}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7298,8 +7297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12, y: 114}
-  m_SizeDelta: {x: -137.1166, y: 11.028}
+  m_AnchoredPosition: {x: -17.732971, y: 113.130005}
+  m_SizeDelta: {x: -121.6173, y: 20.5126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1460115061
 CanvasGroup:
@@ -8676,7 +8675,7 @@ MonoBehaviour:
   jogador: {fileID: 0}
   animator: {fileID: 963573722}
   falas:
-  - "Que peix\xE3o! O maior peixe j\xE1 ca\xE7ado em Atlantis."
+  - "O maior peixe j\xE1 ca\xE7ado em Atlantis. Que peix\xE3o, hein..."
   quemFala: 00000000
   velocidadeTexto: 0.05
   mellory: {fileID: 0}
