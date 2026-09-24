@@ -1,37 +1,46 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VarreduraSlots : Singleton<VarreduraSlots>
+public class VarreduraSlots : MonoBehaviour
 {
     public Image[] slot;
 
     Color novaCor;
     public GameObject script_coleta;
 
+    private void Start()
+    {
+        script_coleta = GameObject.Find("InteractController");
+    }
+
     private void Update()
     {
         Slots();
-
-        script_coleta = GameObject.Find("InteractController");
 
         novaCor.a = 0f;
         novaCor.r = 1f;
         novaCor.g = 1f;
         novaCor.b = 1f;
+    }
 
+    private void Slots ()
+    {
         #region Slot 1
-        if (slot[0].sprite == null)
+        if (slot[0].sprite == null) // se o primeiro slot estiver vazio...
         {
-            slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
+            slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem; //... o slot recebe o sprite do item mais recente
+            slot[0].preserveAspect = true;
 
-            slot[0].color = novaCor;
+            novaCor.a = 1f;
+            slot[0].color = novaCor; // ...  e deixa de ser transparente
+
+            Debug.Log("Slot 1 está vazio");
         }
         #endregion
 
         #region Slot 2
         else if (slot[1].sprite == null)
         {
-            novaCor = slot[0].color;
             novaCor.a = 1f;
             slot[0].color = novaCor;
 
@@ -39,6 +48,8 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
             {
                 slot[1].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
             }
+
+            Debug.Log("Slot 2 está vazio");
         }
         #endregion
 
@@ -223,15 +234,5 @@ public class VarreduraSlots : Singleton<VarreduraSlots>
             }
         }
         #endregion
-
-        else
-        {
-
-        }
-    }
-
-    private void Slots ()
-    {
-
     }
 }

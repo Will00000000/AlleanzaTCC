@@ -1343,14 +1343,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8911766701632928, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 1195380943}
     - target: {fileID: 496065519821802518, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: spriteSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 502048144}
     - target: {fileID: 496065519821802518, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: "espa\xE7oItem"
       value: 
       objectReference: {fileID: 228200441}
+    - target: {fileID: 643623715750369301, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 389957101}
+    - target: {fileID: 858892185999790811, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 1301890997}
     - target: {fileID: 1103341694080830862, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1361,16 +1373,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388898038721926904, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 645
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1388898038721926904, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 387
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 1638002446284987343, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1702762501447991143, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 441400665}
     - target: {fileID: 2018633542995296652, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1403,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2642281775046384062, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 1212754737}
     - target: {fileID: 3179518862701175094, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1411,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelecaoItem
       objectReference: {fileID: 0}
+    - target: {fileID: 3496728536340499026, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 1728609612}
     - target: {fileID: 3984640900372007478, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 849.00354
@@ -1463,6 +1487,10 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 1696055540}
+    - target: {fileID: 5717822419704525116, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 389957100}
     - target: {fileID: 5851788403731134900, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FecharConfiguracoes
@@ -1499,6 +1527,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6599697634439071898, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: spriteSlot
+      value: 
+      objectReference: {fileID: 595713080}
     - target: {fileID: 6672384368847205033, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1539,12 +1571,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelecaoItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8219068519809398955, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: script_coleta
+      value: 
+      objectReference: {fileID: 1801629311}
+    - target: {fileID: 8227539316231236033, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8244877281451647035, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8244877281451647035, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423352722832654652, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423352722832654652, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423352722832654652, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8597438344376136236, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
