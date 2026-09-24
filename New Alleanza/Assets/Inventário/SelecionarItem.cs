@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class SelecionarItem : MonoBehaviour
 {
-    [HideInInspector] public Image spriteSlot;
     private Color novaCor;
 
+    [HideInInspector] public Image spriteSlot;
     public Image espaçoItem;
 
     private void Start()

@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 4909261612718286941}
   - component: {fileID: 5585726900894831637}
   - component: {fileID: 5897998790634452672}
+  - component: {fileID: 5717822419704525116}
   m_Layer: 5
   m_Name: Slot4
   m_TagString: Untagged
@@ -419,7 +420,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5585726900894831637}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5717822419704525116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091445826704077229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &1193507474329340713
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +750,7 @@ GameObject:
   - component: {fileID: 2859692683230623468}
   - component: {fileID: 1815996257306442618}
   - component: {fileID: 3179518862701175094}
+  - component: {fileID: 1702762501447991143}
   m_Layer: 5
   m_Name: Slot3
   m_TagString: Untagged
@@ -830,7 +858,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1815996257306442618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1702762501447991143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803312558945331688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &1819975208902266648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,9 +1204,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5481188505051315081}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HUD_Principal, Assembly-CSharp
-        m_MethodName: InventarioAbre
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1523,6 +1577,7 @@ GameObject:
   - component: {fileID: 4337569007039928619}
   - component: {fileID: 6771527555172691734}
   - component: {fileID: 2155367245397128960}
+  - component: {fileID: 2642281775046384062}
   m_Layer: 5
   m_Name: Slot6
   m_TagString: Untagged
@@ -1630,7 +1685,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6771527555172691734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2642281775046384062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263850740844474968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &2304405109143166540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,6 +2605,7 @@ GameObject:
   - component: {fileID: 5122845321060444154}
   - component: {fileID: 8361541912423591082}
   - component: {fileID: 8040636719293236673}
+  - component: {fileID: 8911766701632928}
   m_Layer: 5
   m_Name: Slot8
   m_TagString: Untagged
@@ -2631,7 +2713,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8361541912423591082}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8911766701632928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563700023400156529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &3707756582250056013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,6 +3347,7 @@ GameObject:
   - component: {fileID: 689511477074417363}
   - component: {fileID: 8204164608233204020}
   - component: {fileID: 7250522465584279626}
+  - component: {fileID: 3496728536340499026}
   m_Layer: 5
   m_Name: Slot9
   m_TagString: Untagged
@@ -3346,7 +3455,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8204164608233204020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3496728536340499026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647471244779215892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &4648620785001442914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,6 +3626,7 @@ GameObject:
   - component: {fileID: 365556370319176872}
   - component: {fileID: 8423352722832654652}
   - component: {fileID: 4538570109214386740}
+  - component: {fileID: 643623715750369301}
   m_Layer: 5
   m_Name: Slot2
   m_TagString: Untagged
@@ -3598,7 +3734,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8423352722832654652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &643623715750369301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218163046885872485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &5361041536880154196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,6 +3773,7 @@ GameObject:
   - component: {fileID: 2428915850437981644}
   - component: {fileID: 6264618329900423322}
   - component: {fileID: 8597438344376136236}
+  - component: {fileID: 858892185999790811}
   m_Layer: 5
   m_Name: Slot7
   m_TagString: Untagged
@@ -3718,7 +3881,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6264618329900423322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &858892185999790811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5361041536880154196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &5379205954661148004
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,6 +4508,7 @@ GameObject:
   - component: {fileID: 5814885882629622635}
   - component: {fileID: 8227539316231236033}
   - component: {fileID: 7749602562428508593}
+  - component: {fileID: 496065519821802518}
   m_Layer: 5
   m_Name: Slot1
   m_TagString: Untagged
@@ -4426,7 +4616,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8227539316231236033}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &496065519821802518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6028661036365553078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &6237078322824918896
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +5791,7 @@ GameObject:
   - component: {fileID: 1814606242061620355}
   - component: {fileID: 4555821647033297136}
   - component: {fileID: 2018633542995296652}
+  - component: {fileID: 6599697634439071898}
   m_Layer: 5
   m_Name: Slot5
   m_TagString: Untagged
@@ -5682,7 +5899,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4555821647033297136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5717822419704525116}
+        m_TargetAssemblyTypeName: SelecionarItem, Assembly-CSharp
+        m_MethodName: SelecaoItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6599697634439071898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7911756602909146520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dda3b24ca3c6f40a7045a56447e39b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSlot: {fileID: 0}
+  "espa\xE7oItem": {fileID: 7288734422450393752}
 --- !u!1 &7918445685630617494
 GameObject:
   m_ObjectHideFlags: 0
