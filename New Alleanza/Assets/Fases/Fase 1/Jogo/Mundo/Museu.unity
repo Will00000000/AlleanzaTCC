@@ -1390,7 +1390,7 @@ PrefabInstance:
     - target: {fileID: 1417800843810039784, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 6745945d1d0395044ae613bc43254ed4, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1417800843810039784, guid: 64bf54c3046e16b4dad8b8c82e2a6c9f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -4039,6 +4039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c233620a83ec0ef47b581511dab5f135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idPersonagem: NPC_Unico
   jogador: {fileID: 1032626397}
   velocidade: 3
   distanciaMinima: 1.5
@@ -7125,6 +7126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1946145153}
   - component: {fileID: 1946145154}
+  - component: {fileID: 1946145155}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7171,6 +7173,19 @@ MonoBehaviour:
   - {fileID: 1728609612}
   poema: {fileID: 21300000, guid: 4e6240505db9cca439846e99e56b089e, type: 3}
   script_coleta: {fileID: 1801629311}
+--- !u!114 &1946145155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946145152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84d6aba17a4eb824f8b2c68c3b890766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poema: {fileID: 1352096011}
 --- !u!1 &1953312859
 GameObject:
   m_ObjectHideFlags: 0
@@ -7543,7 +7558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6656534101286921531, guid: 70372809109b3074eaab8c99fc124bd8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6836830775031909733, guid: 70372809109b3074eaab8c99fc124bd8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
