@@ -1,0 +1,28 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class MaoRapida : MonoBehaviour
+{
+    private Image maoRapida;
+
+    public SelecionarItem selecionarItem;
+
+    Color novaCor;
+
+    public Image espaçoItem;
+    public GameObject poema;
+
+    private void Start()
+    {
+        maoRapida = GetComponent<Image>();
+    }
+
+    public void UsarItem () // tirar o item da mão rápida e usar ele na cena
+    {
+        maoRapida.sprite = null;
+        novaCor.a = 0f;
+        maoRapida.color = novaCor;
+
+        selecionarItem.spriteSlot.sprite = null;
+    }
+}

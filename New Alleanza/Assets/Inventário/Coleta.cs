@@ -5,7 +5,7 @@ public class Coleta : MonoBehaviour
 {
     public Sprite spriteItem;
 
-    public SpriteRenderer[] sprite_itensGeral; // Lista que recebe todos os sprites dos itens
+    public Image[] sprite_itensGeral; // Lista que recebe todos os sprites dos itens
     public GameObject[] itensGeral;            // Lista que recebe todos os GameObjects de itens
 
     // Variáveis estáticas salvam o estado na memória enquanto o jogo estiver aberto.
@@ -13,47 +13,22 @@ public class Coleta : MonoBehaviour
     public static bool pecaFoiColetada = false;
     public static bool chaveFoiColetada = false;
 
-    private void Start()
-    {
-        // Se a peça já foi coletada nesta sessão de jogo, mantém desativada ao carregar a cena
-        if (pecaFoiColetada)
-        {
-            if (itensGeral != null && itensGeral.Length > 0 && itensGeral[0] != null)
-            {
-                itensGeral[0].SetActive(false);
-            }
-        }
-
-        // Se a chave já foi coletada nesta sessão de jogo
-        if (chaveFoiColetada)
-        {
-            if (itensGeral != null && itensGeral.Length > 0 && itensGeral[0] != null)
-            {
-                itensGeral[0].SetActive(false);
-            }
-        }
-    }
-
     public void ColetarPeca()
     {
-        if (itensGeral != null && itensGeral.Length > 0 && itensGeral[0] != null)
-        {
-            itensGeral[0].SetActive(false); // Desativa o objeto da peça
-            pecaFoiColetada = true;         // Marca como coletada apenas na memória atual
+        PlayerPrefs.SetInt("Coletou peça", 1);
 
-            PlayerPrefs.SetInt ("Coletou peça", 1);
-        }
+        itensGeral[0].transform.localScale = new Vector3 (0, 0, 0); // faz a peça sumir
+        spriteItem = sprite_itensGeral[0].sprite; // pega o sprite da variável que pertence à chave
     }
 
-    public void ColetarChave()
+    public void ColetarItem2()
     {
-        ColetarGenerico(0);
-        chaveFoiColetada = true;
+        ColetarGenerico(3);
     }
 
     public void ColetarItem3()
     {
-        ColetarGenerico(2);
+        ColetarGenerico(3);
     }
 
     public void ColetarItem4()
