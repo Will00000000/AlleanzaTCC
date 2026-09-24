@@ -14,7 +14,7 @@ public class MaoRapida : MonoBehaviour
         maoRapida = GetComponent<Image>();
     }
 
-    public void UsarItem ()
+    public void UsarItem () // tirar o item da mão rápida e usar ele na cena
     {
         maoRapida.sprite = null;
         novaCor.a = 0f;

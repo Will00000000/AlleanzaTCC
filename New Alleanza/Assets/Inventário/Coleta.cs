@@ -21,11 +21,14 @@ public class Coleta : MonoBehaviour
         spriteItem = sprite_itensGeral[0].sprite; // pega o sprite da variável que pertence à chave
     }
 
-    public void ColetarPoema()
+    public void ColetarItem2()
     {
-        itensGeral[2].GetComponent<RectTransform>().localScale = Vector3.zero; //faz o objeto sumir
+        ColetarGenerico(3);
+    }
 
-        ColetarGenerico(2); //pega o sprite do poema na lista de itens do jogo e joga para a variável de último item coletado
+    public void ColetarItem3()
+    {
+        ColetarGenerico(3);
     }
 
     public void ColetarItem4()

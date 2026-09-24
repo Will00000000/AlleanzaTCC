@@ -5,7 +5,7 @@ public class SelecionarItem : MonoBehaviour
 {
     private Color novaCor;
 
-    [HideInInspector] public Image spriteSlot;
+    public Image spriteSlot;
     public Image espaçoItem;
 
     private void Start()
