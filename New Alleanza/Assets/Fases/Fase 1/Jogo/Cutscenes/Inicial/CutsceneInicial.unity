@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Avan\xE7ar +1s"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -561,7 +561,7 @@ RectTransform:
   m_GameObject: {fileID: 1716549097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9488, y: 1.9488, z: 1.9488}
+  m_LocalScale: {x: 3.7859428, y: 6.4505486, z: 4.2066965}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1045269626}
@@ -569,8 +569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 791, y: -430}
-  m_SizeDelta: {x: 102.2188, y: 52.7808}
+  m_AnchoredPosition: {x: 806, y: -423}
+  m_SizeDelta: {x: 81.3546, y: 47.7606}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716549099
 MonoBehaviour:
@@ -648,8 +648,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c8092f4e0c62a7449bb2a1635a28d7d1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

@@ -13,17 +13,17 @@ public class SeguirJogador : MonoBehaviour
     public string idPersonagem = "NPC_Unico";
 
     [Header("Configurações de Movimento")]
-    public Transform jogador; 
+    public Transform jogador;
     public float velocidade = 3f;
-    public float distanciaMinima = 1.5f; 
+    public float distanciaMinima = 1.5f;
     public Vector2 offsetTeleport = new Vector2(-1f, 0f);
 
     [Header("Controle")]
-    public bool deveSeguir = false; 
+    public bool deveSeguir = false;
 
     [Header("Animação")]
     public Animator animator;
-    public string parametroAndando = "estaAndando"; 
+    public string parametroAndando = "estaAndando";
 
     void Awake()
     {
@@ -109,7 +109,7 @@ public class SeguirJogador : MonoBehaviour
 
     void BuscarJogador()
     {
-        GameObject playerObj = GameObject.Find("Morgan"); 
+        GameObject playerObj = GameObject.Find("Morgan");
 
         if (playerObj == null)
         {
@@ -128,7 +128,7 @@ public class SeguirJogador : MonoBehaviour
 
     void Update()
     {
-        if (!deveSeguir) 
+        if (!deveSeguir)
         {
             AtualizarAnimacao(false);
             return;
@@ -143,9 +143,10 @@ public class SeguirJogador : MonoBehaviour
 
         float distancia = Vector2.Distance(transform.position, jogador.position);
 
+        // Se estiver além da distância mínima, move o NPC e ativa a animação contínua
         if (distancia > distanciaMinima)
         {
-            Vector2 posicaoAlvo = new Vector2(jogador.position.x, jogador.position.y); 
+            Vector2 posicaoAlvo = new Vector2(jogador.position.x, jogador.position.y);
             transform.position = Vector2.MoveTowards(transform.position, posicaoAlvo, velocidade * Time.deltaTime);
 
             if (jogador.position.x > transform.position.x)
@@ -161,6 +162,7 @@ public class SeguirJogador : MonoBehaviour
         }
         else
         {
+            // Chegou ao destino / distância mínima: para a animação na hora
             AtualizarAnimacao(false);
         }
     }
