@@ -34,10 +34,8 @@ public class Caldeirao : MonoBehaviour
         {
             Destroy (col.gameObject);
 
-            if (ControleMinigamePocao.ingredienteJogado_1 == false && ControleMinigamePocao.ingredienteJogado_2 == false)
+            if (ControleMinigamePocao.ultimoIngredienteJogado_1 == false && ControleMinigamePocao.ultimoIngredienteJogado_2 == false) // no primeiro ingrediente jogado
             {
-                gameController.GetComponent<ControleMinigamePocao>().VerificaçãoLimiteIngredientes ();
-
                 Debug.Log("Ingrediente adicionado: " + col.name);
 
                 // ... ativa a fumaça
@@ -49,7 +47,8 @@ public class Caldeirao : MonoBehaviour
                     Invoke("PararFumaca", 2f);
                 }
 
-                ControleMinigamePocao.ingredienteJogado_1 = true;
+                ControleMinigamePocao.ultimoIngredienteJogado_1 = true; //primeiro ingrediente já foi jogado
+
 
                 //VERIFICAÇÃO DE INGREDIENTES E ORDEM CORRETOS
                 if (col.name == "Ingrediente4 (certo)") // ... e se o nome do ingrediente colidido for o ingrediente 4...
@@ -60,12 +59,12 @@ public class Caldeirao : MonoBehaviour
 
                 ingredienteDestruído = true; //... e diz à variável que o ingrediente jogado foi destruído
             }
-            else if (ControleMinigamePocao.ingredienteJogado_1 == true)
+            else if (ControleMinigamePocao.ultimoIngredienteJogado_1 == true)
             {
-                ControleMinigamePocao.ingredienteJogado_1 = false;
-                ControleMinigamePocao.ingredienteJogado_2 = true;
+                ControleMinigamePocao.ultimoIngredienteJogado_1 = false;
+                ControleMinigamePocao.ultimoIngredienteJogado_2 = true;
 
-                if (primeiroIngredienteCerto == true && col.name == "Ingrediente6 (certo)") // ... e se o primeiro ingrediente já estiver na mistura e o nome do ingrediente colidido for o ingrediente 6...
+                if (col.name == "Ingrediente6 (certo)") // ... e se o primeiro ingrediente já estiver na mistura e o nome do ingrediente colidido for o ingrediente 6...
                 {
                     segundoIngredienteCerto = true; //... então o segundo ingrediente necessário para a poção será misturado.  
                     Debug.Log("Segundo ingrediente certo colocado");
@@ -79,10 +78,10 @@ public class Caldeirao : MonoBehaviour
                     Invoke("PararFumaca", 2f);
                 }
             }
-            else if (ControleMinigamePocao.ingredienteJogado_1 == false && ControleMinigamePocao.ingredienteJogado_2 == true)
+            else if (ControleMinigamePocao.ultimoIngredienteJogado_2 == true)
             {
-                ControleMinigamePocao.ingredienteJogado_2 = false;
-                ControleMinigamePocao.ingredienteJogado_3 = true;
+                ControleMinigamePocao.ultimoIngredienteJogado_2 = false;
+                ControleMinigamePocao.ultimoIngredienteJogado_3 = true;
 
                 if (segundoIngredienteCerto == true && segundoIngredienteCerto == true && col.name == "Ingrediente7 (certo)") //... e se o segundo ingrediente já estiver na mistura e o nome do ingrediente colidido for o ingrediente 8...
                 {

@@ -73,7 +73,7 @@ public class SelecionarIngrediente : MonoBehaviour
             // Ajusta posição, sprite e escala do contorno
             contornoDeSeleção.transform.position = new Vector2(target.position.x, target.position.y);
             contornoDeSeleção.GetComponent<SpriteRenderer>().sprite = targetSprite.sprite;
-            contornoDeSeleção.transform.localScale = target.localScale * 1.2f;
+            contornoDeSeleção.transform.localScale = target.localScale * 1.5f;
         }
         else
         {

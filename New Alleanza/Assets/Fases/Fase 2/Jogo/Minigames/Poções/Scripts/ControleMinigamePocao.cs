@@ -6,23 +6,30 @@ public class ControleMinigamePocao : MonoBehaviour
     public GameObject Caldeirão;
 
     //VERIFICAÇÃO DE QUANTIDADE DE INGREDIENTES
-    public static bool ingredienteJogado_1 = false;
-    public static bool ingredienteJogado_2 = false;
-    public static bool ingredienteJogado_3 = false;
+    public static bool ultimoIngredienteJogado_1;
+    public static bool ultimoIngredienteJogado_2;
+    public static bool ultimoIngredienteJogado_3;
+
+    private void Start ()
+    {
+        ultimoIngredienteJogado_1 = false;
+        ultimoIngredienteJogado_2 = false;
+        ultimoIngredienteJogado_3 = false;
+    }
 
     public void VerificaçãoLimiteIngredientes ()
     {
-        if (ingredienteJogado_1 == true)
+        if (ultimoIngredienteJogado_1 == true)
         {
             Debug.Log ("Joguei o primeiro ingrediente");
         }
 
-        if (ingredienteJogado_2 == true)
+        if (ultimoIngredienteJogado_2 == true)
         {
             Debug.Log ("Joguei o segundo ingrediente");
         }
 
-        if (ingredienteJogado_3 == true)
+        if (ultimoIngredienteJogado_3 == true)
         {
             Debug.Log ("Joguei o terceiro ingrediente");
 
