@@ -6,13 +6,13 @@ public class GerenciarItens : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.GetInt ("was_QuebraCabeça", 0) == 0)
+        if (PlayerPrefs.GetInt ("was_QuebraCabeça", 0) == 1)
         {
-            poema.SetActive(false);
+            poema.SetActive(true);
         }
         else
         {
-            poema.SetActive(true);
+            poema.SetActive(false);
         }
     }
 }

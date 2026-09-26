@@ -11,6 +11,8 @@ public class InteraçãoMuseu : MonoBehaviour
     float distancia_GoQuebraCabeça;
     float distancia_GoCidade;
 
+    public GameObject poema;
+
     private void Start ()
     {
         jogador = GameObject.Find("Morgan");
@@ -43,5 +45,10 @@ public class InteraçãoMuseu : MonoBehaviour
         {
             GoCidade.SetActive (false);
         }
+    }
+
+    public void FecharPoema ()
+    {
+        poema.SetActive (false);
     }
 }

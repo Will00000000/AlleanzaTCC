@@ -218,4 +218,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("Atlantis");
     }
+
+    public void GoMenuPrincipal ()
+    {
+        SceneManager.LoadScene ("MenuPrincipal");
+    }
 }

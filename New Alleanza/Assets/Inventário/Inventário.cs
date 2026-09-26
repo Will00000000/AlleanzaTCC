@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Inventario : MonoBehaviour
 {
     public List<Image> botoesSlots;
-    int slotsLimpos; // quantidade de slots que já foram limpos no laço abaixo
+    int slotsLimpos; // quantidade de slots que j? foram limpos no la?o abaixo
 
     public Sprite poema;
 
@@ -26,7 +26,7 @@ public class Inventario : MonoBehaviour
         CarregarPoema();
     }
 
-    private void LimparSlots () // função para limpar todos os slots
+    private void LimparSlots () // fun??o para limpar todos os slots
     {
         for (int i = 0; i < botoesSlots.Count; i++)
         {
@@ -36,7 +36,7 @@ public class Inventario : MonoBehaviour
         }
     }
 
-    private void CarregarPoema () // põe o sprite do poema no primeiro slot
+    private void CarregarPoema () // p?e o sprite do poema no primeiro slot
     {
         if (slotsLimpos == 9)
         {

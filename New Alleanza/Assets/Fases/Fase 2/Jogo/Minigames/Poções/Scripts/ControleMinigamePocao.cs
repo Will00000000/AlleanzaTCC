@@ -46,7 +46,7 @@ public class ControleMinigamePocao : MonoBehaviour
 
     void JogadorGanhou ()
     {
-        SceneManager.LoadScene("QuartoSelene");
+        SceneManager.LoadScene("CenaVitória");
         Debug.Log("Parabéns! Agora o sangue da Selene não estará mais nas suas mãos!");
     }
 

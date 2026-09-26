@@ -1,9 +1,10 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class VarreduraSlots : MonoBehaviour
 {
-    public Image[] slot;
+    public List<Image> slot;
 
     Color novaCor;
     public GameObject script_coleta;
@@ -11,6 +12,8 @@ public class VarreduraSlots : MonoBehaviour
     private void Start()
     {
         script_coleta = GameObject.Find("InteractController");
+
+        novaCor.a = 0f;
     }
 
     private void Update()
@@ -31,10 +34,10 @@ public class VarreduraSlots : MonoBehaviour
             slot[0].sprite = script_coleta.GetComponent<Coleta>().spriteItem; //... o slot recebe o sprite do item mais recente
             slot[0].preserveAspect = true;
 
-            novaCor.a = 1f;
+            novaCor.a = 0f;
             slot[0].color = novaCor; // ...  e deixa de ser transparente
 
-            Debug.Log("Slot 1 está vazio");
+            Debug.Log("Slot 1 estï¿½ vazio");
         }
         #endregion
 
@@ -49,7 +52,7 @@ public class VarreduraSlots : MonoBehaviour
                 slot[1].sprite = script_coleta.GetComponent<Coleta>().spriteItem;
             }
 
-            Debug.Log("Slot 2 está vazio");
+            Debug.Log("Slot 2 estï¿½ vazio");
         }
         #endregion
 

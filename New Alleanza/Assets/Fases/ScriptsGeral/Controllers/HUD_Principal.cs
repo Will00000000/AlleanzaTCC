@@ -130,27 +130,13 @@ public class HUD_Quarto : MonoBehaviour
     // --- NOVAS FUNÇÕES PARA O MENU DE CONFIGURAÇÕES ---
     public void AbrirConfiguracoes()
     {
-        if (ConfigMenu != null)
-        {
-            ConfigMenu.SetActive(true); // Abre a tela de configurações
-        }
-        
-        if (PauseMenu != null)
-        {
-            PauseMenu.SetActive(false); // Fecha o menu de pause de trás para não acumular
-        }
+        ConfigMenu.SetActive(true); // Abre a tela de configurações
+        PauseMenu.SetActive(false);
     }
 
     public void FecharConfiguracoes()
     {
-        if (ConfigMenu != null)
-        {
-            ConfigMenu.SetActive(false); // Fecha as configurações
-        }
-        
-        if (PauseMenu != null)
-        {
-            PauseMenu.SetActive(true); // Traz o menu de pause de volta
-        }
+        ConfigMenu.SetActive(false); // Fecha as configurações
+        PauseMenu.SetActive(true);
     }
 }

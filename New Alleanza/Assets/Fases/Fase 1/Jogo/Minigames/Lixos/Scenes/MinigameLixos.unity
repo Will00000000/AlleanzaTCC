@@ -535,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202547619}
   - component: {fileID: 202547618}
+  - component: {fileID: 202547620}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -598,6 +599,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &202547620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202547617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a1a39c642f9d14b8645902212c6c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &221676767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -622,14 +635,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SistemaVida
       objectReference: {fileID: 0}
+    - target: {fileID: 1203960991870879323, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 616354273, guid: e57a2e69dda2abc42aff668cc035e36f, type: 3}
     - target: {fileID: 1342587383326448766, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3391506986163693503, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 616354273, guid: e57a2e69dda2abc42aff668cc035e36f, type: 3}
     - target: {fileID: 4634825174604278731, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -650
       objectReference: {fileID: 0}
+    - target: {fileID: 4651989992678282205, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 616354273, guid: e57a2e69dda2abc42aff668cc035e36f, type: 3}
     - target: {fileID: 4969615838075640880, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -841
@@ -664,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5797087059044221502, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 5892435280023433285, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_Camera
@@ -692,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6120279959685309139, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 611
+      value: 403.99994
       objectReference: {fileID: 0}
     - target: {fileID: 6120279959685309139, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -800,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6810695814504427096, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 11.6
+      value: 9.81
       objectReference: {fileID: 0}
     - target: {fileID: 6810695814504427096, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -824,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7130552683655248063, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -603
+      value: -453
       objectReference: {fileID: 0}
     - target: {fileID: 7130552683655248063, guid: b8235be72c9ccf144bc364bb71da30fa, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2550,10 +2575,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2745,8 +2770,8 @@ SceneRoots:
   - {fileID: 311244704}
   - {fileID: 1984054796}
   - {fileID: 1165653617}
-  - {fileID: 202547619}
   - {fileID: 876695}
   - {fileID: 1060865705}
   - {fileID: 283688112}
   - {fileID: 952801728}
+  - {fileID: 202547619}

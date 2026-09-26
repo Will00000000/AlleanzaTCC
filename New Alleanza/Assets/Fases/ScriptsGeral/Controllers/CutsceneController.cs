@@ -38,4 +38,9 @@ public class CutsceneController : MonoBehaviour
             }
         }
     }
+
+    public void PularCutscene ()
+    {
+        SceneManager.LoadScene ("MorganHouse");
+    }
 }

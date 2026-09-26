@@ -77,18 +77,10 @@ public class Visao : MonoBehaviour
             min_Y = 0.01f;
             max_Y = 0.01f;
         }
-        else if (nomeCena == "CasaHelena")
+        else if (nomeCena == "QuartoSelene")
         {
-            min_X = -35;
-            max_X = 6;
-
-            min_Y = 0.01f;
-            max_Y = 0.01f;
-        }
-        else if (nomeCena != "CasaHelena")
-        {
-            min_X = -111111111111;
-            max_X = 111111111111;
+            min_X = -18;
+            max_X = 18;
 
             min_Y = 0.01f;
             max_Y = 0.01f;

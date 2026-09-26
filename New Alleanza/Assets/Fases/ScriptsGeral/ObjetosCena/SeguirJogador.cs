@@ -57,10 +57,10 @@ public class SeguirJogador : MonoBehaviour
     {
         SceneManager.sceneLoaded -= AoCarregarCena;
     }
-
+    
     void AoCarregarCena(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MenuPrincipal")
+        if (scene.name == "MenuPrincipal" || scene.name == "MinigameLixos" || scene.name == "MinigamePoção")
         {
             deveSeguir = false;
             
@@ -148,26 +148,16 @@ public class SeguirJogador : MonoBehaviour
         {
             Vector2 posicaoAlvo = new Vector2(jogador.position.x, jogador.position.y);
             transform.position = Vector2.MoveTowards(transform.position, posicaoAlvo, velocidade * Time.deltaTime);
-             AtualizarAnimacao(true);
-           /* if (jogador.position.x > transform.position.x)
-            {
-                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else if (jogador.position.x < transform.position.x)
-            {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }*/
-
-          
+            AtualizarAnimacao(true);
         }
         else
         {
-               
             // Chegou ao destino / distância mínima: para a animação na hora
             AtualizarAnimacao(false);
         }
         OlharJogador();
     }
+
     void OlharJogador()
     {
         if (jogador.position.x > transform.position.x)
@@ -179,13 +169,14 @@ public class SeguirJogador : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
     }
-            void AtualizarAnimacao(bool estaAndando)
-            {
-                if (animator != null)
-                {
-                    animator.SetBool(parametroAndando, estaAndando);
-                }
-            }
+    
+    void AtualizarAnimacao(bool estaAndando)
+    {
+        if (animator != null)
+        {
+            animator.SetBool(parametroAndando, estaAndando);
+        }
+    }
 
     public void ComeçarASeguir()
     {
